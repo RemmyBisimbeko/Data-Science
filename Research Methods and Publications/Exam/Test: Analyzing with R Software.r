@@ -314,13 +314,11 @@ survival_rates <- aggregate(Survived ~ Pclass, data = titanic_data, FUN = mean)
 # Create bar plot
 barplot(survival_rates$Survived, 
         names.arg = survival_rates$Pclass,
-        ylim = c(0, 1), 
         col = "skyblue", 
         main = "Survival Rates by Passenger Class",
         xlab = "Passenger Class",
         ylab = "Survival Rate",
-        border = "black",
-        ylim = c(0, 1))
+        border = "black")
 
 # What does each line do:
 # We first calculate the survival rates for each passenger class using the aggregate() function, 
@@ -385,8 +383,14 @@ subset_data <- na.omit(subset_data)
 # Calculate the correlation matrix
 correlation_matrix <- cor(subset_data)
 
+
+# This should do the trick
+# Convert the correlation matrix to a data frame for plotting
+correlation_df <- as.data.frame(as.table(correlation_matrix))
+names(correlation_df) <- c("Var1", "Var2", "Correlation")
+
 # Create a heatmap of the correlation matrix
-ggplot(data = as.data.frame(correlation_matrix), aes(x = Var1, y = Var2, fill = value)) +
+ggplot(data = correlation_df, aes(x = Var1, y = Var2, fill = Correlation)) +
   geom_tile() +
   scale_fill_gradient(low = "blue", high = "red") +
   labs(title = "Correlation Heatmap of Variables",
