@@ -71,5 +71,8 @@ Date,Rented Bike Count,Hour,Temperature(�C),Humidity(%),Wind speed (m/s),Visib
 01-12-17,862,18,0.6,66,1.4,2000,-5,0,0,0,Winter,No Holiday,Yes
 01-12-17,600,19,0,77,1.7,2000,-3.5,0,0,0,Winter,No Holiday,Yes
 
-Generate residual plots for the simple linear regression model. 
-Identify any outliers or influential points. Discuss the assumptions of least-square regression and how well the data meet these assumptions.
+Analyze the impact of Holidays on Seoul Bike Rentals in 2017 – 2018.
+Step 1: Filter Data for 2017-2018
+Step 2: Aggregate Bike Rentals by Holiday Status
+Step 3: Visualize the Impact of Holidays on Bike Rentals
+Give observations
