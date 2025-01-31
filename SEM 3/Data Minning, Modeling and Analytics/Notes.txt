@@ -1,0 +1,82 @@
+Latex
+Wednesday
+Thursday
+
+Deadlines
+Data Seminars
+5th Topics
+Guiding focus areas
+Sdg-global
+Ndg-uganda
+Ndg3 latest one
+
+Data Strategy
+National Data Strategy
+
+Not necessarily develop a system
+Not very techy
+Research on something to improve on something existent 
+She will share the notes and road map
+Focus areas in the notes
+She will give us supervisors 
+Whatsapp group for supervisors and students
+Safer to have 2 topics for safety
+What is your research going to be about
+Consider Data collection tools
+Context. Don’t generalize without context
+International relevance of research eg only bweyogerere 
+Critic. People’s literature review. Opinions
+Part of the training process
+Have a strong motivation on what you want to focus on and 
+Each class or lesson to be presenting
+Dont lag behind
+Two sessions safe time 5:30pm
+
+
+Thursday 7-9 For 3 Hours
+Practicle Online Classes
+2 Assignments
+Final Exams - Project based
+Saturday - When
+Each Week
+Canvas on Moodle
+
+Assignment 1 - 20
+Assignment 2 - 20
+Project - 60
+Exam - 30
+
+Exam Immediately after Course
+2 Course Assignments
+Material on Moodle 
+
+Zoom link for Course - Brian
+KDD - Knowledge Discovery in DBs
+
+Processes 
+Interpretation/Evaluation > Data Mining > Preparing > Selection
+Knowledge/Patterns > Preprocessed Data > Target Data > Data 
+
+
+Effective KDD Processes 
+Qwenlm 
+
+Fraud detection 
+Money Laundering 
+Decording Information in a Complex Format
+Regression Series
+
+What can DM do?
+-Clustering
+
+Steps of a KDD Process 
+-Preprocessing tools
+-Classify a problem
+-Coorelation btn A n B 
+
+Relating DM and BI 
+OLAP - Online Analytical Processing 
+
+Difference btn DM and DA 
+Data Usage in our Daily Life
+-Data Visualisationnn
