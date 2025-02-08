@@ -1,0 +1,57 @@
+Catherine Bwire
+Data Security: Kagina
+
+Certificates
+ISACA
+
+Fridays
+
+Moodle
+ISO27001 - privacy management System
+
+
+Data Privacy and protection policy of centinary bank in Compliance Dpt
+
+Expectations: How data is used, stored and destroyed when collected
+But im ready and eager to learn 
+
+Isaac Bbosa - Judiaciary
+ 
+Classes to be aligned by ISO 
+
+COBIT -Guidelines
+
+PINS - Privacy Information Systems 
+ISMS - 
+
+Management Systems - System 
+PECB, MQI 
+
+PII - Personal Identity Information 
+
+Controls
+
+Data Processors 
+PDPO - Personal Data protection Office
+All organisations must register with them 
+
+No need to memorise Clauses 
+
+https://www.aarc-360.com/understanding-the-differences-between-iso-iec-27001-2022-and-iso-iec-27701-2019/
+
+
+Emerging Cybersecurity Trends to Keep an Eye On in 2025 
+
+https://www.itnewsafrica.com/2025/01/emerging-cybersecurity-trends-to-keep-an-eye-on-in-2025/
+
+7/02/2025
+
+Organisational Controls - 37
+Who is your contact person when handling threats
+How do you label classifications
+Access control / logical Access
+Physical, People Controls
+PIMS - Privacy Information Management Systems
+Best Practices / Recommendations
+PI Controller, Processor vs Controllers
+SOA - Statement of Applicability 

@@ -80,3 +80,27 @@ OLAP - Online Analytical Processing
 Difference btn DM and DA 
 Data Usage in our Daily Life
 -Data Visualisationnn
+
+
+
+6/02/2025
+
+She uploaded the learning Material on Canvas and Moodle
+EDA - Exploratory Data Analysis
+Primary / Secondary Data - Typically raw Data
+Preprocess / Analyse it for Outliers, Missing Values
+Strong / Positive Coorelation 
+
+Data Scrapping 
+Dfn 
+Libraries - urllib, Beautiful Soup, Mechanical Soup
+System Automation 
+In class exercise - then Discuss findings
+
+get url -> fetch info from Amazon 
+Save Data into cvs e.g price -> Title, Price, Data 
+
+NCHE
+Fetch Data from Table
+
+Specific content 
