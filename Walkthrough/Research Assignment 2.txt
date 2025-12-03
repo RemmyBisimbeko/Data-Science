@@ -1,0 +1,110 @@
+Since you recently proved your knowledge on Research Methods and Publications, 
+here is a follow up question:
+
+Using Google Scholar, Search and download 10 relevant publications in a 
+fascinating area of research.
+Review them thoroughly and come up with a detailed 4 page literature review.
+Use the following structure to formulate the literature review:
+Define the research question and terms in the  research
+Define the topic clearly and provide an appropriate context for reviewing the literature
+Establish your reasons specifically the point of view
+Explain your squence of the research
+State the scope of research, it would be nice if the scope was relevant to a developing country like Uganda
+What is include, excluded
+Make or provide an insight into the relation between your chosen topic and a wider research area/subject
+finally, move from wider view and narrow down to the specific focus area of interest
+Summarise the important aspects of the existing body of research publications 
+Point out and evaluate the current state of the literature reviewed
+Identify there after the significant flaws or any gaps in the existing knowledge discovered
+Point out areas for future study
+Finally, tie in and link all your research to the exisiting knowledge
+
+--
+
+Since you recently proved your knowledge on Research Methods and Publications also 
+writing a higly detailed literature review, 
+here is another question:
+Using Google Scholar, Search and review relevant publications in a "Using Data Science to resolve issues of fake news"
+which is a fascinating area of research.
+Review them thoroughly and come up with a detailed research paper.
+
+Source and Cite relevant publications from reputable sources to
+Write a highly detailed research paper based on the topic of"Using Data Science to resolve issues of fake news". 
+Research proposal should show us how were going to conduct the research. 
+
+Choose a research paper topic
+conduct preliminary research
+develop a thesis statement
+Body should be compelling
+Find an issue to address to have a solid research paper
+Include sources that might also contradict with the research view point 
+Provide evidence to support your argument
+Find a unique take on the topic
+Find What to include, exclude from the research
+Have there been any latest/recent developments that build on the research topic
+Formulate questions to guide you on the research for example: I want to know, i want to find out, why, how, who. 
+this will help me come up with  a good preposition
+Develop a thesis statement that will be the central argument point.
+this will help us establish the aim and purpose of the paper.
+The thesis statement should be in direct response the forumlated questions.
+It should also show the evidence and reasoning to be used to support the answer.
+the thesis statement should be consice, clear, contineous and coherent. In two sentenses, it should summarise your
+argument.
+Make a claim that requires further evidence or analysis and make a coherent point that relates
+to every part of the paper.
+
+The paper should be formatted according to the IEEE style and should include the following:
+Clear and consice Title
+Abstract
+Introduction: Which must have what, why and how questions answered . e.g: 
+Be spcefic on about the topic of the paper, introduce the background and fine key terms and concepts.
+Why question should aim at providing brief answers to the questions like what important key issues
+does my research aim to define or answer.
+For the how bit, it should aim at letting the reader know what to expect in the research paper.
+
+Review other people's Related Work for inspiration such as recommendations, and other topics 
+that might require further examination
+Identify there after the significant flaws or any gaps in the existing knowledge discovered
+Point out areas for future study
+Finally, tie in and link all your research to the exisiting knowledge
+Methods
+Results
+Discussions
+Conclusion: Should include recommendations and future work but not new arguments or essential information
+www.scribbr.com is an example of a free citation website
+Dont begin like, In conclusion: ..... or any other stock phrases that signal the end of the paper
+References:
+In put the references on the entire reserach paper
+
+This project entails application of research proposal development skills. 
+You are required in a group of three to identify a research problem within 
+your prepared areas of interest in Data Science and develop a full proposal to be examined
+
+1. You are required to critically come up with an appropriate topic for a scholarly research 
+in any area of Computer Science or Data Science of your interest. 
+This topic should clearly depict the type of research study that you intend to undertake; 
+It should be either theoretical, applied or action research. 
+In the introduction section of your write up, highlight the main objectives, research questions/hypotheses, 
+scope of the study and justification of the study.
+
+2. With reference to existing knowledge, provide the a clear statement of problem. 
+Issues around the study area showing the need for the study and its significance to the community. 
+Indicate whether other research groups have already tried to solve the problem you're interested 
+in and how your approach might differ. Use of theoretical or conceptual framework will be helpful in 
+demonstrating your research focus and provide a solid background.
+
+3. You are required to review related work from literature in order to contextualize your study and 
+show how it links with previous work and fits within the existing body of knowledge. The write up, 
+this section - Literature Review, should include introductory part, main body with sub-headings under 
+which the literature is reviewed. Note that the review of the related literature should be guided by 
+the objectives and the research questions or hypotheses and it should be a substantial, selective, balanced, 
+comprehensive and evaluative review of the relevant literature on or around the subject of the current investigation. 
+Your review should identify the gap in the literature that the research study seeks to address.
+
+4. The submission should demonstrate that a scientific approach was adopted and any recommendation or assertion 
+of new knowledge should be a result of a proper methodology that includes but not limited to: research design, 
+well aligned research approach, methods and sources of data, population and sampling techniques, variables and indicators, 
+measurement levels (where necessary), procedure/protocols for data collection.
+
+5. Expected to produce between 25 and 30 pages of research proposal as an output of this project.
+It should be well formatted following official guidelines contained IEEE standard. 

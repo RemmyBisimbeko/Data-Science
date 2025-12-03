@@ -1,0 +1,111 @@
+landslide_factors_iran.csv
+
+columns and sample data:
+ID,LONG,LAT,SUB_Basin,Elevation,AAP(mm),RiverDIST(m),FaultDIST(m),Landuse_Type,Slop(Percent),Slop(Degrees),GEO_UNIT,DES_GEOUNI,Climate_Type,DES_ClimateType
+1,52.326,27.763,Mehran,617,137,1448.705292,40639.5789,poorrange,42.2406693,22.8995228,EOas-ja,"Undivided Asmari and Jahrum Formation , regardless to  the disconformity separates them",A-M-VW,"Warm and humid, with a humid period longer than the dry period"
+2,52.333,27.772,Mehran,944,137,344.2994837,40135.02913,mix(woodland_x),68.2191162,34.3014641,KEpd-gu,Keewatin Epedotic quartz diorite,A-M-VW,"Warm and humid, with a humid period longer than the dry period"
+3,52.326,27.763,Mehran,617,137,1448.705292,40639.5789,poorrange,42.2406693,22.8995228,EOas-ja,"Undivided Asmari and Jahrum Formation , regardless to  the disconformity separates them",A-M-VW,"Warm and humid, with a humid period longer than the dry period"
+4,52.333,27.694,Mehran,55,137,1889.828623,42189.54442,rock,12.1417656,6.9228325,Mlmmi, Low weathering grey marls alternating with bands of more ressitant shelly limestone ( MISHAN FM. ),A-M-VW,"Warm and humid, with a humid period longer than the dry period"
+5,52.324,27.682,Mehran,20,137,874.2016906,43010.084,poorrange,2.2162299,1.2695984,MuPlaj," Brown to grey , calcareous , feature - forming sandstone and low weathering , gypsum - veind , red marl and siltstone ( AGHAJARI FM . )",A-M-VW,"Warm and humid, with a humid period longer than the dry period"
+6,52.313,27.775,Mehran,616,137,404.8089532,38850.08367,poorrange,12.9352999,7.3704548,OMr,Opemiska mafic rocks,A-M-VW,"Warm and humid, with a humid period longer than the dry period"
+7,52.313,27.685,Mehran,31,137,214.0573525,44108.08706,rock,8.1982002,4.6867418,MuPlaj," Brown to grey , calcareous , feature - forming sandstone and low weathering , gypsum - veind , red marl and siltstone ( AGHAJARI FM . )",A-M-VW,"Warm and humid, with a humid period longer than the dry period"
+8,53.167,27.486,Mehran,938,128,942.2903776,41978.69755,poorrange,38.0811234,20.8473949,EOas-ja,"Undivided Asmari and Jahrum Formation , regardless to  the disconformity separates them",A-M-VW,"Warm and humid, with a humid period longer than the dry period"
+9,53.173,27.483,Mehran,997,128,923.985226,42012.63072,poorrange,36.4768181,20.0403614,EOas-ja,"Undivided Asmari and Jahrum Formation , regardless to  the disconformity separates them",A-M-VW,"Warm and humid, with a humid period longer than the dry period"
+10,53.177,27.481,Mehran,982,128,630.3981552,42041.32242,poorrange,38.5856361,21.0994263,OMr,Opemiska mafic rocks,A-M-VW,"Warm and humid, with a humid period longer than the dry period"
+11,53.167,27.489,Mehran,940,128,982.950499,41682.44522,poorrange,39.7474747,21.6765728,EOas-ja,"Undivided Asmari and Jahrum Formation , regardless to  the disconformity separates them",A-M-VW,"Warm and humid, with a humid period longer than the dry period"
+12,53.338,27.466,Mand,516,128,2470.397753,36194.56093,poorrange,1.2748281,0.7303831,Plbk, Low weathering grey marls alternating with bands of more ressitant shelly limestone ( MISHAN FM. ),A-M-VW,"Warm and humid, with a humid period longer than the dry period"
+13,53.678,27.812,Mand,725,138,3456.875061,6292.382384,poorrange,22.1826591,12.507205,Mlmmi, Low weathering grey marls alternating with bands of more ressitant shelly limestone ( MISHAN FM. ),A-M-VW,"Warm and humid, with a humid period longer than the dry period"
+14,53.778,27.925,Mand,756,138,2989.006526,4573.340079,mix(agri_follow),1.6997707,0.9738031,Qft2, Low level piedmont fan and valley teraces deposite,A-M-VW,"Warm and humid, with a humid period longer than the dry period"
+15,53.777,27.933,Mand,754,138,3218.362532,5423.691246,mix(bareland_x),3.0047984,1.7211049,Qft2, Low level piedmont fan and valley teraces deposite,A-M-VW,"Warm and humid, with a humid period longer than the dry period"
+
+
+This dataset includes information and factors affecting landslides in Iran. 
+The dataset contains over 4000 landslide hazards in Iran, 
+each of which has been characterized by a variety of factors that may contribute to 
+landslide occurrence. These factors include natural factors such as slope, climate, tectonic activity, etc., 
+and human factors such as land use, etc. These factors can have a significant impact on the likelihood of a 
+landslide occurring. For example, slope is one of the most important natural factors affecting landslides. 
+Note that landslides are more likely to occur on steep slopes 
+
+
+Use the dataset to generate various insights on landslide occurrences in Iran.
+Generate and publish your results in a python notebook on your Kaggle or
+Github account
+
+1. Show extensive Ability to distinctly identify the different data/variable types and show data
+wrangling using python notebooks
+2. Show Ability to explore the datasets provided using python notebooks
+3. Ability to respond and make comprehensive interpretations that can analytically 
+respond to the pertinent research questions using python notebooks
+4. Show all the code for visualising and drawing 
+5. Ability to generate machine learning models that can make accurate predictions
+6. Ability to compile the results stated from milestone 1 to 4 in a dashboard and 
+powerpoint presentation to be made for a diverse audience
+
+Use all possible ways or options to demostrate the above milestones
+Comment each line of code with what each does
+
+
+
+
+--------------------------
+
+traffic_data.csv
+
+columns and sample data:
+City,Vehicle Type,Weather,Economic Condition,Day Of Week,Hour Of Day,Speed,Is Peak Hour,Random Event Occurred,Energy Consumption,Traffic Density
+SolarisVille,Drone,Snowy,Stable,Sunday,20,29.4268,0,0,14.7134,0.5241
+AquaCity,Flying Car,Solar Flare,Recession,Wednesday,2,118.8,0,0,143.5682,0.3208
+Neuroburg,Autonomous Vehicle,Solar Flare,Recession,Wednesday,16,100.3904,0,0,91.264,0.0415
+Ecoopolis,Drone,Clear,Booming,Thursday,8,76.8,1,0,46.0753,0.1811
+AquaCity,Autonomous Vehicle,Solar Flare,Stable,Saturday,16,45.2176,0,0,40.1934,0.4544
+TechHaven,Autonomous Vehicle,Snowy,Recession,Thursday,20,30.5179,0,0,37.5562,0.0843
+Ecoopolis,Autonomous Vehicle,Rainy,Recession,Monday,21,43.9222,0,0,39.042,0.0293
+Ecoopolis,Autonomous Vehicle,Snowy,Stable,Friday,20,20.4236,0,0,18.1543,0.1393
+MetropolisX,Drone,Snowy,Recession,Saturday,7,69.9735,0,0,41.8502,0.1505
+SolarisVille,Drone,Snowy,Booming,Saturday,15,37.9431,0,0,18.9715,0.2485
+Neuroburg,Drone,Snowy,Stable,Saturday,13,29.5809,1,0,14.1535,0.0626
+MetropolisX,Drone,Clear,Booming,Tuesday,7,40.4778,1,0,18.399,0.5179
+TechHaven,Autonomous Vehicle,Clear,Recession,Sunday,7,87.8801,0,0,79.891,0.1248
+Neuroburg,Autonomous Vehicle,Electromagnetic Storm,Recession,Sunday,10,60.0447,0,0,57.459,0.0342
+Ecoopolis,Drone,Solar Flare,Booming,Monday,8,70.2698,1,0,35.1349,0.2389
+Ecoopolis,Car,Rainy,Booming,Friday,9,66.8856,0,0,66.8856,0.2521
+Neuroburg,Autonomous Vehicle,Snowy,Booming,Monday,21,126.7644,0,0,107.1712,0.0784
+MetropolisX,Flying Car,Clear,Recession,Friday,21,87.0448,0,0,118.6975,0.1352
+
+The above dataset provides a comprehensive look at traffic data in a hypothetical urban setting. It includes over 1.2 million records, each representing a unique snapshot of various factors influencing traffic conditions in six fictional cities.)
+List of Variables:
+City: The name of the city
+Vehicle type: type of vehicle in use
+Weather: Weather conditions at the time of data capture
+Economic Condition: Economic state of the city at time of data capture
+Day of Week: The day of the week at time of data capture
+Hour of Day: The hour of the day at time of data capture
+Speed: Recorded speed of the vehicle
+Is Peak Hour: Indicator of whether data was captured during peak traffic hours (Not peak hour: 0, Peak hour: 1)
+Random Event Occurred: Indicator of whether a random event (like accidents or road closures) occurred (No random event: 0, random event occurred: 1)
+Energy consumption: An estimate of energy consumption based on vehicle type and speed Traffic Density: The density of traffic at the time of data capture
+
+
+
+Use the dataset to generate various insights
+1.Understanding the traffic density on various days of the week in the urban
+environments
+2. Analyzing the impact of various factors like weather, economic conditions,
+and vehicle types on traffic density and energy consumption
+3. Developing and testing traffic density prediction algorithms for smart city
+solutions.
+
+
+1. Show extensive Ability to distinctly identify the different data/variable types and show data
+wrangling using python notebooks
+2. Show Ability to explore the datasets provided using python notebooks
+3. Ability to respond and make comprehensive interpretations that can analytically 
+respond to the pertinent research questions using python notebooks
+4. Show all the code for visualising and drawing 
+5. Ability to generate machine learning models that can make accurate predictions
+6. Ability to compile the results stated from milestone 1 to 4 in a dashboard and 
+powerpoint presentation to be made for a diverse audience
+
+Use all possible ways or options to demostrate the above milestones
+Comment each line of code with what each does
