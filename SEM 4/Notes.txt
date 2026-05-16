@@ -1,0 +1,246 @@
+-Everyone must have a budget
+-create an account on overleaf
+-upload project
+-declararion of Ai eg code trouble shooting
+-add prompts like 4, 5
+
+
+
+------
+-Where's the list of figures, list of tables?
+
+The conceptual framework of this study illustrates the relationships between the key variables
+of the research and the mechanism through which the machine learning intervention translates
+customer behavioral data into personalized recommendations and measurable outcomes.
+-Mention the figure. Rememeber, all figures and tables must be referred to in the main paragraphs to help. guide the reader.
+
+Key Customer Attributes for Service Prediction (Objective 1)
+-delete the objective 1 or objective 2 etc. Just have subtitles that are clearly linked to those objectives.
+
+
+Table 2.1 below summarizes the key studies reviewed in this chapter, organized by
+methodology, application context, and principal finding. This table serves as a direct reference
+point for the model comparisons presented in Chapter Four.
+-Formating
+
+
+
+Before describing the methods used in this study, it is important to situate the research within
+the broader industry landscape of recommendation systems, as this context directly informs
+the modeling choices made. Recommendation engines have become a foundational technology
+across multiple industries. Global platforms such as Amazon, Netflix, and Spotify have
+demonstrated the commercial power of personalized algorithmic recommendations at scale.
+Amazon has publicly attributed approximately 35 percent of its total revenue to its
+recommendation engine, while Netflix reports that its system drives over 80 percent of content
+consumed on the platform (Grand View Research, 2023). Spotify similarly uses collaborative
+filtering and audio-based content modeling to generate personalized playlists and discovery
+features that are now central to user retention (Deldjoo et al., 2024).
+The telecommunications sector has, however, lagged behind these digital-native platforms in
+adopting recommendation engines. As noted by industry analysts, most telecom mobile
+applications remain largely static, presenting uniform product menus to all customers rather
+than personalized interfaces that reflect individual usage patterns (CCS Insight, 2024). This gap
+represents a significant untapped opportunity: McKinsey & Company (2022) found that telecom
+operators who implement analytics-driven customer value management can increase revenues
+
+by up to 10 percent and improve customer satisfaction and engagement by between 20 and 30
+
+percent. A documented case study of an Asia-Pacific telecom company that deployed an AI-
+powered next-best-experience engine — integrating customer usage history, billing data, and
+
+behavioral signals — showed improvements in customer satisfaction of 15 to 20 percent,
+revenue growth of 5 to 8 percent, and a reduction in cost-to-serve of 20 to 30 percent (McKinsey
+& Company, 2024).
+Within Africa and Uganda specifically, recommendation system adoption remains nascent. As
+established in Chapter Two, both Airtel Uganda and MTN Uganda have deployed early-stage
+segmentation-based offerings ('My Pakalast' and 'MyPakaPaka' respectively), but these rely
+primarily on ARPU banding rather than multi-feature behavioral modeling. This study's
+methodology is therefore designed to move beyond that baseline and build a classification
+model whose feature set and accuracy can be benchmarked against global best practice.
+-This is a literature review, not methodology
+
+
+Data Collection
+-Where's the data management aspect:  e.g. storage, retrieving, sharing etc
+
+
+Data Use Agreement (DUA).
+-Where's the screenshot of this? Place it in the appendix
+
+
+The interview guide was organized around three thematic areas corresponding to the
+study's objectives: the current state of customer segmentation and recommendation practices
+at Airtel Uganda; perceived gaps and pain points in existing approaches; and commercial
+priorities and strategic context for a data-driven recommendation system. Interviews were
+conducted in person and via video call, with a mean duration of approximately 45 minutes.
+With participant consent, all interviews were audio-recorded and subsequently transcribed
+verbatim for analysis.
+-Where's the interview questionaire? It should also be mentioned and placed in the appendix
+
+
+familiarization with
+the data, generating initial codes, searching for themes, reviewing themes, defining and naming
+themes, and producing the report. This approach was chosen because it is flexible, rigorous,
+and appropriate for identifying patterns across a relatively small number of expert interviews.
+The themes emerging from the qualitative analysis served two purposes: they provided
+contextual grounding for the interpretation of the quantitative results, and they directly
+informed the strategic recommendations
+-Where was the data stored before analysis? (Github, Colab etc)
+
+The raw transactional dataset underwent a structured preprocessing pipeline prior to model
+training. The first step involved data cleaning — identifying and handling missing values,
+removing duplicate transaction records, and correcting inconsistencies in timestamp formats
+and product category labels. Missing values in behavioral features were imputed using median
+imputation for continuous variables and mode imputation for categorical variables, consistent
+with best practice for large-scale telecom datasets (Alotaibi & Haq, 2024).
+Feature engineering was conducted to create the behavioral variables described in Section
+3.6.2. Derived features — including rolling purchase frequency averages, bundle depletion rate,
+recency score, and ARPU over multiple time windows — were computed from the raw
+transaction logs. Temporal features (hour of purchase, day of week, day of month) were
+extracted from transaction timestamps. Categorical variables, including geographic region and
+bundle type labels, were encoded using Label Encoding to convert them into numerical
+representations suitable for ML algorithms (Mohaimin et al., 2025).
+-This is not. a description. Which IDE did you use, which language, which library, which functions, for which which pre-processing approaches?   Where are the citations?
+
+
+3.9.3 Model Development and Training
+Four supervised classification models were developed and compared to address Research
+Question 2 and test Hypothesis H2. The selection of these models is grounded directly in the
+literature reviewed in Chapter Two, ensuring methodological continuity and enabling
+meaningful comparison of results with prior studies.
+Logistic Regression was included as a baseline model. Despite its relative simplicity, it provides
+a transparent, interpretable benchmark against which more complex models can be evaluated.
+Its inclusion allows the study to determine whether the added computational complexity of
+ensemble methods is justified by a meaningful gain in predictive accuracy (Chang et al., 2024).
+A Decision Tree classifier was included as a second baseline model. Decision trees are inherently
+
+interpretable, producing classification rules that can be visualized and communicated to non-
+technical stakeholders — an important consideration for the strategic recommendations
+
+component of this study (Chang et al., 2024).
+Random Forest, an ensemble method that builds multiple decision trees and aggregates their
+predictions through majority voting, was included as the primary candidate model. It was
+identified in the literature review as one of the best-performing models for telecom customer
+classification tasks, with reported accuracy figures of approximately 91 percent in comparable
+studies (Chang et al., 2024; Alotaibi & Haq, 2024). Random Forest also provides a built-in
+feature importance measure, which directly serves Research Question 1 and Hypothesis H1 by
+quantifying the relative contribution of each behavioral attribute to the model's predictions.
+XGBoost (Extreme Gradient Boosting), a gradient-boosted tree ensemble, was included as the
+second advanced candidate model. XGBoost has consistently demonstrated competitive or
+superior performance to Random Forest in imbalanced, high-dimensional telecom datasets and
+
+is the current industry standard for structured data classification tasks (Sikri et al., 2024;
+Alotaibi & Haq, 2024).
+All models were trained using a 70 percent / 30 percent train-test split, where 70 percent of
+the preprocessed dataset was used for training and 30 percent was held out as an unseen test
+set for final evaluation. Hyperparameter tuning was conducted using cross-validation on the
+training set to optimize model configuration without overfitting to the test data.
+3.9.4 Model Evaluation
+The performance of each candidate model was evaluated against the held-out test set using
+four metrics, selected on the basis of the literature reviewed in Chapter Two (Alotaibi & Haq,
+2024; Shani & Gunawardana, 2011). Accuracy measures the overall proportion of correct
+predictions across all bundle classes and provides a general indicator of model performance.
+Precision measures, for each bundle class, the proportion of predictions for that class that were
+correct — a metric of commercial relevance because it reflects how often a recommendation
+would be genuinely appropriate for the customer. Recall measures the proportion of actual
+purchases in each class that the model successfully identified — relevant for ensuring that
+customers for specific bundle types are not systematically missed. The F1-Score, as the
+harmonic mean of precision and recall, provides a single balanced metric particularly useful
+when class imbalance exists. The Area Under the ROC Curve (AUC-ROC) measures the model's
+ability to discriminate between classes across all classification thresholds, providing a
+threshold-independent performance indicator.
+The model achieving the highest combination of F1-Score and AUC-ROC on the test set will be
+identified as the best-performing model, directly addressing Hypothesis H2. The feature
+importance output of the best-performing model will be used to answer Research Question 1
+and evaluate Hypothesis H1. These quantitative findings will then be combined with the
+qualitative interview themes to develop the strategic recommendations that address Research
+Question 3 and Hypothesis H3.
+3.9.5 Strategic Recommendation Formulation
+The final analytical step translates the model outputs into actionable business strategy. Feature
+importance rankings from the best-performing classification model will identify which customer
+attributes most strongly determine bundle preference — a finding directly relevant to Airtel
+
+Uganda's customer segmentation and targeting practices. These insights will be cross-
+referenced with the qualitative themes from the key informant interviews to produce strategic
+
+recommendations that are both data-grounded and contextually relevant to Airtel Uganda's
+commercial operating environment. The recommendations will be benchmarked against
+documented outcomes from similar deployments in global and African telecom contexts, as
+reviewed in Chapter Two, to assess their potential business impact.
+3.10 Validity and Reliability
+To ensure the internal validity of the quantitative analysis, the preprocessing pipeline was
+applied consistently across the full dataset, and all model training and evaluation was
+conducted on strictly separated training and test sets to prevent data leakage. Cross-validation
+was used during hyperparameter tuning to produce stable, unbiased performance estimates.
+For the qualitative component, credibility was enhanced through member checking — sharing
+key themes and interpretations with two of the key informants to confirm that the analysis
+accurately represented their perspectives (Braun & Clarke, 2006).
+External validity — the generalizability of the study's findings — is supported by the large scale
+of the quantitative dataset, which encompasses a substantial proportion of Airtel Uganda's
+active prepaid subscriber base over a 90-day period. However, it is acknowledged that findings
+are specific to the Ugandan prepaid voice bundle market context and may not transfer directly
+to postpaid or data-dominant markets without adaptation.
+-Write an actual. methodology, not. a literature review
+-Describe clearer
+
+
+a plain-language information sheet
+describing the study's purpose,
+-Where's this?
+
+ANALYSIS
+-Results ONLY!!! How many times must I say this? Analysis is a method, REsults stand-alone!
+
+The
+results are organized to address each hypothesis in sequence: Section 4.2 presents the
+comparative model performance findings that speak to Research Question 2 (RQ2) and
+Hypothesis H2; Section 4.3 presents the feature importance analysis that addresses Research
+Question 1 (RQ1) and Hypothesis H1; and Section 4.4 presents the projected business impact of
+personalized recommendations, informing Research Question 3 (RQ3)
+-How can results for H2 come before results for H1? This is so disorgaised.
+
+
+
+The Rolling 30-Day ARPU metric ranked third at 14.2 percent relative importance. While ARPU
+is the primary basis of existing segmentation approaches at both Airtel Uganda and MTN Uganda,
+the model results reveal that it is a less powerful predictor than real-time behavioral signals
+such as depletion rate and temporal patterns. This finding has direct strategic implications: it
+suggests that over-reliance on ARPU banding as a segmentation criterion leads to systematically
+suboptimal recommendations, and that operators would benefit from complementing ARPU
+with the higher-signal behavioral features identified here. Last Bundle Price, contributing 10.3
+percent, reflects the strong anchoring effect of a customer's most recent spend on their
+
+subsequent purchase decision — a behavioral phenomenon consistent with consumer decision-
+making theory (Kotler & Keller, 2016).
+-Results Section is not a Discussion!!! You just describe the results!
+
+
+-More comments
+-Improve on the draft
+-Address the comments
+-Put my github link(https://github.com/RemmyBisimbeko/Data-Science) and any other github links for data sources and data sets
+-Attach my approvals for data collection in the appendix
+-Objectives of the research should be reflected in the appendix
+-Include the graphs as well 
+
+
+
+
+So, the Supervisor was very very furious about my latest submission
+Here are her hash comments:
+-She said this is the last draft she will be looking at or else I will not graduate
+-The Github links doesnt have a dataset
+-I need to provide a direct link to the data, notebooks and so on
+-Objective 1 - link
+-Make it easy to get the link
+-I need to order my objectives in Chronological order
+-I forgot to add the key statistical tests in Objective one
+-I should not just go to the methedology
+-We did not show the relationship with the features in the objectives
+-Test, - figure out the test
+-She will then look through these changes and will determine whether it is fit for her approval
+-The formating is still offputting for her
+-Check the captions of the tables and figures, they do not match to what is in the document
+-Add back the abstract
+-Correct the abstract, include the keywords
+-The abstract is the synopsis and must be included
+-Reorganise the methodology to make sense and should flow in Chronological order
