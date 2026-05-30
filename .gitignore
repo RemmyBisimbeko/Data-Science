@@ -3,3 +3,16 @@
 *.png
 *.zip
 Project Exam Instructions/Traffic_Data.csv
+
+# Large thesis datasets
+SEM 4/Thesis/Datasets/BUNDLE_CONSUMPTION.xlsx
+SEM 4/Thesis/Datasets/BUNDLE_CONSUMPTION_2.xlsx
+SEM 4/Thesis/Datasets/CUSTOMER_PROFILE.xlsx
+
+# Purchase timing files
+SEM 4/Thesis/Datasets/PURCHASE_TIMING_FEB.xlsx
+SEM 4/Thesis/Datasets/PURCHASE_TIMING_MARCH.xlsx
+SEM 4/Thesis/Datasets/PURCHASE_TIMING_APRIL.xlsx
+
+# Phone number sample
+SEM 4/Thesis/Datasets/PHONE_NUMBER_SAMPLE.csv
