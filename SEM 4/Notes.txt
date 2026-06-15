@@ -717,4 +717,64 @@ here is the output sample: TARGET_VARIABLE.csv
 
 
 ---
+Notes for later 
+-remove the  -
 
+
+
+Good day Remmy,
+
+It's getting to the point where I need to stop reviewing your thesis as you are making the same mistakes over again.
+
+Check the following: Thesis_Draft9_Reviews
+1. Formatting,  page-numbering, grammar
+2. Methodology description (describe  the dataset too, collection methods, times etc, and include a table of variables or at least a screenshot of  the dataset used)
+3.  Results description (Revisit this portion and describe what each table/figure  is reflecting, don't just skim over the details).
+4. Figures, table-style (Amend these to make them neater and correct captioning)
+5. Citation
+6. Cross-referencing.
+
+Once you have addressed the above, convert the document in to the acceptable submission format so that I can email the postgrad coordinator.
+
+Regards,
+
+--10th June 2026
+--Without writing the entire section:
+Let us make adjustments to include, accomodate these comments
+-Add page numbers to document
+-Statistical tests included Spearman Rank Correlation, one-way ANOVA, and Chi-Square tests. -Her comment: state the purpose of. these tests
+-Word count: Approximately 280 words. -Her comment: Word count indication isn't needed.  Remove it.
+-Distribution of Average Revenue Per User (ARPU). Her comment: Figures are only captioned at the bottom, not the top. (All Figures)
+-Table 1 summarizes the key studies reviewed in this chapter, organized by methodology, application context, and principal finding. This table serves as a direct reference point for the model selection and performance comparisons presented in Chapter Four.
+Her comment: Discuss the key highlights in table 1, this is a literature review afterall
+-The quantitative dataset used for model training comprises approximately 150 million voice bundle purchase transactions from approximately 5.4 million unique prepaid subscribers over a 90-day period. 
+Her comment: -This description is sparse. When was it collected, by whom, what method was used? etc.
+-3.7.1 Secondary Data: Historical Transaction Records. Her comment: How old is this data, how much data is available? The reporting here isn't transparent, and will lead to many issues. Atleast include a screenshot of the dataset in the appendix.
+-a copy of which is provided in Appendix I. Her comment: Use a cross-reference so the examiner can find the document in. the appendix. Infact, use cross-references for all referred to figures, tables,  etc for ease.
+-The interview guide, provided in Appendix III, Her comment: cross-reference?
+-The analysis dataset comprised 1,458,900 active prepaid subscribers from the Kampala, Central 1, and Central 2 regions of Uganda, drawn from Airtel Uganda's transactional records over the period February 1 to April 30, 2026.
+Her comment: The methodology doesn't have this information, nor all the variables? Why is it here now?
+-The Spearman Rank Correlation test evaluated the monotonic relationship between each of the 35 numeric features and the target variable (value segment). Table 2 presents the results for the ten features with the strongest absolute correlation coefficients, together with the one non-significant feature.
+Her comment: At what p-value do you determine. statistical significance? This should all be expressed in the description of results, which correlations are weak,strong?. Go back and consult your Data Science classes
+The results show that 34 of 35 features returned statistically significant Spearman correlations with the value segment target variable. The strongest correlations were recorded for IS_SMARTPHONE (r = -0.068), BUNDLE_SPEND_30D (r = -0.067), ACTIVE_DAYS (r = -0.059), and TOTAL_OG_MINUTES (r = -0.054). The negative direction of most correlations indicates that subscribers in higher value segments tend to exhibit lower raw activity counts, consistent with the Ugandan prepaid market structure, where higher-tier subscribers purchase fewer but larger bundles. AGE was the only feature with a positive correlation (r = 0.053), indicating that older subscribers tend to cluster in higher value segments. UPGRADE_RATE was the only non-significant feature (r = 0.0004, p = 0.65), indicating that whether a subscriber upgrades to a more expensive bundle has no monotonic relationship with their value segment.
+-Her comment: See previous comment
+At what p-value do you determine. statistical significance? This should all be expressed in the description of results, which correlations are weak,strong?. Go back and consult your Data Science classes
+The results show that 34 of 35 features returned statistically significant Spearman correlations with the value segment target variable. The strongest correlations were recorded for IS_SMARTPHONE (r = -0.068), BUNDLE_SPEND_30D (r = -0.067), ACTIVE_DAYS (r = -0.059), and TOTAL_OG_MINUTES (r = -0.054). The negative direction of most correlations indicates that subscribers in higher value segments tend to exhibit lower raw activity counts, consistent with the Ugandan prepaid market structure, where higher-tier subscribers purchase fewer but larger bundles. AGE was the only feature with a positive correlation (r = 0.053), indicating that older subscribers tend to cluster in higher value segments. UPGRADE_RATE was the only non-significant feature (r = 0.0004, p = 0.65), indicating that whether a subscriber upgrades to a more expensive bundle has no monotonic relationship with their value segment.
+-All code, datasets, and model files are available at https://github.com/RemmyBisimbeko/Data-Science/tree/main/SEM%204/Thesis.
+Her comment: This doesn't fit under conclusions
+-On the call she empasised me working on the Results and Methodology
+
+
+In Her call she said, 
+Be quick on them 
+Results and methodoilgy
+Next week - Contact the coordinator
+
+
+1. screenshots in Appendix IV 
+2. Table 2: Summary of Dataset Components Used in the Study - Inserted - Renamed all exsiting Tables and references
+
+
+
+-FIX table of contents
+-Remove sub heading that are not needed esp in appendix
