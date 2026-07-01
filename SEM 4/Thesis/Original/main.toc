@@ -1,0 +1,40 @@
+\contentsline {chapter}{Declaration}{i}{chapter*.1}%
+\contentsline {chapter}{Declaration}{ii}{chapter*.2}%
+\contentsline {chapter}{Approval}{iii}{chapter*.3}%
+\contentsline {chapter}{Abstract}{iv}{chapter*.4}%
+\contentsline {chapter}{Dedication}{iv}{chapter*.4}%
+\contentsline {chapter}{Acknowledgments}{vii}{chapter*.6}%
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Background}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Problem Statement}{1}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Research Objectives}{1}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}Specific Objective 1}{1}{subsection.1.3.1}%
+\contentsline {subsection}{\numberline {1.3.2}Specific Objective 2}{1}{subsection.1.3.2}%
+\contentsline {subsection}{\numberline {1.3.3}Specific Objective 3}{1}{subsection.1.3.3}%
+\contentsline {section}{\numberline {1.4}Justification}{1}{section.1.4}%
+\contentsline {chapter}{\numberline {2}Literature Review}{2}{chapter.2}%
+\contentsline {chapter}{\numberline {3}Methodology}{3}{chapter.3}%
+\contentsline {chapter}{\numberline {4}Results}{4}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Discussion}{5}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Conclusion and Recommendation}{6}{chapter.6}%
+\contentsline {chapter}{REFERENCES}{7}{chapter*.7}%
+\contentsline {chapter}{APPENDICES}{7}{chapter*.7}%
+\contentsline {chapter}{\numberline {A}Budget }{8}{appendix.1.A}%
+\contentsline {chapter}{\numberline {B}Research Project timelines }{9}{appendix.1.B}%
+\contentsline {chapter}{\numberline {C}Declaration of AI use }{10}{appendix.1.C}%
+\contentsline {chapter}{\numberline {D}List of 10 Major Journal Publications reviewed }{11}{appendix.1.D}%
+\contentsline {chapter}{\numberline {E}Research alignment with national (NDPIV) and Global (SDGs) agenda }{12}{appendix.1.E}%
+\contentsline {section}{\numberline {E.1}Alignment with the National Development Plan IV (NDPIV)}{12}{section.1.E.1}%
+\contentsline {subsection}{\numberline {E.1.1}Alignment with NDPIV}{12}{subsection.1.E.1.1}%
+\contentsline {subsection}{\numberline {E.1.2}Alignment with the Uganda Vision 2040}{12}{subsection.1.E.1.2}%
+\contentsline {subsection}{\numberline {E.1.3} ... other agendas}{12}{subsection.1.E.1.3}%
+\contentsline {section}{\numberline {E.2}Alignment with global agenda}{12}{section.1.E.2}%
+\contentsline {subsection}{\numberline {E.2.1}Alignment with Sustainable Development Goals (SDG) }{12}{subsection.1.E.2.1}%
+\contentsline {subsection}{\numberline {E.2.2}Alignment with ..... }{12}{subsection.1.E.2.2}%
+\contentsline {subsection}{\numberline {E.2.3}Alignment with ..... }{12}{subsection.1.E.2.3}%
+\contentsline {chapter}{\numberline {F}Algorithms, Code of interest}{13}{appendix.1.F}%
+\contentsline {chapter}{\numberline {G}Other useful figures}{14}{appendix.1.G}%
+\contentsline {chapter}{\numberline {H}Research poster layout }{15}{appendix.1.H}%
+\contentsline {chapter}{\numberline {I}Research Ethics Committee (REC) Approval}{16}{appendix.1.I}%
+\contentsline {chapter}{\numberline {J}Data collection tools }{17}{appendix.1.J}%
+\contentsline {chapter}{\numberline {K}Student - supervisor meeting/supervision plan }{18}{appendix.1.K}%

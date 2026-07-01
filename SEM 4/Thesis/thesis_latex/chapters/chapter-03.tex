@@ -1,0 +1,216 @@
+
+\section{Introduction}
+
+This chapter outlines the research design, data collection approach, analytical procedures, and ethical considerations that guided this study. The overarching aim is to describe how the three specific objectives of the study were operationalised: identifying key customer behavioural attributes that drive voice bundle purchase decisions; testing and selecting appropriate machine learning models for prediction and classification; and formulating strategic data-driven recommendations for Airtel Uganda. Each methodological decision made in this chapter is directly tied to one or more of these objectives, and the research questions and hypotheses introduced in this chapter will serve as the evaluative framework against which results are discussed in Chapters Four and Five.
+
+
+\section{Research Questions and Hypotheses}
+
+To structure the analytical work of this study and provide a clear basis for comparing findings against prior literature, three research questions and their corresponding hypotheses were formulated. These questions operationalise the specific objectives of the study and will be revisited in the results and discussion chapters to assess the degree to which each is answered by the empirical findings.
+
+Research Question 1 (RQ1): Which customer behavioural attributes are the most significant predictors of voice bundle purchase decisions among Airtel Uganda subscribers? This question corresponds directly to Specific Objective 1 and is grounded in the literature showing that derived behavioural features, such as purchase frequency, bundle depletion rate, temporal purchase patterns, and Average Revenue Per User (ARPU) metrics, consistently outperform demographic-only features in predicting customer service choices (Mohaimin et al., 2025; Sikri et al., 2024).
+
+H1	extsubscript{0}: No customer behavioural attributes are significantly associated with the type of voice bundle purchased.
+
+H1	extsubscript{1}: At least one customer behavioural attribute (e.g., purchase frequency, bundle depletion rate, temporal usage pattern, ARPU) is a significant predictor of the type of voice bundle purchased.
+
+Research Question 2 (RQ2): Which machine learning classification model most accurately predicts the appropriate voice bundle for a given Airtel Uganda customer based on their behavioural profile? This question corresponds to Specific Objective 2 and is informed by global literature comparing the performance of Random Forest, XGBoost, and Logistic Regression models on telecom customer classification tasks, with benchmark accuracy figures of approximately 91\% and F1-scores above 80\% reported in comparable studies (Chang et al., 2024; Alotaibi \& Haq, 2024).
+
+H2	extsubscript{0}: No significant difference exists in the predictive accuracy of the candidate machine learning models when applied to Airtel Uganda voice bundle classification.
+
+H2	extsubscript{1}: At least one machine learning model significantly outperforms the others in predicting the correct voice bundle class for Airtel Uganda customers, as measured by Accuracy, F1-Score, and AUC-ROC.
+
+Research Question 3 (RQ3): How can the outputs of a data-driven machine learning recommendation model inform strategic business decisions for Airtel Uganda to improve customer satisfaction and grow revenue? This question corresponds to Specific Objective 3 and is supported by evidence showing that personalised telecom recommendations can increase revenues by up to 10 percent and raise customer satisfaction and engagement by between 20 and 30 percent (McKinsey \& Company, 2022).
+
+H3	extsubscript{0}: ML-based personalised bundle recommendations yield no strategically significant insights for improving Airtel Uganda's customer engagement or revenue performance.
+
+H3	extsubscript{1}: ML-based personalised bundle recommendations generate actionable strategic insights that can demonstrably contribute to improvements in customer satisfaction and revenue optimisation for Airtel Uganda.
+
+
+\section{Research Philosophy and Design}
+
+The study is grounded in a post-positivist philosophical position. Post-positivism acknowledges that while an objective reality exists --- in this case, actual customer purchasing behaviour --- our understanding of it is always partial and shaped by the tools and frameworks we use to observe it (Creswell \& Creswell, 2018). This is appropriate for a study that uses large-scale quantitative modelling as its primary tool, but supplements it with qualitative insights to contextualise and validate the quantitative findings.
+
+The methodological design is a mixed-methods approach, combining quantitative analysis of historical transactional data with qualitative data gathered through semi-structured interviews. This integration is justified by the nature of the research problem: while the machine learning models are built and evaluated quantitatively, understanding the business context, existing recommendation practices, and strategic pain points at Airtel Uganda requires qualitative engagement with practitioners. Saunders et al. (2019) describe this as a pragmatic research approach, where the research question determines the method rather than adherence to a single methodological tradition.
+
+The research strategy follows a case study design, with Airtel Uganda Limited as the unit of analysis. This is appropriate because the study seeks to develop and evaluate a recommendation model within a specific, real-world organisational and market context. The temporal dimension is cross-sectional, using a 90-day window of historical customer transaction data as the basis for model training and evaluation.
+
+
+\section{Study Population}
+
+The target population of this study comprises all active prepaid subscribers of Airtel Uganda Limited who purchased at least one voice bundle within a defined 90-day observation period. The focus on prepaid subscribers is deliberate: as established in the literature review, the Ugandan telecommunications market is characterised by the overwhelming dominance of prepaid services, where purchase decisions are made frequently, independently, and at low denominations, a behavioural pattern distinct from postpaid contractual environments (Chulu, 2017; Nafiu et al., 2012). Including postpaid subscribers would introduce a structurally different purchasing process into the dataset and potentially distort the recommendation logic.
+
+Airtel Uganda's published financial results indicate a subscriber base of approximately 10.5 million active customers as of December 2024 (Uganda Securities Exchange, 2025). Of this base, voice bundle purchasers constitute a large and commercially significant segment, as voice bundles remain one of Airtel Uganda's primary revenue-generating products. The quantitative component of this study utilised transactional data encompassing approximately 150 million transactions from approximately 5.4 million unique prepaid users over the 90-day observation window. This figure constitutes the accessible population --- those subscribers for whom complete, anonymised transaction records were available within the data governance framework established with Airtel Uganda.
+
+The qualitative component of the study targeted a purposively selected population of professionals within Airtel Uganda's commercial and data analytics functions. These individuals were selected on the basis of their direct involvement in customer segmentation, product design, and recommendation strategy, making them uniquely positioned to provide contextual insights that quantitative data alone cannot capture. Given the specialised nature of this expertise, the total eligible population for qualitative participation was small, estimated at fewer than 20 individuals across the relevant departments.
+
+
+\section{Variables of the Study}
+
+
+\subsection{Dependent Variable}
+
+The dependent variable of this study is the voice bundle type purchased by a customer, operationalised as a multi-class categorical variable. Each category represents a distinct voice bundle product offered by Airtel Uganda, such as the Pakalast and Tooti bundle families, which vary by price, duration, call minutes, and validity period. This variable serves as the target label in the supervised classification models: the machine learning algorithms are trained to predict which bundle class a customer is most likely to purchase on a given occasion, based on their behavioural profile. The choice of a categorical dependent variable frames this as a multiclass classification problem, which is why classification algorithms, rather than regression models, form the core analytical tool of this study.
+
+
+\subsection{Independent Variables}
+
+The independent variables are the customer behavioural and contextual attributes that the machine learning models use as input features to predict the dependent variable. These variables were selected on the basis of the literature reviewed in Chapter Two, which identified behavioural usage features as the strongest predictors of customer service choice in prepaid telecom markets (Mohaimin et al., 2025; Sikri et al., 2024; Chang et al., 2024). The key independent variables operationalised in this study are as follows.
+
+Purchase frequency captures how often a customer purchases a voice bundle within a rolling time window; daily, weekly, and monthly averages are computed. This variable reflects customer engagement intensity and is one of the most predictive behavioural signals in prepaid telecom classification tasks (Zhao et al., 2023). Bundle depletion rate measures the speed at which a customer consumes their purchased bundle, expressed as a proportion of total bundle value used within the bundle's validity period. A high depletion rate signals that the customer consistently uses more than their current bundle provides, suggesting a potential match to a higher-tier product.
+
+Temporal purchase features capture the time-of-day, day-of-week, and day-of-month patterns associated with a customer's purchases. As documented by Chen et al. (2023) and reinforced in the literature review, temporal patterns contain meaningful behavioural information in prepaid markets, where purchasing decisions follow consistent daily and weekly rhythms. Average Revenue Per User (ARPU), calculated over rolling 7-day, 30-day, and 90-day windows, captures the customer's spending level and trajectory, a key metric established in both global and regional telecom literature as a strong segmentation and prediction feature (Mahmoud \& Asyhari, 2024; Zhao et al., 2023).
+
+Recency score quantifies the number of days elapsed since the customer's most recent bundle purchase, forming the R component of an adapted RFM (Recency, Frequency, Monetary) framework commonly applied in customer behaviour modelling. Customer tenure records the duration of the subscriber's relationship with Airtel Uganda in days, which has been identified as a predictor of behavioural stability and bundle preference consistency (Mohaimin et al., 2025). Finally, geographic region --- derived from the customer's registered home location or most frequent network site --- is included as a categorical feature following literature evidence that geographic context influences bundle preference in African markets (Mahmoud \& Asyhari, 2024).
+
+
+\section{Sample Size and Sampling Strategy}
+
+
+\subsection{Quantitative Sample: Statistical Justification}
+
+For the purposes of establishing the academic generalizability of the study's findings to the broader Airtel Uganda prepaid subscriber population, a minimum statistical sample size was calculated using the standard formula for estimating a proportion in a large or unknown population. This formula, widely applied in social and business research when the total population is large enough to be treated as infinite, is derived from the normal approximation to the binomial distribution and is specified in Cochran (1977), as cited in Saunders et al. (2019):
+
+In this formula, n represents the minimum required sample size; Z is the Z-score corresponding to the desired confidence level, which is 1.96 for a 95 percent confidence level --- the standard threshold in academic and business research; p is the estimated proportion of the population exhibiting the characteristic of interest, set conservatively at 0.5 to maximize the required sample size and thereby produce the most defensible minimum estimate; and e is the acceptable margin of error, set at 0.05 (5 percent), which is the conventional standard in business research (Saunders et al., 2019; Creswell \& Creswell, 2018). Applying these values:
+
+This yields a minimum required sample of 385 customers, which is statistically sufficient to draw generalizable conclusions about the Airtel Uganda prepaid subscriber population at a 95 per cent confidence level with a 5 percent margin of error. The study's quantitative dataset substantially exceeds this minimum, which strengthens the statistical validity of the findings.
+
+
+\subsection{Quantitative Sample: Machine Learning Dataset}
+
+While the statistical minimum sample of 385 establishes generalizability, the machine learning models require a substantially larger training dataset to learn the complex, high-dimensional behavioural patterns that distinguish between bundle classes. This distinction --- between the sample size needed for statistical inference and the data volume needed for ML model performance --- is well-established in the literature (Hastie et al., 2009). The quantitative dataset used for model training comprises approximately 150 million voice bundle purchase transactions from approximately 5.4 million unique prepaid subscribers over a 90-day period. This volume of data is consistent with the scale required to train robust multiclass classification models and to capture rare but commercially significant patterns, such as high-frequency low-value purchases or irregular depletion patterns.
+
+A stratified random sampling approach was applied when drawing the analytical sample from the full dataset, ensuring proportional representation of subscribers across bundle type, geographic region, spending tier, and purchase frequency segment. This approach guards against systematic bias in the training data and improves the model's ability to generalise to underrepresented customer groups.
+
+
+\subsection{Qualitative Sample: Key Informant Interviews}
+
+For the qualitative component of the study, purposive sampling was employed to identify and recruit key informants with direct knowledge of Airtel Uganda's recommendation strategies, customer segmentation practices, and commercial objectives. Purposive sampling is appropriate here because the research requires participants with specific, expert knowledge rather than statistical representativeness (Saunders et al., 2019; Turner III, 2010). A total of eight key informants were recruited from Airtel Uganda's commercial, data analytics, and product management teams. This number was determined by the principle of data saturation --- the point at which additional interviews cease to yield substantively new insights (Guest et al., 2006). Participants were informed of the study's purpose, their right to withdraw at any time, and the confidentiality of their responses prior to participation.
+
+
+\section{Data Collection}
+
+
+\subsection{Secondary Data: Historical Transaction Records}
+
+The primary quantitative dataset was extracted from Airtel Uganda Limited's production database by the researcher, who holds authorised internal access as an employee of the organisation. The extraction was conducted between February and May 2026 using structured Presto/Hive SQL queries executed against four internal data sources: the OCS transaction table (ocsmonmaininternal), the subscriber dimension table (subscriberdimension), the daily voice usage table (br\_daily\_voice\_usage), and the geographic master table (geo\_master). The full extraction scripts are available in the study's GitHub repository (see Appendix VI).
+
+The dataset covers the period February 1 to April 30, 2026 --- a 90-day observation window --- and comprises records for 1,458,900 unique active prepaid subscribers from the Kampala, Central 1, and Central 2 regions of Uganda, representing the central and most commercially active geographic cluster of Airtel Uganda's network. A cluster-based sampling strategy was applied: rather than random sampling, all subscribers whose mobile subscriber identity number (MSISDN) prefix falls within specific network clusters (prefixes 25673 and 25620) were selected. This approach preserves the complete 90-day transaction history for every selected subscriber --- which is essential for computing time-window behavioral features such as PURCHASES\_LAST\_30D and BUNDLE\_SPEND\_30D --- while reducing the extraction volume to a computationally manageable size from the raw tables, which contain in excess of 85 million transaction records.
+
+Five separate data exports were produced and subsequently joined in Python to form the final analytical dataset: (1) TARGET\_VARIABLE.csv --- the product catalogue of 1,905 bundle products, filtered to 738 voice and combo bundles; (2) PURCHASE\_TIMING\_FEB.xlsx, PURCHASE\_TIMING\_MARCH.xlsx, and PURCHASE\_TIMING\_APRIL.xlsx --- monthly purchase transaction records containing purchase date, hour, bundle identifier, transaction channel, payment channel, and bundle revenue per transaction; (3) BUNDLE\_CONSUMPTION.xlsx and BUNDLE\_CONSUMPTION\_2.xlsx --- daily voice consumption records containing outgoing and incoming minutes by call type (on-net, off-net, international) per subscriber per day; (4) CUSTOMER\_PROFILE.xlsx --- subscriber demographic and segmentation data including device type, handset generation, region, gender, age, tenure, value segment, total revenue, and call counts; and (5) LOCATION\_DETAILS.xlsx --- network site master data containing site codes, geographic coordinates, district, and cluster classifications. Sample screenshots of each dataset are provided in Appendix VII. All personally identifiable information --- including mobile subscriber numbers --- was anonymised prior to extraction, in compliance with Airtel Uganda's data governance policies and Uganda's Data Protection and Privacy Act (2019).
+
+Table 2 presents a summary of the dataset components used in this study.
+
+\begin{table}[H]
+\centering
+\caption{Summary of Dataset Components Used in the Study}
+\label{tab:datasets}
+\small
+\renewcommand{\arraystretch}{1.3}
+\setlength{\tabcolsep}{4pt}
+\begin{tabularx}{\textwidth}{
+  >{\raggedright\arraybackslash}p{5.0cm}
+  >{\raggedright\arraybackslash}p{3.8cm}
+  >{\raggedright\arraybackslash}p{1.6cm}
+  >{\raggedright\arraybackslash}X
+}
+\toprule
+\textbf{Dataset} & \textbf{Source Table(s)} & \textbf{Records} & \textbf{Key Variables} \\
+\midrule
+TARGET\_VARIABLE.csv &
+leap\_product\_\allowbreak catalog\_\allowbreak master &
+1,905 (738 voice) &
+BUNDLE\_ID, BUNDLE\_TYPE, BUNDLE\_CATEGORY, PRICE, VALIDITY\_DAYS \\
+\addlinespace[4pt]
+PURCHASE\_TIMING (Feb--Apr) &
+ocsmonmaininternal, ocsloanmaininternal &
+$\sim$59M rows &
+PURCHASE\_DATE, PURCHASE\_HOUR, BUNDLE\_ID, TRANSACTION\_CHANNEL, BUNDLE\_REVENUE \\
+\addlinespace[4pt]
+BUNDLE\_CONSUMPTION &
+br\_daily\_voice\_usage &
+$\sim$500K rows &
+EVENTDATE, OG/IC MINUTES by type (on-net, off-net, international) \\
+\addlinespace[4pt]
+CUSTOMER\_PROFILE &
+subscriberdimension, crystal, subscriber\_lifecycle &
+1,514,566 rows &
+PHONE\_NUMBER, DEVICE\_TYPE, HANDSET\_TYPE, AGE, TENURE\_DAYS, VALUESEGMENT, TOTAL\_REVENUE, CALLS \\
+\addlinespace[4pt]
+LOCATION\_DETAILS &
+geo\_master &
+3,697 sites &
+SITE\_CODE, TOWN\_NAME, REGION, LATITUDE, LONGITUDE, CLUSTER \\
+\bottomrule
+\end{tabularx}
+\begin{flushleft}
+\small\textit{Note.} All datasets were extracted from Airtel Uganda's production database under a formal Data Use Agreement. Raw subscriber data is not publicly available. Anonymised sample screenshots are provided in Appendix \ref{App:dataset-screenshots}.
+\end{flushleft}
+\end{table}
+
+\subsection{Data Management: Storage, Retrieval, and Version Control}
+
+Upon receipt, the anonymised dataset was stored securely in Google Drive, accessible only to the researcher, with two-factor authentication enabled on the associated Google account. Raw data files were retained in their original CSV format and never modified directly --- all preprocessing and transformation operations were performed programmatically on copies loaded into the analytical environment, preserving the integrity of the original files. The full analytical codebase --- including data preprocessing scripts, feature engineering pipelines, model training notebooks, and evaluation outputs --- was version-controlled and maintained in a dedicated GitHub repository accessible at https://github.com/RemmyBisimbeko/Data-Science/tree/main/SEM\%204/Thesis. This repository serves as the primary audit trail for all analytical decisions made in the study and enables reproducibility of the results. All model outputs, evaluation metrics, and intermediate data artefacts were stored within the Google Colab environment during active analysis sessions and saved to the linked Google Drive upon completion of each analytical stage. No raw customer data was shared with third parties beyond the scope defined in the DUA, and no data was retained beyond the period specified in the agreement.
+
+
+\subsection{Primary Data: Semi-Structured Interviews}
+
+Primary qualitative data was collected through semi-structured interviews with eight key informants from Airtel Uganda. Semi-structured interviews were chosen because they allow for sufficient flexibility to explore unexpected themes while maintaining a consistent question framework across participants, enabling thematic comparison (Braun \& Clarke, 2006; Turner III, 2010). Prior to each interview, participants were provided with a plain-language participant information sheet (see Appendix II) describing the study's purpose, the voluntary nature of their participation, their right to withdraw at any point without consequence, and the confidentiality measures in place. Written informed consent was obtained from all participants before the interview commenced. The interview guide, provided in Appendix III, was organised around three thematic areas corresponding to the study's objectives: the current state of customer segmentation and recommendation practices at Airtel Uganda; perceived gaps and pain points in existing approaches; and commercial priorities and strategic context for a data-driven recommendation system. Interviews were conducted in person and via video call, with a mean duration of approximately 45 minutes. With participant consent, all interviews were audio-recorded and subsequently transcribed verbatim for analysis.
+
+
+\section{Data Analysis Procedures}
+
+
+\subsection{Qualitative Analysis: Thematic Analysis}
+
+Interview audio recordings were stored on a password-protected device and uploaded to a private, encrypted Google Drive folder immediately following each session. Transcripts were produced using a combination of automated transcription and manual review to ensure accuracy, and stored in the same secure folder alongside the original recordings. Qualitative data from the key informant interviews were analysed using thematic analysis, following the six-phase framework described by Braun and Clarke (2006): familiarisation with the data, generating initial codes, searching for themes, reviewing themes, defining and naming themes, and producing the report. This approach was chosen because it is flexible, rigorous, and appropriate for identifying patterns across a relatively small number of expert interviews. The themes emerging from the qualitative analysis served two purposes: they provided contextual grounding for the interpretation of the quantitative results, and they directly informed the strategic recommendations developed in response to Research Question 3 and Hypothesis H3.
+
+
+\subsection{Data Preprocessing and Feature Engineering}
+
+All quantitative data preprocessing and analysis were conducted using Python 3.10 within a Google Colab environment, which provided the necessary computational resources for processing the large-scale dataset without local hardware constraints. The full preprocessing pipeline was implemented in Jupyter Notebooks and version-controlled in the project GitHub repository (https://github.com/RemmyBisimbeko/Data-Science/tree/main/SEM\%204/Thesis). The principal Python libraries employed were: pandas (version 1.5) for data ingestion, manipulation, and cleaning; NumPy for numerical operations and array handling; scikit-learn (version 1.2) for preprocessing transformations, model training, and evaluation; imbalanced-learn for SMOTE oversampling; and XGBoost (version 1.7) for the Gradient Boosting classifier implementation.
+
+Prior to model training, three statistical tests were applied to the merged dataset to evaluate the relationships between candidate features and the target variable (value segment), and to provide empirical justification for feature selection. Spearman Rank Correlation was selected to measure the strength and direction of monotonic relationships between numeric features and the ordinal target variable --- it was chosen over Pearson correlation because it does not assume a normal distribution of variables, which cannot be guaranteed for usage-based behavioral metrics in a prepaid subscriber population (Field, 2018). One-Way Analysis of Variance (ANOVA) was applied to determine whether the mean value of each numeric feature differs significantly across the eight value segment groups --- a significant F-statistic indicates that a feature discriminates between segment classes and therefore carries predictive value. Chi-Square test of independence was applied to categorical features to determine whether their distribution is independent of the value segment --- a significant Chi-Square statistic confirms an association between the categorical attribute and the target. Statistical significance was set at $\alpha$ = 0.05 for all three tests. Correlation strength was interpreted using Cohen's (1988) classification: |r| < 0.10 negligible, 0.10--0.29 weak, 0.30--0.49 moderate, $\geq$ 0.50 strong.
+
+The preprocessing pipeline proceeded in four stages. In the first stage, data cleaning was performed using pandas. The DataFrame.isnull().sum() function was used to identify missing values across all columns; continuous features with missing values were imputed using SimpleImputer(strategy='median') from scikit-learn, while categorical features were imputed using SimpleImputer(strategy='most\_frequent'). Duplicate transaction records were identified and removed using DataFrame.drop\_duplicates(), and timestamp fields were standardised to a uniform UTC datetime format using pandas.to\_datetime() (Alotaibi \& Haq, 2024).
+
+In the second stage, feature engineering was conducted to create the behavioural variables described in Section 3.5.2. Rolling purchase frequency averages over 7-day, 30-day, and 90-day windows were computed using DataFrame.rolling() with groupby() applied per subscriber ID. The bundle depletion rate was calculated as the ratio of minutes consumed to total bundle minutes, divided by the number of days since purchase. The recency score was derived as the number of days elapsed since the subscriber's last transaction using datetime differencing. ARPU over multiple time windows was computed by aggregating transaction amounts per subscriber using groupby().sum() divided by the observation window length. Temporal features --- hour of purchase, day of week, and day of month --- were extracted from transaction timestamps using the pandas DatetimeIndex accessor attributes .hour, .dayofweek, and .day respectively (Mohaimin et al., 2025).
+
+In the third stage, categorical variables --- including geographic region and bundle type labels --- were encoded into numerical representations using LabelEncoder() from scikit-learn's preprocessing module. Bundle type, as the target variable, was encoded into integer class labels and stored as the dependent variable vector y, while all feature columns were assembled into the feature matrix X. In the fourth stage, class imbalance in the target variable was addressed using SMOTE() from the imbalanced-learn library, applied exclusively to the training set after the train-test split to prevent data leakage (Sikri et al., 2024; Zdziebko et al., 2024).
+
+
+\subsection{Model Development and Training}
+
+Following preprocessing, the feature matrix X and target vector y were split into training and test sets using train\_test\_split() from scikit-learn, with a 70/30 ratio and a fixed random\_state of 42 to ensure reproducibility. Stratified splitting (stratify=y) was applied to maintain the class distribution of bundle types across both sets. Four models were trained and compared to address Research Question 2 and test Hypothesis H2.
+
+Logistic Regression was implemented using LogisticRegression(max\_iter=1000, multi\_class='multinomial', solver='lbfgs') from scikit-learn. It was included as a linear baseline to establish a minimum performance benchmark and to assess whether the non-linear complexity of ensemble methods is justified (Chang et al., 2024). A Decision Tree was implemented using DecisionTreeClassifier(criterion='gini', max\_depth=10) and included as a second interpretable baseline. Decision trees produce human-readable classification rules that can be visualised using scikit-learn's export\_graphviz() function, making them useful for communicating model logic to non-technical stakeholders.
+
+Random Forest was implemented using RandomForestClassifier(n\_estimators=100, max\_depth=None, random\_state=42) from scikit-learn. It was selected as the primary candidate model on the basis of its strong documented performance in telecom classification tasks, achieving approximately 91 percent accuracy in comparable studies (Chang et al., 2024; Alotaibi \& Haq, 2024). Random Forest's built-in feature\_importances\_ attribute was used to extract the relative contribution of each behavioural feature to the model's predictions, directly addressing Research Question 1 and Hypothesis H1. XGBoost was implemented using XGBClassifier(n\_estimators=200, max\_depth=6, learning\_rate=0.1, use\_label\_encoder=False, eval\_metric='mlogloss', random\_state=42) from the XGBoost library. XGBoost has consistently demonstrated superior performance on imbalanced, high-dimensional telecom datasets (Sikri et al., 2024; Alotaibi \& Haq, 2024).
+
+Hyperparameter tuning for both ensemble models was conducted using GridSearchCV() from scikit-learn, with 5-fold cross-validation (cv=5) applied to the training set only. The parameter grids searched included n\_estimators, max\_depth, and min\_samples\_split for Random Forest, and n\_estimators, max\_depth, and learning\_rate for XGBoost. The best-performing hyperparameter configuration for each model was selected on the basis of the weighted F1-Score to account for class imbalance.
+
+
+\subsection{Model Evaluation}
+
+The performance of each candidate model was evaluated against the held-out test set using four metrics, selected on the basis of the literature reviewed in Chapter Two (Alotaibi \& Haq, 2024; Shani \& Gunawardana, 2011). Accuracy measures the overall proportion of correct predictions across all bundle classes and provides a general indicator of model performance. Precision measures, for each bundle class, the proportion of predictions for that class that were correct --- a metric of commercial relevance because it reflects how often a recommendation would be genuinely appropriate for the customer. Recall measures the proportion of actual purchases in each class that the model successfully identified --- relevant for ensuring that customers for specific bundle types are not systematically missed. The F1-Score, as the harmonic mean of precision and recall, provides a single balanced metric particularly useful when class imbalance exists. The Area Under the ROC Curve (AUC-ROC) measures the model's ability to discriminate between classes across all classification thresholds, providing a threshold-independent performance indicator.
+
+The model achieving the highest combination of F1-Score and AUC-ROC on the test set will be identified as the best-performing model, directly addressing Hypothesis H2. The feature importance output of the best-performing model will be used to answer Research Question 1 and evaluate Hypothesis H1. These quantitative findings will then be combined with the qualitative interview themes to develop the strategic recommendations that address Research Question 3 and Hypothesis H3.
+
+
+\subsection{Strategic Recommendation Formulation}
+
+The final analytical step translates the model outputs into actionable business strategy. Feature importance rankings from the best-performing classification model will identify which customer attributes most strongly determine bundle preference --- a finding directly relevant to Airtel Uganda's customer segmentation and targeting practices. These insights will be cross-referenced with the qualitative themes from the key informant interviews to produce strategic recommendations that are both data-grounded and contextually relevant to Airtel Uganda's commercial operating environment. The recommendations will be benchmarked against documented outcomes from similar deployments in global and African telecom contexts, as reviewed in Chapter Two, to assess their potential business impact.
+
+
+\section{Validity and Reliability}
+
+To ensure the internal validity of the quantitative analysis, the preprocessing pipeline was applied consistently across the full dataset, and all model training and evaluation were conducted on strictly separated training and test sets to prevent data leakage. Cross-validation was used during hyperparameter tuning to produce stable, unbiased performance estimates. For the qualitative component, credibility was enhanced through member checking --- sharing key themes and interpretations with two of the key informants to confirm that the analysis accurately represented their perspectives (Braun \& Clarke, 2006).
+
+External validity --- the generalizability of the study's findings --- is supported by the large scale of the quantitative dataset, which encompasses a substantial proportion of Airtel Uganda's active prepaid subscriber base over a 90-day period. However, it is acknowledged that findings are specific to the Ugandan prepaid voice bundle market context and may not transfer directly to postpaid or data-dominant markets without adaptation.
+
+
+\section{Ethical Considerations}
+
+The study adhered to the ethical principles and protocols of Uganda Christian University's research ethics framework. Formal ethical approval was sought and obtained from the University's research and ethics committee prior to any data collection activity; the approval letter is provided in Appendix IV. A formal Data Use Agreement (DUA) was established with Airtel Uganda prior to accessing any customer transaction data, specifying the permitted scope of data use, the data retention period, and the security measures in place; a copy of the DUA is provided in Appendix I. All customer data was anonymised before transfer --- with mobile subscriber numbers replaced by unique non-identifiable User IDs --- ensuring compliance with Uganda's Data Protection and Privacy Act (2019) and Airtel Uganda's internal data governance policies.
+
+For the qualitative component, all key informant participants provided written informed consent prior to participation, having been provided with the plain-language participant information sheet described in Section 3.7.3 and provided in full in Appendix II. No participant is identified by name in any part of this report; participants are referred to by role designation only. Interview recordings and transcripts were stored on password-protected devices and in the secure Google Drive folder described in Section 3.7.2, accessible only to the researcher.

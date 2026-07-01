@@ -1,0 +1,272 @@
+
+\section{Introduction}
+
+This chapter reviews the existing literature relevant to the three specific objectives of this study: (1) identifying key customer attributes and patterns relevant to voice bundle recommendations; (2) testing and selecting suitable machine learning models for prediction, classification, and data preprocessing; and (3) developing strategic machine learning-based business recommendations for Airtel Uganda. The review is organised thematically and progresses from a global perspective to a regional African context and finally to the specific Ugandan telecom environment. Sources include peer-reviewed journal articles, conference papers, and industry reports published primarily between 2020 and 2025, with foundational theoretical sources, where necessary.
+
+
+\section{Theoretical Framework}
+
+
+\subsection{Consumer Behaviour Theory and Telecom Service Adoption}
+
+Understanding why customers choose particular telecommunications products requires a grounding in consumer behaviour theory. The Theory of Planned Behaviour (Ajzen, 1991), originally applied to individual decision-making, has been widely extended to telecommunications contexts to explain how customer attitudes, social norms, and perceived control shape service selection. In the telecom sector, this translates into understanding that a customer's decision to purchase a specific voice bundle is not random; it is driven by habitual usage patterns, social context, and economic considerations.
+
+More recently, the Push-Pull-Mooring (PPM) framework has gained prominence in explaining service switching and retention behaviour in telecoms. Al-Mashraie et al. (2020) applied this framework to demonstrate that customers are pushed away from inappropriate service plans, pulled toward better alternatives, and retained or 'moored' by personalised, relevant offers. This study is grounded in the PPM framework insofar as personalised voice bundle recommendations serve as a key mooring mechanism, reducing the likelihood of customers abandoning a service provider in search of better-suited alternatives.
+
+Traditional telecom marketing has relied heavily on the Segmentation, Targeting, and Positioning (STP) model (Kotler \& Keller, 2016), which segments customers into broad demographic or behavioural groups and targets them with standardised offers. However, as data volumes and computational capabilities have grown, the field has shifted toward hyper-personalisation, using individual-level behavioural data to deliver recommendations tailored to each customer's unique consumption profile (McKinsey \& Company, 2024). This study operates within the hyper-personalisation paradigm, moving beyond group-level segmentation to model individual customer purchasing behaviour.
+
+
+\subsection{Machine Learning as a Predictive Decision-Making Framework}
+
+Machine learning (ML) provides the technical foundation for this study. Supervised learning, in particular, enables the training of models on historical data to predict future outcomes, in this case, the type of voice bundle a customer is most likely to purchase next. Classification algorithms such as Random Forest, Gradient Boosted Trees (XGBoost), and Logistic Regression have become standard tools for customer behaviour prediction in telecoms (Chang et al., 2024; Sikri et al., 2024).
+
+Complementing supervised methods, unsupervised learning, particularly K-Means clustering, enables the discovery of natural groupings within customer data without predefined labels. These clusters serve as the basis for segment-level recommendation logic. The combination of both approaches reflects a hybrid modelling strategy that has been shown to outperform single-method models in complex real-world telecom datasets (Zhao et al., 2023).
+
+
+\section{Key Customer Attributes and Behavioural Patterns in Telecom}
+
+
+\subsection{Global Perspective: What Drives Customer Bundle Purchasing Decisions?}
+
+A substantial body of global literature has examined which customer attributes most significantly predict service purchase behaviour in telecommunications. Mohaimin et al. (2025) analysed customer churn in the US telecom market using billing records, service usage logs, and demographic data, concluding that usage intensity, billing frequency, and service tenure were the strongest predictors of customer behaviour. This reinforces the centrality of behavioural usage data --- rather than demographics alone --- as the foundation for predictive modelling.
+
+Feature engineering has emerged as a critical differentiator in model performance. Rather than using raw usage figures, researchers have found that derived metrics, such as the rate of bundle depletion, average purchase frequency over rolling time windows, and the ratio of voice usage to bundle capacity, substantially improve prediction accuracy. Singh et al. (2025) demonstrated that machine learning models applied to telecom customer segmentation achieved notably higher accuracy when feature engineering was applied to create derived behavioural variables compared to models using only raw customer attributes. In a similar vein, Sikri et al. (2024) showed that incorporating temporal purchase patterns, rather than static usage snapshots, improved churn prediction accuracy by a meaningful margin.
+
+Temporal and time-of-day features have also proven highly significant. Chen et al. (2023) found that models incorporating hourly and daily consumption rhythms outperformed those using aggregated monthly figures, as customers tend to exhibit consistent purchase timing that reflects real-world behavioural routines. For prepaid voice bundle markets --- where purchasing decisions are made multiple times per week --- this temporal granularity is particularly valuable. Figure 2 illustrates the distribution of ARPU across a typical prepaid subscriber base, Figure 3 shows daily purchase frequency patterns, and Figure 4 shows hourly purchase peaks --- all of which motivate the temporal and financial features used in this study's modelling pipeline.
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth]{images/fig2_1_arpu_distribution.png}
+\caption{Distribution of Average Revenue Per User (ARPU)}
+\label{figure_2}
+\end{figure}
+
+\begin{flushleft}
+\small\textit{Note. Source: Airtel Uganda transactional dataset (February--April 2026).}
+\end{flushleft}
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth]{images/fig3_1_purchase_frequency.png}
+\caption{Customer Voice Bundle Purchase Frequency}
+\label{figure_3}
+\end{figure}
+
+\begin{flushleft}
+\small\textit{Note. Source: Airtel Uganda transactional dataset (February --April 2026).}
+\end{flushleft}
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth]{images/fig4_1_hourly_purchases.png}
+\caption{Voice Bundle Purchase Distribution by Hour of the Day}
+\label{figure_4}
+\end{figure}
+
+\begin{flushleft}
+\small\textit{Note. Source: Airtel Uganda transactional dataset (February--April 2026).}
+\end{flushleft}
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth]{images/fig5_1_outgoing_voice_minutes.png}
+\caption{Total Outgoing Voice Minutes from all Subscribers}
+\label{figure_5}
+\end{figure}
+
+\begin{flushleft}
+\small\textit{Note. Source: Airtel Uganda transactional dataset (February--April 2026).}
+\end{flushleft}
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth]{images/fig6_1_value_segments.png}
+\caption{Distribution of subscribers across value segments}
+\label{figure_6}
+\end{figure}
+
+\begin{flushleft}
+\small\textit{Note. Source: Airtel Uganda transactional dataset (February--April 2026).}
+\end{flushleft}
+
+Geographic and demographic segmentation further enrich predictive models. A 2024 study from the KSEM conference (Mahmoud \& Asyhari, 2024) applied ML to Call Detail Records (CDRs) and demonstrated that combining usage behaviour with location-based features and demographic segments yielded the most accurate customer clustering outcomes for telecom marketing applications. The study specifically noted that geographic region was a significant predictor of bundle type preference, as usage patterns vary meaningfully across urban and rural environments.
+
+
+\subsection{Regional Perspective: Customer Attributes in African Telecom Markets}
+
+African telecom markets present a distinct context that shapes which customer attributes matter most. The dominance of prepaid services, the prevalence of low-denomination, high-frequency micro-transactions, and limited fixed-line infrastructure mean that the attributes driving service choice differ from those observed in postpaid-dominant markets in Europe or North America.
+
+A Zambia-focused study on recommender systems for telecoms (Chulu, 2017) highlighted that in African markets, Call Detail Records (CDRs) are among the richest available data sources, capturing granular usage behaviour that can serve as a proxy for customer intent. The study emphasized that daily recharge frequency and average bundle size purchased were stronger predictors of appropriate product recommendations than demographic data alone, given the informality of customer registration data in many African markets.
+
+Nafiu et al. (2012) identified that in emerging markets, the most commercially relevant customer attribute is spending regularity --- whether a customer purchases consistently or sporadically. Sporadic purchasers are often underserved by generic bundles and represent the greatest opportunity for targeted recommendations. More recent regional studies reinforce this finding: Akanferi et al. (2022) examined mobile commerce adoption in Ghana and found that perceived value --- whether a customer feels they are getting an appropriate product for their usage level --- is the primary driver of repeat purchase behaviour in African prepaid mobile markets.
+
+
+\subsection{Ugandan Context: Customer Attributes and Service Loyalty}
+
+In Uganda, the published literature on customer behaviour in telecoms has predominantly focused on service quality and its relationship to loyalty, rather than on data-driven attribute modeling. Christopher and Nelson (2024) examined marketing strategies at MTN Uganda and found that while service quality was the primary driver of customer loyalty, targeted promotional offers --- essentially bundle recommendations --- were the most significant secondary factor. This finding is directly relevant to the present study: it suggests that even in the Ugandan market, appropriately targeted bundle recommendations have a demonstrable impact on customer retention.
+
+Faridah et al. (2023) applied Multiple Linear Regression to analyze customer loyalty in Ugandan telecoms, identifying network quality, pricing, and customer service as the primary loyalty determinants. However, this study --- like most Ugandan telecom research --- relied on survey data rather than transactional behavioral data. The result is that the attributes identified reflect customer perceptions rather than actual behavioral patterns. This distinction is important: perception-based research tells us what customers say influences their decisions, but behavioral data tells us what actually drives their purchasing actions (Zhao et al., 2023). This study addresses this gap by analyzing real transactional data from Airtel Uganda.
+
+
+\section{Machine Learning Models for Prediction, Classification and Data Preprocessing}
+
+
+\subsection{Classification Models for Customer Behaviour Prediction: Global Evidence}
+
+The global literature presents a rich evidence base for the application of classification algorithms to customer behaviour prediction in telecommunications. Alotaibi and Haq (2024) conducted a comprehensive comparative study using Random Forest, LightGBM (LGBM), XGBoost, Logistic Regression, Decision Trees, and Artificial Neural Networks (ANN) on a telecom customer dataset. Their results showed that ensemble methods --- particularly XGBoost and Random Forest --- consistently outperformed simpler models, with the Random Forest achieving an accuracy of approximately 91.66\% and strong precision and recall scores. Importantly, the study found that these models benefitted substantially from hyperparameter tuning and cross-validation, with unoptimized models performing significantly worse.
+
+Chang et al. (2024) reached similar conclusions, demonstrating that Decision Trees, Boosted Trees, and Random Forests offered the best combination of accuracy and interpretability for telecom customer classification tasks. Their study emphasized that model interpretability is not merely a technical consideration but a business necessity: telecom marketing teams need to understand why a model makes a particular recommendation to trust and act on it. This aligns with growing interest in Explainable AI (XAI) within the field.
+
+Sikri et al. (2024) published findings in Scientific Reports demonstrating that SVM, Random Forest, and Logistic Regression substantially improved churn prediction accuracy and could also be adapted for retention strategies including personalized bundle recommendations. Their work further showed that AI-powered models could segment customers by risk level and profitability simultaneously, enabling telecoms to prioritize both retention-focused and revenue-growth-focused recommendations from the same modeling framework.
+
+A comprehensive survey of recommender systems published in 2024 traced the evolution from traditional collaborative filtering and content-based approaches to deep learning, graph-based models, and reinforcement learning (Deldjoo et al., 2024). The survey confirmed that for dense user-item interaction datasets, such as telecom transaction logs, collaborative filtering remains highly effective, while hybrid models that combine collaborative and content-based signals achieve the best overall performance. The global recommendation engine market was valued at USD 3.92 billion in 2023 and is projected to grow at a compound annual growth rate of 36.3\% through 2030, reflecting the widespread commercial validation of these approaches (Grand View Research, 2023).
+
+
+\subsection{Customer Segmentation Using Clustering Algorithms}
+
+Customer segmentation through unsupervised learning, particularly K-Means clustering, is one of the most well-established applications of machine learning in telecommunications. A 2024 review of machine learning approaches to customer segmentation, presented at the International Conference on E-commerce and Artificial Intelligence, evaluated K-Means, Fuzzy C-Means, K-Means++, Random Forest, and Artificial Neural Networks across publications from 2020 to 2024. The review found that K-Means and its variants remain the benchmark for behavioral segmentation in telecom, with the most meaningful improvements coming from better feature engineering rather than algorithmic novelty (Yuming et al., 2024).
+
+Zhao et al. (2023) proposed a hybrid deep learning approach combining unsupervised and supervised classification to discover customer value segments in telecoms. Their model applied K-Means to identify initial behavioral clusters, then trained a deep learning classifier to assign new customers to segments based on their early behavioral signals. The study demonstrated that this two-stage approach achieved significantly higher accuracy than using either method in isolation, with the combined model also proving more robust to data sparsity --- a common challenge in prepaid telecom datasets.
+
+Mahmoud and Asyhari (2024) applied ML-based segmentation specifically to CDR data in the context of 5G telecom planning, using usage behaviour and loyalty indicators as segmentation features. Their findings confirmed that segments defined by behavioral loyalty metrics --- such as consistent high-spend or frequent low-denomination purchasers --- were more actionable for marketing than segments defined by demographics alone.
+
+
+\subsection{Data Preprocessing: The Foundation of Model Quality}
+
+The quality of machine learning model outputs is fundamentally constrained by the quality of the input data and the rigor of preprocessing. This is particularly relevant in African telecom contexts where data quality challenges, including missing values, inconsistent transaction logging, and class imbalance in the target variable, are common.
+
+Class imbalance is one of the most discussed preprocessing challenges in the literature. In telecom datasets, certain bundle types may be purchased far more frequently than others, causing models to systematically ignore underrepresented classes. Zdziebko et al. (2024) specifically addressed this challenge in the context of telecom customer modeling, applying fuzzy-based churn modeling with usage data to handle imbalanced datasets and showing that their approach produced more interpretable and operationally useful results than standard oversampling techniques. Sikri et al. (2024) similarly treated class imbalance as a central preprocessing step, testing SMOTE (Synthetic Minority Oversampling Technique) and other resampling methods before model training.
+
+Feature engineering --- the creation of new, informative variables from raw data --- is consistently identified as one of the highest-impact preprocessing steps. A 2025 study by Mohaimin et al. demonstrated that derived features such as rolling average spend, bundle depletion rate, and purchase time-of-day dramatically improved model accuracy over raw attribute inclusion. Encoding of categorical variables --- particularly customer demographic categories and geographic identifiers --- using techniques such as Label Encoding and One-Hot Encoding is also identified as a necessary preprocessing step to enable numerical ML algorithms to process categorical data (Alotaibi \& Haq, 2024).
+
+Dimensionality reduction through Principal Component Analysis (PCA) has also been applied in telecom customer modeling to address the curse of dimensionality --- the degradation of model performance when too many features are included. A study reviewed by Yuming et al. (2024) demonstrated that applying PCA prior to K-Means clustering improved segment coherence, particularly for high-dimensional CDR datasets.
+
+
+\subsection{Model Evaluation Metrics}
+
+The literature consistently identifies a standard set of evaluation metrics for classification and recommendation models in telecoms. Precision measures the proportion of recommended bundles that were actually relevant to the customer. Recall measures the proportion of all genuinely relevant bundles that the model successfully identified. The F1-Score provides a harmonic mean of precision and recall, useful when there is a trade-off between the two. The Area Under the Receiver Operating Characteristic Curve (AUC-ROC) captures overall discriminative ability across classification thresholds, while the Root Mean Squared Error (RMSE) is applied in regression-based recommendation tasks. Alotaibi and Haq (2024) achieved an ensemble model AUC of 0.79 with a recall of 0.72, which they benchmarked against prior studies. Chang et al. (2024) reported a Random Forest accuracy of 91.66\% with an 82.2\% precision and 81.8\% recall --- results this study will use as a baseline for comparison.
+
+
+\section{Empirical Review of Key Methodologies}
+
+Table 1 summarizes the key studies reviewed in this chapter, organized by methodology, application context, and principal finding. This table serves as a direct reference point for the model selection and performance comparisons presented in Chapter Four.
+
+\begin{table}[H]
+\centering
+\caption{Empirical Review of Machine Learning Methodologies in Telecom Recommendation and Segmentation}
+\label{tab:litreview}
+\begin{tabular}{p{3cm}p{3cm}p{3cm}p{5cm}}
+\toprule
+\textbf{Methodology} & \textbf{Key Study} & \textbf{Application} & \textbf{Key Finding} \\
+\midrule
+Collaborative Filtering & Deldjoo et al.\ (2024) & Telecom Recommender Systems & Hybrid CF models outperform single-approach systems in dense usage datasets. \\
+\midrule
+K-Means Clustering & Yuming et al.\ (2024) & Customer Segmentation & Feature engineering, not algorithmic novelty, drives the greatest segmentation improvements. \\
+\midrule
+Gradient Boosting (XGBoost) & Alotaibi \& Haq (2024) & Customer Classification & Random Forest achieves $\sim$91.66\% accuracy; XGBoost matches or exceeds it on imbalanced datasets. \\
+\midrule
+Deep Learning Hybrid & Zhao et al.\ (2023) & Customer Value Segmentation & Two-stage unsupervised + supervised approach outperforms either method in isolation. \\
+\midrule
+Temporal Feature Modeling & Chen et al.\ (2023) & Usage Pattern Prediction & Hourly and daily temporal features significantly outperform aggregated monthly figures. \\
+\midrule
+Predictive Analytics & Wassouf et al.\ (2020) & Customer Retention & Accurate behavioral predictions directly improve the effectiveness of commercial interventions. \\
+\bottomrule
+\end{tabular}
+\begin{flushleft}
+\small\textit{Note.} Sources cited are representative of the broader literature reviewed. All identified studies rely on publicly available or synthetic datasets; none were conducted using real Ugandan operator data. Source: Author's synthesis of reviewed literature.
+\end{flushleft}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{Empirical Review of Machine Learning Methodologies in Telecom Recommendation and Segmentation}
+\label{tab:litreview}
+\begin{tabular}{p{3cm}p{3cm}p{3cm}p{5cm}}
+\toprule
+\textbf{Methodology} & \textbf{Key Study} & \textbf{Application} & \textbf{Key Finding} \\
+\midrule
+Collaborative Filtering & Deldjoo et al.\ (2024) & Telecom Recommender Systems & Hybrid CF models outperform single-approach systems in dense usage datasets. \\
+\midrule
+K-Means Clustering & Yuming et al.\ (2024) & Customer Segmentation & Feature engineering, not algorithmic novelty, drives the greatest segmentation improvements. \\
+\midrule
+Gradient Boosting (XGBoost) & Alotaibi \& Haq (2024) & Customer Classification & Random Forest achieves $\sim$91.66\% accuracy; XGBoost matches or exceeds it on imbalanced datasets. \\
+\midrule
+Deep Learning Hybrid & Zhao et al.\ (2023) & Customer Value Segmentation & Two-stage unsupervised + supervised approach outperforms either method in isolation. \\
+\midrule
+Temporal Feature Modeling & Chen et al.\ (2023) & Usage Pattern Prediction & Hourly and daily temporal features significantly outperform aggregated monthly figures. \\
+\midrule
+Predictive Analytics & Wassouf et al.\ (2020) & Customer Retention & Accurate behavioral predictions directly improve the effectiveness of commercial interventions. \\
+\bottomrule
+\end{tabular}
+\begin{flushleft}
+\small\textit{Note.} Sources cited are representative of the broader literature reviewed. All identified studies rely on publicly available or synthetic datasets; none were conducted using real Ugandan operator data. Source: Author's synthesis of reviewed literature.
+\end{flushleft}
+\end{table}
+
+Table 1 reveals several important patterns across the reviewed literature. First, ensemble methods --- particularly Random Forest and XGBoost --- are the most consistently high-performing models for telecom classification tasks, with reported F1-Scores ranging from 0.78 to 0.92 across the reviewed studies (Chang et al., 2024; Alotaibi \& Haq, 2024; Sikri et al., 2024). Logistic Regression and single Decision Trees appear as baseline comparators in most studies, consistently underperforming ensemble approaches by a meaningful margin. Second, Collaborative Filtering approaches achieve strong recommendation accuracy where per-item interaction histories are available, but are primarily applied in data-rich global market contexts rather than African prepaid markets (Deldjoo et al., 2024). Third, and most significantly for the present study, none of the reviewed studies were conducted using real proprietary transaction data from a Ugandan telecommunications operator --- all rely either on publicly available benchmark datasets such as the IBM Telco Churn dataset or on synthetically generated samples. This constitutes the primary gap that the present study addresses. Furthermore, no reviewed study simultaneously addresses voice bundle recommendation, value segment classification, and business impact projection within a single analytical framework --- a combination this study contributes to the literature.
+
+
+\section{Recommender Systems in Telecommunications}
+
+
+\subsection{Global Approaches and Evidence}
+
+Recommendation engines have become a foundational technology across multiple industries, demonstrating that personalised algorithmic suggestions at scale are both technically feasible and commercially transformative. Global platforms such as Amazon, Netflix, and Spotify have led this transformation. Amazon has publicly attributed approximately 35 percent of its total revenue to its recommendation engine, while Netflix reports that its system drives over 80 percent of content consumed on the platform (Grand View Research, 2023). Spotify similarly uses collaborative filtering and audio-based content modelling to generate personalised playlists and discovery features that are now central to user retention (Deldjoo et al., 2024). The telecommunications sector has, however, lagged behind these digital-native platforms in adopting recommendation engines, with most telecom mobile applications remaining largely static --- presenting uniform product menus to all customers rather than personalised interfaces that reflect individual usage patterns. McKinsey and Company (2022) found that telecom operators who implement analytics-driven customer value management can increase revenues by up to 10 percent and improve customer satisfaction and engagement by between 20 and 30 percent, underscoring the significant untapped opportunity in this space.
+
+For telecom-specific applications, collaborative filtering based on usage log data has proven particularly effective. Item-based CF, which identifies bundles frequently purchased together or in sequence by similar customers, can surface contextually appropriate recommendations without requiring explicit customer ratings. A 2024 study on efficient personalised product recommendations proposed a fusion algorithm based on frequent itemset mining that addressed both data sparsity and the cold-start problem, achieving more accurate recommendations by reducing the candidate item space and computing user-item interest rankings from behavioural signals (Li et al., 2024). The cold-start problem --- where new customers have insufficient history for CF --- remains a recognised challenge, and the literature recommends using demographic and early behavioural signals to initialise recommendations for new users.
+
+McKinsey and Company (2024) documented a case study of an Asia-Pacific telecommunications company that deployed an AI-powered next-best-experience engine, integrating fragmented customer data into a centralised data lake and developing propensity models to identify customers at risk of dissatisfaction. The system delivered personalised bundle alternatives based on each customer's usage history, and the results were significant: the approach enhanced customer satisfaction by 15 to 20 percent, increased revenue by 5 to 8 percent, and reduced the cost-to-serve by 20 to 30 percent. This case study establishes a clear business case for the type of data-driven recommendation approach this study seeks to build.
+
+
+\subsection{Recommender Systems in Africa}
+
+In the African context, the published literature on telecom recommender systems is limited, though growing. The Zambia-focused study by Chulu (2017) remains one of the few dedicated studies of recommender systems for African telecoms and demonstrated that CF-based models built on CDR data could effectively predict relevant service bundles in a prepaid, low-denomination market. The study noted that the high frequency of small transactions in African prepaid markets --- in contrast to monthly postpaid billing cycles --- actually creates richer behavioural data that can improve recommendation model training, provided the data is adequately preprocessed to remove noise and handle irregular transaction patterns.
+
+More broadly, research on mobile commerce adoption in Ghana by Akanferi et al. (2022) highlighted that recommendation relevance --- the degree to which a suggested service matches actual usage behaviour --- is a more important driver of adoption than ease of use or interface design in African mobile markets. This finding is significant for the present study: it suggests that technical accuracy is a meaningful commercial objective, not merely an academic one.
+
+
+\subsection{Current Recommendation Practices in Uganda}
+
+Within Uganda specifically, both Airtel Uganda and MTN Uganda have deployed early-stage recommendation systems. Airtel Uganda's 'My Pakalast' offering segments customers primarily based on Average Revenue Per User (ARPU) over a defined period and allocates bundles accordingly. While this represents a meaningful step beyond uniform product menus, it is essentially a one-dimensional segmentation approach that does not account for temporal usage dynamics, geographic variation, bundle depletion behaviour, or demographic factors.
+
+MTN Uganda's 'MyPakaPaka' offering, launched subsequently, has been publicly described as leveraging machine learning to analyse subscriber financials and usage behaviour (MTN Uganda, 2021). This signals industry-level recognition in Uganda that data-driven personalisation is a strategic priority. However, the details of the model architecture and feature set are not publicly disclosed, and no published academic study has examined its performance or methodology.
+
+Christopher and Nelson (2024) noted that while both operators have moved toward targeted promotions, the dominant local approach remains ARPU-banding, a relatively blunt instrument compared to the feature-rich behavioural models documented in global literature. This gap between current Ugandan practice and global best practice represents both the research opportunity and the practical contribution of this study.
+
+
+\section{Impact of Personalised Recommendations on Revenue and Customer Satisfaction}
+
+
+\subsection{Global Evidence on Business Outcomes}
+
+The business case for personalised recommendations in telecoms is well-established in the global literature. A 2024 State of Customer Experience Personalisation report found that organisations with high personalisation capability were twice as likely to achieve major revenue growth compared to those with low personalisation capability (Medallia, 2024). Additionally, 82 percent of consumers reported that personalised experiences drive their brand choice in at least half of purchasing situations, a finding with direct implications for bundle purchase decisions in the telecom sector.
+
+In the telecom industry specifically, Wassouf et al. (2020) applied predictive analytics to the Syriatel telecom dataset and found that data-driven customer loyalty interventions --- including targeted service recommendations, increased customer retention rates significantly. Their study demonstrated a direct link between the accuracy of behavioural predictions and the effectiveness of the subsequent commercial intervention, reinforcing the argument that better ML models translate into better business outcomes.
+
+Research consistently identifies upselling through recommendations as more cost-effective than reactive churn management. This is because churn prevention requires identifying and intervening with at-risk customers after dissatisfaction has already developed, whereas proactive bundle recommendations address the underlying cause of dissatisfaction --- the mismatch between available products and customer needs --- before it manifests as churn (Nafiu et al., 2012; Sikri et al., 2024).
+
+
+\subsection{Revenue Optimisation Through ARPU Enhancement}
+
+Average Revenue Per User (ARPU) is the primary financial metric in the telecom industry, and its enhancement through targeted recommendations is a key focus of the literature. Static ARPU banding --- as currently practised by Airtel Uganda --- captures historical spend but does not distinguish between customers who are at their optimal bundle level and those who are consistently under-purchasing due to a lack of awareness of better-fit products.
+
+A study at the KSEM 2024 conference specifically addressed the relationship between ML-based segmentation and revenue growth in telecoms, arguing that customer segments defined by behavioural loyalty and value metrics enable more precise upselling and cross-selling strategies. The authors noted that customers in the high-frequency, low-denomination purchase segment, analogous to the prepaid Ugandan market, represent significant revenue upside if appropriately matched to higher-value bundle tiers that still fit their consumption patterns (Mahmoud \& Asyhari, 2024).
+
+
+\subsection{Identified Gaps in Current Ugandan Recommendation Systems}
+
+While both Airtel Uganda and MTN Uganda have taken meaningful steps toward personalisation, this literature review identifies four critical gaps in their current approaches that the present study seeks to address. First, existing ARPU-based models overlook the temporal context of consumption, such as festive periods, student holidays, or religious observances, which can significantly alter usage patterns and bundle preferences (Al-Nashif et al., 2020). Second, current systems do not explicitly integrate demographic information, such as age bracket, into their personalisation algorithms, despite evidence that demographic data substantially improves recommender system precision (Hossain et al., 2024; El Hamri \& Idri, 2024). Third, geographic or location-based preferences are largely overlooked, despite growing evidence that geographical context influences bundle preference in African markets (Zheng et al., 2020; Al-Sayed et al., 2019). Fourth and most critically, current systems rely on average usage metrics rather than granular bundle depletion analysis, meaning they cannot detect the real-time signal of a customer approaching the end of their current bundle, which this study identifies as the single most powerful predictor of the next purchase decision.
+
+
+\section{Synthesis of Literature and Identification of Research Gap}
+
+The literature reviewed in this chapter establishes a clear and consistent global evidence base for the use of machine learning in predicting customer service preferences, segmenting customers by behavioural attributes, and deploying recommendation engines that improve both customer satisfaction and business revenue. Across global, regional, and local contexts, three conclusions emerge consistently.
+
+First, behavioural usage attributes, including purchase frequency, bundle depletion rate, temporal purchasing patterns, and derived financial metrics such as rolling ARPU, consistently outperform demographic-only features in predicting customer service choices. Second, ensemble classification models such as Random Forest and XGBoost are the current best-practice tools for customer behaviour classification in telecoms, achieving accuracy levels above 80 percent in well-preprocessed datasets. Third, hybrid recommender systems that combine collaborative filtering with content-based signals represent the global frontier of recommendation technology in this sector.
+
+However, the application of these global frameworks to the specific context of the Ugandan prepaid voice bundle market remains an identified gap. Existing Ugandan research is predominantly survey-based and qualitative, focusing on perceptions of service quality rather than behavioural modelling. The current recommendation approaches deployed by Ugandan operators are ARPU-banded rather than multi-feature and behavioural, and no published academic study has evaluated a feature-rich ML classification model for voice bundle prediction using Ugandan transactional data. This study addresses this gap directly by applying supervised classification and unsupervised clustering to real transactional data from Airtel Uganda, incorporating features such as temporal purchase behaviour, bundle depletion rates, purchase frequency, and ARPU metrics. The findings will serve as a direct comparator to global benchmark studies such as Chang et al. (2024) and Alotaibi and Haq (2024), and will provide actionable strategic recommendations for Airtel Uganda's commercial teams.

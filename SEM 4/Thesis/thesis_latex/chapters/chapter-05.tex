@@ -1,0 +1,97 @@
+
+\section{Introduction}
+
+This chapter interprets the empirical findings presented in Chapter Four in light of the theoretical framework, prior literature, and the three research hypotheses established in Chapters Two and Three. The discussion follows the same chronological order as the results: Section 5.2 discusses the statistical test findings and evaluates H1; Section 5.3 discusses the model performance findings and evaluates H2; Section 5.4 discusses the feature importance findings and their strategic implications; and Section 5.5 evaluates H3 in light of the projected business impact.
+
+
+\section{Discussion of Key Customer Behavioural Attributes: Hypothesis H1}
+
+Research Question 1 asked which customer behavioural attributes most effectively predict voice bundle purchase decisions. The statistical results presented in Section 4.2 provide overwhelming evidence for rejecting H1	extsubscript{0} and accepting H1	extsubscript{1}: 34 of 35 features under Spearman Rank Correlation, all 35 features under ANOVA, and all 7 categorical features under Chi-Square returned statistically significant results.
+
+
+\subsection{The Large-Sample Context}
+
+An important interpretive caveat applies to these results. With a sample of N = 1,458,900 subscribers, statistical power is extremely high --- even trivially small true relationships will reach significance at $p < 0.05$. The one-sentence summary of Spearman results (34/35 significant) and ANOVA results (35/35 significant), therefore, does not imply that all features are equally predictive. The substantive analysis focuses on the relative ranking of F-statistics and correlation coefficients, not significance alone. This is consistent with the large-sample guidance in the literature reviewed in Chapter Two (Hastie et al., 2009; Mohaimin et al., 2025).
+
+
+\subsection{Device Type and Smartphone Ownership as the Strongest Signal}
+
+IS\_SMARTPHONE produced the strongest Spearman correlation (r = -0.068) and the second-highest ANOVA F-statistic among non-revenue features (F = 25,891.16), with the HANDSET\_TYPE Chi-Square reaching 181,566.52. This is the single most consistent finding across all three tests: smartphone ownership is the strongest behavioural discriminator of voice bundle segment membership in the Airtel Uganda prepaid market. This finding validates the literature reviewed in Chapter Two (El Hamri \& Idri, 2024; Hossain et al., 2024), which consistently identifies device capability as a proxy for digital engagement and consumption capacity. In practical terms, this suggests that a subscriber's device generation --- available in real time from the network --- is a highly efficient single feature for initial segment classification, with significant implications for the design of the recommendation engine discussed in Chapter Six.
+
+
+\subsection{Bundle Spend Recency and Purchase Frequency}
+
+BUNDLE\_SPEND\_30D produced the second-strongest Spearman correlation (r = -0.067) and the third-highest ANOVA F-statistic among non-revenue features (F = 23,594.82). PURCHASES\_LAST\_30D also returned a significant Spearman correlation (r = -0.048). These findings confirm that recent purchase behaviour --- specifically spending in the last 30 days --- is a stronger predictor of current segment membership than longer-term historical spend, consistent with the Push-Pull-Mooring framework's emphasis on current behavioural state as the primary driver of consumption decisions (Al-Mashraie et al., 2020). DISTINCT\_BUNDLES\_TRIED (F = 12,106.23) confirms that bundle variety --- the number of different bundles a subscriber has tried across the observation period --- is a powerful discriminator, reflecting the extent of a subscriber's engagement with Airtel's product portfolio.
+
+
+\subsection{Voice Activity Features}
+
+VOICE\_INTENSITY (calls per active day; F = 27,892.34) and TOTAL\_OG\_MINUTES (r = -0.054) both returned strong results, confirming that the intensity and volume of voice activity are meaningful predictors of bundle segment. The negative Spearman direction for TOTAL\_OG\_MINUTES indicates that higher-segment subscribers make fewer outgoing calls in raw terms --- consistent with the interpretation that they rely on larger bundles that last longer between purchases, rather than making many small top-ups. ACTIVE\_DAYS (r = -0.059; F = 12,240.63) similarly showed strong results, reflecting that subscriber engagement regularity is a significant segment discriminator.
+
+
+\subsection{UPGRADE\_RATE: The One Non-Significant Feature}
+
+UPGRADE\_RATE --- the proportion of purchases in which a subscriber chose a more expensive bundle than their previous purchase --- was the only feature that failed to achieve significance under Spearman correlation (r = 0.0004, p = 0.65), despite reaching significance under ANOVA (F = 8,585.68). This divergence suggests a non-linear rather than monotonic relationship between upgrading behaviour and segment: subscribers in both low and high segments upgrade at similar rates, but the pattern across all eight segment classes is not linear. This is a novel finding with practical implications --- it suggests that monitoring upgrade frequency alone is an insufficient basis for segment prediction.
+
+
+\section{Discussion of Model Performance: Hypothesis H2}
+
+Research Question 2 asked which machine learning model most accurately predicts the voice bundle value segment. The model comparison results in Table 6 provide clear grounds for rejecting H2	extsubscript{0} and accepting H2	extsubscript{1}. XGBoost achieved the highest F1-Score of 0.6611, with a meaningful F1-Score range of 0.2146 across models, confirming a significant performance hierarchy.
+
+
+\subsection{Interpreting the F1-Score in Context}
+
+The XGBoost F1-Score of 0.6611 falls below the global benchmark of approximately 0.82 cited from Chang et al. (2024) and Alotaibi and Haq (2024). However, direct comparison requires an important qualification: the benchmark figures are drawn from binary classification tasks (churn vs. no churn, or two bundle tiers), while this study addresses an 8-class classification problem across highly imbalanced segment sizes ranging from 34 Diamond subscribers to 776,970 Silver subscribers. In an 8-class setting, a random baseline achieves approximately 12.5 percent accuracy; the XGBoost model's 68.0 percent accuracy represents a 5.4-fold improvement over random, and its weighted F1 of 0.6611 reflects genuine discriminative ability across all eight segments. This reframing is consistent with the methodology used in the closest comparable studies (Singh et al., 2025; Yuming et al., 2024), which also report lower F1-Scores for multi-class telecom classification tasks.
+
+
+\subsection{Performance by Segment Class}
+
+The per-class classification report reveals a pattern of performance that is theoretically consistent: Silver (the majority class; F1 = 0.79) and Platinum (F1 = 0.71) achieved the strongest per-class performance, while Ivory (F1 = 0.33), Super Gold (F1 = 0.46), and Diamond (F1 = 0.56) achieved lower performance. This is expected in imbalanced multi-class settings: majority classes have more training examples and their boundaries are better defined. The SMOTE oversampling strategy, which capped minority class generation to a maximum of 50,000 synthetic samples per class, partially addressed this imbalance but could not fully compensate for the extreme rarity of the Diamond class (n = 34 real instances in the training set). Future work should explore more sophisticated resampling strategies or cost-sensitive learning approaches for the most extreme minority classes.
+
+
+\subsection{The Performance Hierarchy}
+
+The progression from Logistic Regression (F1 = 0.4465) through Decision Tree (F1 = 0.6344) and Random Forest (F1 = 0.6522) to XGBoost (F1 = 0.6611) reflects the well-documented pattern in ensemble learning literature: linear models are insufficient for complex non-linear multi-class boundaries; single decision trees improve substantially but overfit; and ensemble methods --- particularly gradient boosting --- achieve the best generalisation (Hastie et al., 2009; Chang et al., 2024). The relatively small gap between Random Forest and XGBoost (0.0089 F1 points) suggests that both models have extracted most of the available predictive signal from the current feature set, and that further performance gains are more likely to come from richer features --- particularly the purchase timing features that were not fully leveraged in this analysis.
+
+
+\section{Strategic Implications of Feature Importance Results}
+
+The feature importance analysis in Section 4.4 yields findings with direct strategic implications for how Airtel Uganda should redesign its customer segmentation and recommendation architecture.
+
+
+\subsection{Revenue Efficiency Over Raw Revenue}
+
+While TOTAL\_REVENUE is the single most important feature (18.01\%), the second most important feature is SPEND\_PER\_MINUTE (6.57\%) --- an engineered feature that captures the ratio of a subscriber's total revenue to their outgoing minutes consumed. This finding directly challenges the adequacy of Airtel Uganda's current ARPU-banding approach: it is not how much a subscriber spends in absolute terms that most powerfully discriminates their bundle tier, but how efficiently they spend relative to their usage. A subscriber with moderate total revenue but very high spend-per-minute is exhibiting a behavioural pattern characteristic of a higher-tier bundle user, and the current ARPU-banded system cannot detect this. This finding is consistent with Zhao et al. (2023), who demonstrated that behavioural efficiency metrics are more actionable for marketing segmentation than static financial averages.
+
+
+\subsection{Call Intensity as a Real-Time Trigger Signal}
+
+VOICE\_INTENSITY --- calls per active day --- contributed 5.87 percent of feature importance and showed the highest ANOVA F-statistic among non-revenue engineered features (F = 27,892.34). This finding has a direct operational implication: call intensity is a signal that is observable in real time from Airtel's network. A subscriber whose daily call frequency has increased relative to their historical baseline is exhibiting a behavioural pattern that the model associates with a higher bundle tier --- suggesting that they may be underserved by their current bundle. Monitoring daily call intensity as a real-time trigger for bundle recommendations represents a concrete deployment pathway that does not require batch processing of historical data.
+
+
+\subsection{Mobile Money as a Financial Engagement Signal}
+
+MOBILE\_MONEY activity contributed 4.64 percent of feature importance, confirming the literature's finding that financial service engagement breadth is a meaningful predictor of telecom bundle behaviour in the Ugandan context (Nafiu et al., 2012). Subscribers who actively use mobile money services demonstrate a distinct consumption profile correlated with higher bundle segment membership. For Airtel Uganda, which offers both mobile money and voice bundles on the same platform, this creates a cross-service recommendation opportunity: mobile money activity patterns can inform voice bundle recommendations without requiring additional data collection.
+
+
+\section{Projected Business Impact and Evaluation of Hypothesis H3}
+
+Research Question 3 asked how ML model outputs can inform strategic business decisions for Airtel Uganda. The projected business impact metrics in Table 8 provide preliminary support for H3	extsubscript{1}.
+
+The XGBoost model's weighted precision of 0.67 means that bundle recommendations generated by the model will be segment-appropriate approximately 67 percent of the time --- compared to a random baseline of 12.5 percent in an 8-class system and a generic conversion rate of approximately 3 percent under the current ARPU-banded approach. The projected four- to five-fold improvement in conversion rate (from \textasciitilde\{\}3 percent to 12--15 percent) is grounded in this precision figure and is consistent with documented outcomes from comparable global telecom recommendation deployments (McKinsey \& Company, 2022; 2024). The projected 9 percent ARPU improvement reflects the model's ability to identify subscribers in lower segments whose SPEND\_PER\_MINUTE and VOICE\_INTENSITY profiles indicate capacity for higher-tier bundles, enabling targeted upselling at behaviourally appropriate moments.
+
+It is important to note that the XGBoost F1-Score of 0.6611 --- while meaningful --- also implies that the model misclassifies approximately 34 percent of cases. In a production recommendation engine, misclassified recommendations would result in irrelevant offers. The design of the A/B test specified in Chapter Six must therefore include a measurement of actual conversion rates against this theoretical projection to validate H3	extsubscript{1} empirically. H3	extsubscript{1} is therefore considered preliminarily supported but not yet fully confirmed, pending live deployment validation.
+
+
+\section{Assessment of Research Objectives}
+
+Specific Objective 1 is comprehensively addressed. The study identified IS\_SMARTPHONE, BUNDLE\_SPEND\_30D, ACTIVE\_DAYS, TOTAL\_OG\_MINUTES, VOICE\_INTENSITY, and DISTINCT\_BUNDLES\_TRIED as the most statistically powerful discriminators of voice bundle segment membership, confirmed across three independent statistical tests on 1,458,900 real Airtel Uganda subscriber records.
+
+Specific Objective 2 is fully addressed. The systematic evaluation of four models --- Logistic Regression (F1 = 0.4465), Decision Tree (F1 = 0.6344), Random Forest (F1 = 0.6522), and XGBoost (F1 = 0.6611) --- demonstrated that XGBoost achieves the highest F1-Score, with the engineered features SPEND\_PER\_MINUTE and VOICE\_INTENSITY identified as key contributors to model performance beyond the revenue features available in standard CDR datasets.
+
+Specific Objective 3 is partially addressed through the projected business impact analysis and the feature importance findings. Full achievement of this objective --- through specific, actionable recommendations for Airtel Uganda --- is the focus of Chapter Six.
+
+
+\section{Summary}
+
+This chapter has interpreted the empirical findings within the context of the three research hypotheses and the prior literature. H1	extsubscript{0} is rejected: 34 of 35 numeric features and all 7 categorical features are statistically significant predictors of voice bundle segment membership, with IS\_SMARTPHONE, BUNDLE\_SPEND\_30D, VOICE\_INTENSITY, and DISTINCT\_BUNDLES\_TRIED emerging as the strongest non-revenue discriminators. H2	extsubscript{0} is rejected: XGBoost significantly and meaningfully outperforms all other models with an F1-Score of 0.6611 and a range of 0.2146. The F1-Score reflects the genuine difficulty of an 8-class imbalanced task and should be interpreted relative to the random baseline of 12.5 percent rather than against binary classification benchmarks. H3	extsubscript{1} is preliminarily supported: the projected 67 percent recommendation precision and four- to five-fold conversion improvement are grounded in model performance and benchmarked against global deployments. The strategic recommendations that operationalise these findings for Airtel Uganda are presented in Chapter Six.

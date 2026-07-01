@@ -1,0 +1,234 @@
+% \documentclass{article}
+\documentclass[12pt]{report}
+\usepackage{appendix}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{xcolor}
+\usepackage{longtable}
+\usepackage[paper=a4paper,bottom=2cm,footskip=0.25cm,top=2cm,headsep=0.25cm,rmargin=2cm,lmargin=2cm]{geometry}
+\usepackage{tabularx}
+\usepackage{xltabular}
+\usepackage{booktabs}
+\usepackage{tabu}
+\usepackage{float}
+\usepackage[parfill]{parskip}
+\usepackage{enumerate}
+\usepackage{enumitem}
+
+
+\usepackage{color}   %May be necessary if you want to color links
+\usepackage{hyperref}
+\usepackage{mathtools}
+\hypersetup{
+    colorlinks=false, %set true if you want colored links
+    linktoc=all,     %set to all if you want both sections and subsections linked
+    linkcolor=blue,  %choose some color if you want links to stand out
+}
+%---- Footer ---
+
+%--------
+
+%\usepackage{draftwatermark}
+%\SetWatermarkLightness{ 0.9 }
+%\SetWatermarkText{MSCS \& MSDS Proposal template }
+%\SetWatermarkScale{ 2.5 }
+
+\usepackage{soul}
+
+%\newcommand{\todo}[1]{\textcolor{orange}{[TODO\@: #1]}}
+
+%\newcommand{\done}[1]{\textit{\hl{[DONE\@: #1]}}}
+
+
+
+\setcounter{secnumdepth}{3}    % Number subsubsections in the chapters
+\setcounter{tocdepth}{3}       % Put subsubsections in the table of contents
+
+%%%% NOTE:: Student should fill in the data fields :: %%%%
+\newcommand\theResearchTopic{\textit{[Enter research topic]}}
+
+\newcommand\theStudentName{\textit{[Enter Student Name]}}
+\newcommand\theStudentRegNo{\textit{[Enter Student RegNo]}}
+\newcommand\theStudentNo{\textit{[Enter Student No]}}
+\newcommand\theStudentEmail{\textit{[Enter Student Email]}}
+%\newcommand\theStudentPhoneNo{\textit{[Enter Student PhoneNo]}}
+
+\newcommand\theSpecializationTrack{\textit{Specialization:[Enter Intended Specialization Track]}}
+
+\newcommand\thePrimaryAdvisor{\textit{[Enter Primary Advisor, e.g, Dr. John Smith]}} 
+
+
+
+
+
+\newcommand\theProgrameAward{Master of Science in Computer/Data Science}
+%\newcommand\theSpecializationTrack{[Enter Specialization Track]}%
+\newcommand\theTheDocumentType{dissertation} %[Enter either proposal or Report or dissertation]
+\newcommand\theFinalOutputDocument{Degree}
+
+
+\newcommand\theFaculty{Faculty of Engineering Design \& Technology}%[Enter Faculty]
+\newcommand\theStudentPrevQualification{\textit{[Enter Prev Qualification]}}
+\newcommand\theDepartment{Department of Computing \& Technology}%[Enter Department]
+
+\newcommand\theVersionDate{\textit{[Enter Version Date]}}
+
+
+%--------------
+%Please seek consent
+\newcommand\theOtherAdvisor{\textit{[Enter co Advisor Name, e.g., Mr. Samuel Ojara]}} 
+
+\newcommand\theOtherAdvisorFaculty{[Please enter faculty of other advisor if different from main supervisor faculty]}%[Enter Faculty]
+
+\newcommand\theOtherAdvisorDepartment{[Please enter department of other advisor if different from main supervisor department]}%[Enter Department]
+
+\newcommand\theOtherAdvisorUniversity{[Please enter University of other advisor if different from main supervisor department]}%[Enter Department]
+
+
+
+%%-------
+
+%%%%%=====================. %%%%
+
+\newcommand\makLogo{\includegraphics[scale=.3]{images/logos/UCU-Logo.png}}
+
+
+\pagenumbering{roman}
+\begin{document}
+    %%---- Title page
+    \begin{titlepage}
+        \centering
+        \makLogo  \\
+         \theDepartment \\
+    	\vspace{1cm}
+        \Large{	
+            \theResearchTopic \\
+
+            \vspace{.5cm}
+            \textit{By}\\
+            \vspace{.5cm}
+            \theStudentName\\
+            \theStudentPrevQualification \\
+           \vspace{1cm}
+            Reg No: \theStudentRegNo, Student No: \theStudentNo  \\
+            E-mail: \theStudentEmail %, Phone No:  \theStudentPhoneNo\\
+
+            
+           % \vspace{1cm}
+            
+           
+           
+           
+            
+            \vspace{1cm}
+            
+            
+            A \theTheDocumentType~submitted to the \theFaculty~for the study leading to the \theFinalOutputDocument~in partial fulfillment of the requirements for the award of \textbf{\theProgrameAward}~of Uganda Christian University \\
+            
+            \vspace{1cm}
+            
+
+            % \thePrimaryAdvisor \\
+            % \theOtherAdvisor \\
+            
+             \vspace{1cm}
+            \theVersionDate \\
+       }
+    \end{titlepage}
+
+
+%%%=== Preliminary pages ====
+\chapter*{Declaration}
+\label{pre:01-declaration}
+\addcontentsline{toc}{chapter}{Declaration}
+\input{preliminary-pages/01-declaration}
+
+%%%=== Preliminary pages ====
+\chapter*{Ethical Generative AI Usage Declaration}
+\label{pre:01b-AI-declaration}
+\addcontentsline{toc}{chapter}{Declaration}
+\input{preliminary-pages/01b-AI-declaration}
+
+\chapter*{Approval}
+\label{pre:02-approval}
+\addcontentsline{toc}{chapter}{Approval}
+\input{preliminary-pages/02-approval}
+
+\chapter*{Abstract}
+\label{pre:03-abstract}
+\addcontentsline{toc}{chapter}{Abstract}
+\input{preliminary-pages/03-abstract}
+
+% %----- You can activate this in your --- 
+% \chapter*{Dedication}
+% \label{pre:04-dedication}
+% % --------------------------------------
+
+
+\addcontentsline{toc}{chapter}{Dedication}
+\input{preliminary-pages/04-dedication}
+
+% \chapter*{Table of Contents}
+% \label{pre:05-toc-tof-symbols-abrevs}
+\input{preliminary-pages/05-toc-tof-symbols-abrevs}
+
+\chapter*{Acknowledgments}
+\label{pre:06-acknowledgments}
+\addcontentsline{toc}{chapter}{Acknowledgments}
+\input{preliminary-pages/06-acknowledgments}
+%%==End of preliminary pages
+
+
+
+%%%%======================== Beginning of Chapters
+\chapter{Introduction}
+\label{ch:chapter-01}
+ %%%%========================
+ \pagenumbering{arabic}
+ \renewcommand{\arraystretch}{1}  
+ %%%=========================
+\input{chapters/chapter-01}
+
+\chapter{Literature Review}
+\label{ch:chapter-02}
+\input{chapters/chapter-02}
+
+
+\chapter{Methodology}
+\label{ch:chapter-03}
+\input{chapters/chapter-03}
+
+
+%% === Commented out for proposal
+\chapter{Results}
+\label{ch:chapter-04}
+\input{chapters/chapter-04}
+%% === Commented out for proposal
+
+
+\chapter{Discussion}
+\label{ch:chapter-05}
+\input{chapters/chapter-05}
+
+
+\chapter{Conclusion and Recommendation}
+\label{ch:chapter-06}
+\input{chapters/chapter-06}
+
+%%%=== =============Add bibliography & references
+\bibliographystyle{ieeetr} 
+\bibliography{references/list-of-references-bib-format}
+\addcontentsline{toc}{chapter}{REFERENCES}
+
+
+%%%==== Add Appendicies ==
+
+\appendix
+\addcontentsline{toc}{chapter}{APPENDICES}
+\begin{appendices}
+    \input{appendicies/AAppendix-main}
+\end{appendices}
+
+
+\end{document}

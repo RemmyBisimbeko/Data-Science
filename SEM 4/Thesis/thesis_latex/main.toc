@@ -1,0 +1,129 @@
+\contentsline {chapter}{Declaration}{i}{chapter*.1}%
+\contentsline {chapter}{AI Usage Declaration}{ii}{chapter*.2}%
+\contentsline {chapter}{Approval}{iv}{chapter*.3}%
+\contentsline {chapter}{Abstract}{v}{chapter*.4}%
+\contentsline {chapter}{Dedication}{vii}{chapter*.5}%
+\contentsline {chapter}{List of Figures}{xiii}{chapter*.7}%
+\contentsline {chapter}{List of Tables}{xiv}{chapter*.8}%
+\contentsline {chapter}{Acknowledgements}{xv}{chapter*.9}%
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Background to the Study}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Problem Statement}{2}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Justification of the Study}{3}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}Justification for the Telecom Industry}{3}{subsection.1.3.1}%
+\contentsline {subsection}{\numberline {1.3.2}Justification for the Customer}{4}{subsection.1.3.2}%
+\contentsline {subsection}{\numberline {1.3.3}Justification for Academia}{5}{subsection.1.3.3}%
+\contentsline {section}{\numberline {1.4}Main Objective of the Research}{5}{section.1.4}%
+\contentsline {section}{\numberline {1.5}Specific Objectives}{6}{section.1.5}%
+\contentsline {section}{\numberline {1.6}Research Questions}{6}{section.1.6}%
+\contentsline {section}{\numberline {1.7}Research Hypotheses}{7}{section.1.7}%
+\contentsline {section}{\numberline {1.8}Scope of the Study}{7}{section.1.8}%
+\contentsline {subsection}{\numberline {1.8.1}Geographical Scope}{7}{subsection.1.8.1}%
+\contentsline {subsection}{\numberline {1.8.2}Time Scope}{8}{subsection.1.8.2}%
+\contentsline {subsection}{\numberline {1.8.3}Content Scope}{8}{subsection.1.8.3}%
+\contentsline {section}{\numberline {1.9}Significance of the Study}{8}{section.1.9}%
+\contentsline {section}{\numberline {1.10}Theoretical and Conceptual Framework}{9}{section.1.10}%
+\contentsline {section}{\numberline {1.11}Limitations of the Study}{11}{section.1.11}%
+\contentsline {section}{\numberline {1.12}Organisation of the Thesis}{12}{section.1.12}%
+\contentsline {chapter}{\numberline {2}Literature Review}{13}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Introduction}{13}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Theoretical Framework}{13}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Consumer Behaviour Theory and Telecom Service Adoption}{13}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Machine Learning as a Predictive Decision-Making Framework}{14}{subsection.2.2.2}%
+\contentsline {section}{\numberline {2.3}Key Customer Attributes and Behavioural Patterns in Telecom}{15}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Global Perspective: What Drives Customer Bundle Purchasing Decisions?}{15}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Regional Perspective: Customer Attributes in African Telecom Markets}{17}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Ugandan Context: Customer Attributes and Service Loyalty}{18}{subsection.2.3.3}%
+\contentsline {section}{\numberline {2.4}Machine Learning Models for Prediction, Classification and Data Preprocessing}{19}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Classification Models for Customer Behaviour Prediction: Global Evidence}{19}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}Customer Segmentation Using Clustering Algorithms}{20}{subsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.4.3}Data Preprocessing: The Foundation of Model Quality}{20}{subsection.2.4.3}%
+\contentsline {subsection}{\numberline {2.4.4}Model Evaluation Metrics}{21}{subsection.2.4.4}%
+\contentsline {section}{\numberline {2.5}Empirical Review of Key Methodologies}{22}{section.2.5}%
+\contentsline {section}{\numberline {2.6}Recommender Systems in Telecommunications}{24}{section.2.6}%
+\contentsline {subsection}{\numberline {2.6.1}Global Approaches and Evidence}{24}{subsection.2.6.1}%
+\contentsline {subsection}{\numberline {2.6.2}Recommender Systems in Africa}{25}{subsection.2.6.2}%
+\contentsline {subsection}{\numberline {2.6.3}Current Recommendation Practices in Uganda}{25}{subsection.2.6.3}%
+\contentsline {section}{\numberline {2.7}Impact of Personalised Recommendations on Revenue and Customer Satisfaction}{26}{section.2.7}%
+\contentsline {subsection}{\numberline {2.7.1}Global Evidence on Business Outcomes}{26}{subsection.2.7.1}%
+\contentsline {subsection}{\numberline {2.7.2}Revenue Optimisation Through ARPU Enhancement}{27}{subsection.2.7.2}%
+\contentsline {subsection}{\numberline {2.7.3}Identified Gaps in Current Ugandan Recommendation Systems}{27}{subsection.2.7.3}%
+\contentsline {section}{\numberline {2.8}Synthesis of Literature and Identification of Research Gap}{28}{section.2.8}%
+\contentsline {chapter}{\numberline {3}Methodology}{29}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Introduction}{29}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Research Questions and Hypotheses}{29}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Research Philosophy and Design}{30}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Study Population}{31}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Variables of the Study}{32}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Dependent Variable}{32}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}Independent Variables}{32}{subsection.3.5.2}%
+\contentsline {section}{\numberline {3.6}Sample Size and Sampling Strategy}{33}{section.3.6}%
+\contentsline {subsection}{\numberline {3.6.1}Quantitative Sample: Statistical Justification}{33}{subsection.3.6.1}%
+\contentsline {subsection}{\numberline {3.6.2}Quantitative Sample: Machine Learning Dataset}{34}{subsection.3.6.2}%
+\contentsline {subsection}{\numberline {3.6.3}Qualitative Sample: Key Informant Interviews}{34}{subsection.3.6.3}%
+\contentsline {section}{\numberline {3.7}Data Collection}{35}{section.3.7}%
+\contentsline {subsection}{\numberline {3.7.1}Secondary Data: Historical Transaction Records}{35}{subsection.3.7.1}%
+\contentsline {subsection}{\numberline {3.7.2}Data Management: Storage, Retrieval, and Version Control}{37}{subsection.3.7.2}%
+\contentsline {subsection}{\numberline {3.7.3}Primary Data: Semi-Structured Interviews}{37}{subsection.3.7.3}%
+\contentsline {section}{\numberline {3.8}Data Analysis Procedures}{38}{section.3.8}%
+\contentsline {subsection}{\numberline {3.8.1}Qualitative Analysis: Thematic Analysis}{38}{subsection.3.8.1}%
+\contentsline {subsection}{\numberline {3.8.2}Data Preprocessing and Feature Engineering}{38}{subsection.3.8.2}%
+\contentsline {subsection}{\numberline {3.8.3}Model Development and Training}{40}{subsection.3.8.3}%
+\contentsline {subsection}{\numberline {3.8.4}Model Evaluation}{40}{subsection.3.8.4}%
+\contentsline {subsection}{\numberline {3.8.5}Strategic Recommendation Formulation}{41}{subsection.3.8.5}%
+\contentsline {section}{\numberline {3.9}Validity and Reliability}{41}{section.3.9}%
+\contentsline {section}{\numberline {3.10}Ethical Considerations}{42}{section.3.10}%
+\contentsline {chapter}{\numberline {4}Results}{43}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Introduction}{43}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Key Customer Attributes and Feature--Target Relationships - Objective 1}{43}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Spearman Rank Correlation Results}{43}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}One-Way ANOVA Results}{45}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Chi-Square Test of Independence Results}{46}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.4}Hypothesis H1 Verdict}{46}{subsection.4.2.4}%
+\contentsline {section}{\numberline {4.3}Machine Learning Model Performance - Objective 2}{47}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Hypothesis H2 Verdict}{48}{subsection.4.3.1}%
+\contentsline {section}{\numberline {4.4}Feature Importance Analysis}{48}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Projected Business Impact - Objective 3}{49}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Summary of Results}{49}{section.4.6}%
+\contentsline {chapter}{\numberline {5}Discussion}{51}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Introduction}{51}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Discussion of Key Customer Behavioural Attributes: Hypothesis H1}{51}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}The Large-Sample Context}{51}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Device Type and Smartphone Ownership as the Strongest Signal}{52}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.3}Bundle Spend Recency and Purchase Frequency}{52}{subsection.5.2.3}%
+\contentsline {subsection}{\numberline {5.2.4}Voice Activity Features}{52}{subsection.5.2.4}%
+\contentsline {subsection}{\numberline {5.2.5}UPGRADE\_RATE: The One Non-Significant Feature}{53}{subsection.5.2.5}%
+\contentsline {section}{\numberline {5.3}Discussion of Model Performance: Hypothesis H2}{53}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Interpreting the F1-Score in Context}{53}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}Performance by Segment Class}{54}{subsection.5.3.2}%
+\contentsline {subsection}{\numberline {5.3.3}The Performance Hierarchy}{54}{subsection.5.3.3}%
+\contentsline {section}{\numberline {5.4}Strategic Implications of Feature Importance Results}{54}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}Revenue Efficiency Over Raw Revenue}{54}{subsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.2}Call Intensity as a Real-Time Trigger Signal}{55}{subsection.5.4.2}%
+\contentsline {subsection}{\numberline {5.4.3}Mobile Money as a Financial Engagement Signal}{55}{subsection.5.4.3}%
+\contentsline {section}{\numberline {5.5}Projected Business Impact and Evaluation of Hypothesis H3}{55}{section.5.5}%
+\contentsline {section}{\numberline {5.6}Assessment of Research Objectives}{56}{section.5.6}%
+\contentsline {section}{\numberline {5.7}Summary}{57}{section.5.7}%
+\contentsline {chapter}{\numberline {6}Conclusions and Recommendations}{58}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Introduction}{58}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Conclusions}{58}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}Conclusion on Specific Objective 1: Key Customer Attributes}{58}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2}Conclusion on Specific Objective 2: Model Selection and Performance}{59}{subsection.6.2.2}%
+\contentsline {subsection}{\numberline {6.2.3}Conclusion on Specific Objective 3: Business Impact and Strategic Value}{60}{subsection.6.2.3}%
+\contentsline {section}{\numberline {6.3}Strategic Recommendations for Airtel Uganda}{60}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}Recommendation 1: Deploy a VOICE\_INTENSITY-Triggered Personalised Recommendation Engine}{60}{subsection.6.3.1}%
+\contentsline {subsection}{\numberline {6.3.2}Recommendation 2: Enrich Segmentation with Device Type and Channel Features}{61}{subsection.6.3.2}%
+\contentsline {subsection}{\numberline {6.3.3}Recommendation 3: Establish a Formal A/B Test and Model Governance Framework}{62}{subsection.6.3.3}%
+\contentsline {section}{\numberline {6.4}Limitations of the Study}{63}{section.6.4}%
+\contentsline {section}{\numberline {6.5}Directions for Future Research}{63}{section.6.5}%
+\contentsline {section}{\numberline {6.6}Final Remarks}{64}{section.6.6}%
+\contentsline {chapter}{References}{64}{section.6.6}%
+\contentsline {chapter}{Appendices}{69}{chapter*.28}%
+\contentsline {chapter}{\numberline {A}Data Use Agreement --- Airtel Uganda Limited}{70}{appendix.1.A}%
+\contentsline {chapter}{\numberline {B}Participant Information Sheet}{73}{appendix.1.B}%
+\contentsline {chapter}{\numberline {C}Semi-Structured Interview Guide}{76}{appendix.1.C}%
+\contentsline {chapter}{\numberline {D}Research Ethics and Data Collection Approval}{79}{appendix.1.D}%
+\contentsline {chapter}{\numberline {E}Research Objectives, Questions, and Hypotheses}{81}{appendix.1.E}%
+\contentsline {chapter}{\numberline {F}GitHub Repository and Analytical Codebase}{83}{appendix.1.F}%
+\contentsline {chapter}{\numberline {G}Declaration of AI Use}{84}{appendix.1.G}%
+\contentsline {chapter}{\numberline {H}Dataset Sample Screenshots}{85}{appendix.1.H}%

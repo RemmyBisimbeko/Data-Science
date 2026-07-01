@@ -1,0 +1,142 @@
+\documentclass[12pt]{report}
+\usepackage{appendix}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{xcolor}
+\usepackage{longtable}
+\usepackage[paper=a4paper,bottom=2.5cm,footskip=1.2cm,top=2.5cm,headsep=0.5cm,rmargin=2.5cm,lmargin=3cm]{geometry}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage[parfill]{parskip}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{setspace}
+\usepackage{fancyhdr}
+\usepackage{caption}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{textcomp}
+\usepackage[T1]{fontenc}
+\usepackage{url}
+\usepackage{hyperref}
+\hypersetup{colorlinks=false, linktoc=all}
+
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+\onehalfspacing
+
+% Student details
+\newcommand\theResearchTopic{LEVERAGING MACHINE LEARNING FOR DATA-DRIVEN AND PERSONALISED VOICE BUNDLE RECOMMENDATIONS: IMPROVING CUSTOMER SATISFACTION AND INFORMING BUSINESS DECISIONS FOR REVENUE OPTIMISATION. A CASE STUDY OF AIRTEL UGANDA LIMITED}
+\newcommand\theStudentName{Remmy Bisimbeko}
+\newcommand\theStudentRegNo{J24MD19/007}
+\newcommand\theStudentNo{B26099}
+\newcommand\theStudentEmail{rbisimbeko@ucu.ac.ug}
+\newcommand\theSpecializationTrack{Data Science and Analytics}
+\newcommand\thePrimaryAdvisor{Dr.\ Daphne Nyachaki Bitalo}
+\newcommand\theProgrameAward{Master of Science in Data Science and Analytics}
+\newcommand\theTheDocumentType{dissertation}
+\newcommand\theFinalOutputDocument{Degree}
+\newcommand\theFaculty{Faculty of Engineering Design \& Technology}
+\newcommand\theStudentPrevQualification{Master of Science in Data Science and Analytics Candidate}
+\newcommand\theDepartment{Department of Computing \& Technology}
+\newcommand\theVersionDate{October 2025}
+\newcommand\makLogo{\includegraphics[scale=.3]{images/logos/UCU-Logo.png}}
+
+\pagenumbering{roman}
+
+\begin{document}
+
+% Title page
+\begin{titlepage}
+    \centering
+    \makLogo \\
+    \vspace{0.3cm}
+    {\large \theDepartment} \\
+    \vspace{0.8cm}
+    \Large{
+        \textbf{\theResearchTopic} \\
+        \vspace{0.6cm}
+        \textit{By} \\
+        \vspace{0.4cm}
+        \theStudentName \\
+        \vspace{0.3cm}
+        Reg No: \theStudentRegNo \quad Student No: \theStudentNo \\
+        E-mail: \theStudentEmail \\
+        \vspace{0.8cm}
+        A \theTheDocumentType~submitted to the \theFaculty~in partial fulfillment of the requirements for the award of \textbf{\theProgrameAward}~of Uganda Christian University \\
+        \vspace{0.8cm}
+        Supervised by: \thePrimaryAdvisor \\
+        \vspace{0.8cm}
+        \theVersionDate \\
+    }
+\end{titlepage}
+
+% Preliminary pages
+\chapter*{Declaration}
+\addcontentsline{toc}{chapter}{Declaration}
+\input{preliminary-pages/01-declaration}
+
+\chapter*{Ethical Generative AI Usage Declaration}
+\addcontentsline{toc}{chapter}{AI Usage Declaration}
+\input{preliminary-pages/01b-AI-declaration}
+
+\chapter*{Approval}
+\addcontentsline{toc}{chapter}{Approval}
+\input{preliminary-pages/02-approval}
+
+\chapter*{Abstract}
+\addcontentsline{toc}{chapter}{Abstract}
+\input{preliminary-pages/03-abstract}
+
+\chapter*{Dedication}
+\addcontentsline{toc}{chapter}{Dedication}
+\input{preliminary-pages/04-dedication}
+
+\input{preliminary-pages/05-toc-tof-symbols-abrevs}
+
+\chapter*{Acknowledgements}
+\addcontentsline{toc}{chapter}{Acknowledgements}
+\input{preliminary-pages/06-acknowledgments}
+
+% Chapters — Arabic numerals start at Chapter 1
+\chapter{Introduction}
+\label{ch:chapter-01}
+\pagenumbering{arabic}
+\input{chapters/chapter-01}
+
+\chapter{Literature Review}
+\label{ch:chapter-02}
+\input{chapters/chapter-02}
+
+\chapter{Methodology}
+\label{ch:chapter-03}
+\input{chapters/chapter-03}
+
+\chapter{Results}
+\label{ch:chapter-04}
+\input{chapters/chapter-04}
+
+\chapter{Discussion}
+\label{ch:chapter-05}
+\input{chapters/chapter-05}
+
+\chapter{Conclusions and Recommendations}
+\label{ch:chapter-06}
+\input{chapters/chapter-06}
+
+% References
+\addcontentsline{toc}{chapter}{References}
+\input{references/references-content}
+
+% Appendices
+\appendix
+\addcontentsline{toc}{chapter}{Appendices}
+\begin{appendices}
+\input{appendicies/AAppendix-main}
+\end{appendices}
+
+\end{document}

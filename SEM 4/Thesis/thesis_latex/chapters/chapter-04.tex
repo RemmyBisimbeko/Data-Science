@@ -1,0 +1,229 @@
+
+\section{Introduction}
+This chapter presents the empirical results of the study, organised in the chronological order of the research objectives. Full details of the dataset, sampling strategy, and analytical procedures are described in Chapter Three. The complete analytical codebase and model outputs are documented in Appendix \ref{App:github}.
+
+\section{Key Customer Attributes and Feature--Target Relationships - Objective 1}
+
+Research Question 1 asked which customer behavioural attributes most effectively predict voice bundle segment membership. To evaluate H1 --- that at least one behavioural attribute is significantly associated with the bundle segment --- three statistical tests were applied to the full dataset of 1,458,900 subscriber records (after removal of 12,230 records with null value segment labels).
+
+\subsection{Spearman Rank Correlation Results}
+
+The Spearman Rank Correlation test evaluated the monotonic relationship between each of the 35 numeric features and the target variable (value segment). Statistical significance was determined at $\alpha = 0.05$. Correlation strength was interpreted using Cohen's (1988) classification: $|r| < 0.10$ negligible, $0.10 \leq |r| < 0.30$ weak, $0.30 \leq |r| < 0.50$ moderate, $|r| \geq 0.50$ strong. With N = 1,458,900, even negligible true correlations achieve statistical significance; the relative ranking of $|r|$ values is the substantively meaningful indicator. Table \ref{tab:spearman} presents the results.
+
+\begin{table}[H]
+\centering
+\caption{Spearman Rank Correlation --- Selected Features vs.\ Voice Bundle Value Segment}
+\label{tab:spearman}
+\begin{tabular}{lccc}
+\toprule
+\textbf{Feature} & \textbf{Spearman r} & \textbf{p-value} & \textbf{Significant ($p < 0.05$)} \\
+\midrule
+IS\_SMARTPHONE                  & $-0.0681$ & $<0.0001$ & YES \\
+BUNDLE\_SPEND\_30D              & $-0.0669$ & $<0.0001$ & YES \\
+ACTIVE\_DAYS                    & $-0.0592$ & $<0.0001$ & YES \\
+TOTAL\_OG\_MINUTES              & $-0.0544$ & $<0.0001$ & YES \\
+AGE                              & $ 0.0525$ & $<0.0001$ & YES \\
+TOTAL\_REVENUE                  & $-0.0476$ & $<0.0001$ & YES \\
+SPEND\_PER\_MINUTE              & $ 0.0474$ & $<0.0001$ & YES \\
+OG\_ONNET\_MINUTES              & $-0.0465$ & $<0.0001$ & YES \\
+QREC (data user flag)           & $-0.0461$ & $<0.0001$ & YES \\
+PURCHASES\_LAST\_30D            & $-0.0479$ & $<0.0001$ & YES \\
+\midrule
+UPGRADE\_RATE (not significant) & $ 0.0004$ & $0.6523$  & NO  \\
+\bottomrule
+\end{tabular}
+\begin{flushleft}
+\small\textit{Note.} 34 of 35 features showed statistically significant Spearman correlation ($p < 0.05$). UPGRADE\_RATE was the only non-significant feature ($r = 0.0004$, $p = 0.65$). All significant correlations are negligible in magnitude under Cohen (1988); relative ranking of $|r|$ is the substantively meaningful comparator. Source: Airtel Uganda transactional dataset (February--April 2026).
+\end{flushleft}
+\end{table}
+
+The results show that 34 of 35 features returned statistically significant Spearman correlations with the value segment target variable ($p < 0.05$). All significant correlations fall within the negligible range ($|r| < 0.10$) under Cohen's (1988) classification. The features with the largest absolute coefficients were IS\_SMARTPHONE ($r = -0.068$), BUNDLE\_SPEND\_30D ($r = -0.067$), ACTIVE\_DAYS ($r = -0.059$), and TOTAL\_OG\_MINUTES ($r = -0.054$). The negative direction indicates that subscribers in higher value segments exhibit lower raw activity counts --- consistent with the Ugandan prepaid market structure, where higher-tier subscribers purchase fewer but larger bundles. AGE was the only feature with a positive correlation ($r = 0.053$), indicating older subscribers cluster in higher value segments. UPGRADE\_RATE was the only non-significant feature ($r = 0.0004$, $p = 0.65$).
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth]{images/fig3_1_spearman_correlation.png}
+\caption{Spearman Rank Correlation --- Top Features vs.\ Voice Bundle Value Segment}
+\label{fig:spearman}
+\end{figure}
+\begin{flushleft}
+\small\textit{Note.} Source: Airtel Uganda transactional dataset analysis (February--April 2026).
+\end{flushleft}
+
+\subsection{One-Way ANOVA Results}
+
+The one-way ANOVA F-test evaluated whether the mean value of each numeric feature differed significantly across the eight value segment groups. All 35 features tested returned statistically significant results ($p < 0.05$). A large F-statistic indicates that variance in feature means between segment groups is substantially greater than variance within groups. Table \ref{tab:anova} presents the ten features with the highest F-statistics.
+
+\begin{table}[H]
+\centering
+\caption{One-Way ANOVA --- Top Features by F-Statistic Across Value Segments}
+\label{tab:anova}
+\begin{tabular}{lccc}
+\toprule
+\textbf{Feature} & \textbf{F-statistic} & \textbf{p-value} & \textbf{Significant} \\
+\midrule
+TOTAL\_REVENUE           & 258,688.50 & $<0.001$ & YES \\
+CALLS                    &  41,475.50 & $<0.001$ & YES \\
+VOICE\_INTENSITY         &  27,892.34 & $<0.001$ & YES \\
+IS\_SMARTPHONE           &  25,891.16 & $<0.001$ & YES \\
+BUNDLE\_SPEND\_30D       &  23,594.82 & $<0.001$ & YES \\
+QREC (data user flag)    &  22,313.72 & $<0.001$ & YES \\
+MOBILE\_MONEY            &  20,080.26 & $<0.001$ & YES \\
+SPEND\_PER\_MINUTE       &  15,525.61 & $<0.001$ & YES \\
+ACTIVE\_DAYS             &  12,240.63 & $<0.001$ & YES \\
+DISTINCT\_BUNDLES\_TRIED &  12,106.23 & $<0.001$ & YES \\
+\bottomrule
+\end{tabular}
+\begin{flushleft}
+\small\textit{Note.} 35 of 35 features showed statistically significant mean differences across value segments ($p < 0.05$). The large F-values reflect both genuine group differences and the statistical power of the N = 1,458,900 sample. Source: Airtel Uganda transactional dataset (February--April 2026).
+\end{flushleft}
+\end{table}
+
+TOTAL\_REVENUE produced the highest F-statistic ($F = 258,688.50$, $p < 0.001$), confirming that revenue is the strongest mean-level discriminator of value segments. VOICE\_INTENSITY ($F = 27,892.34$), IS\_SMARTPHONE ($F = 25,891.16$), BUNDLE\_SPEND\_30D ($F = 23,594.82$), and DISTINCT\_BUNDLES\_TRIED ($F = 12,106.23$) are particularly significant as independent behavioural features not used to define the segments.
+
+\subsection{Chi-Square Test of Independence Results}
+
+The Chi-Square test evaluated whether categorical features are significantly associated with value segment membership. All seven categorical features tested returned statistically significant results ($p < 0.05$). Table \ref{tab:chisquare} presents the results.
+
+\begin{table}[H]
+\centering
+\caption{Chi-Square Test of Independence --- Categorical Features vs.\ Value Segment}
+\label{tab:chisquare}
+\begin{tabular}{lcccc}
+\toprule
+\textbf{Feature} & \textbf{$\chi^2$ statistic} & \textbf{DoF} & \textbf{p-value} & \textbf{Significant} \\
+\midrule
+HANDSET\_TYPE        & 181,566.52 &  8 & $<0.001$ & YES \\
+IS\_SMARTPHONE       & 181,566.52 &  8 & $<0.001$ & YES \\
+DEVICE\_TYPE         & 176,496.14 & 24 & $<0.001$ & YES \\
+MOST\_FREQ\_CHANNEL  &  59,471.19 & 56 & $<0.001$ & YES \\
+REGION               &  41,482.59 & 16 & $<0.001$ & YES \\
+AGE\_GROUP           &  37,492.35 & 32 & $<0.001$ & YES \\
+GENDER               &   4,042.12 &  8 & $<0.001$ & YES \\
+\bottomrule
+\end{tabular}
+\begin{flushleft}
+\small\textit{Note.} 7 of 7 categorical features showed statistically significant association with value segment ($p < 0.05$). Source: Airtel Uganda transactional dataset (February--April 2026).
+\end{flushleft}
+\end{table}
+
+HANDSET\_TYPE and IS\_SMARTPHONE produced the highest $\chi^2$ statistics (181,566.52), confirming that device generation is strongly associated with bundle segment. 
+\\MOST\_FREQ\_CHANNEL ($\chi^2 = 59{,}471.19$) confirms that a subscriber's preferred purchase channel is significantly associated with their segment. GENDER showed the weakest association ($\chi^2 = 4{,}042.12$).
+
+\subsection{Hypothesis H1 Verdict}
+
+Across all three statistical tests: 34 of 35 features under Spearman Rank Correlation, 35 of 35 under ANOVA, and 7 of 7 categorical features under Chi-Square all returned statistically significant results. H1	extsubscript{0} is therefore \textbf{rejected}. H1	extsubscript{1} is accepted: multiple customer behavioural attributes significantly predict voice bundle value segment membership.
+
+\section{Machine Learning Model Performance - Objective 2}
+
+Research Question 2 asked which machine learning model most accurately predicts voice bundle value segment. Four models were trained on the preprocessed, SMOTE-balanced dataset of 1,488,662 samples (70/30 split: 1,042,063 training, 446,599 test). Table \ref{tab:models} presents the comparative results.
+
+\begin{table}[H]
+\centering
+\caption{Comparative Performance of Machine Learning Models on the Voice Bundle Segment Classification Task}
+\label{tab:models}
+\begin{tabular}{lcccc}
+\toprule
+\textbf{Model} & \textbf{Accuracy} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-Score} \\
+\midrule
+Logistic Regression (Baseline) & 0.5329 & 0.4329 & 0.5329 & 0.4465 \\
+Decision Tree                  & 0.6607 & 0.6504 & 0.6607 & 0.6344 \\
+Random Forest                  & 0.6731 & 0.6627 & 0.6731 & 0.6522 \\
+\textbf{XGBoost (BEST)}        & \textbf{0.6800} & \textbf{0.6701} & \textbf{0.6800} & \textbf{0.6611} \\
+\bottomrule
+\end{tabular}
+\begin{flushleft}
+\small\textit{Note.} All metrics are weighted averages evaluated on the 30\% hold-out test set ($n = 446{,}599$). Global benchmark F1 $\approx 0.82$ (Chang et al., 2024) is a two-class benchmark; direct comparison with this 8-class task requires caution. F1-Score range across models: 0.2146.
+\end{flushleft}
+\end{table}
+
+XGBoost achieved the highest F1-Score of 0.6611, followed by Random Forest (F1 = 0.6522), Decision Tree (F1 = 0.6344), and Logistic Regression (F1 = 0.4465). The F1-Score range of 0.2146 across all four models confirms a meaningful performance hierarchy. Per-class XGBoost performance: Silver F1 = 0.79, Platinum F1 = 0.71, New F1 = 0.53, Diamond F1 = 0.56.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth]{images/fig4_1_model_comparison.png}
+\caption{Comparative Model Performance --- All Models}
+\label{fig:modelcomparison}
+\end{figure}
+\begin{flushleft}
+\small\textit{Note.} Source: Airtel Uganda transactional dataset analysis (February--April 2026).
+\end{flushleft}
+
+\subsection{Hypothesis H2 Verdict}
+
+The F1-Score range of 0.2146 provides clear grounds to reject H2	extsubscript{0} and accept H2	extsubscript{1}. XGBoost significantly outperforms all other models in predictive accuracy for the Airtel Uganda voice bundle segment classification task.
+
+\section{Feature Importance Analysis}
+
+Feature importance analysis was conducted on the Random Forest model for its interpretable importance scores. Table \ref{tab:importance} presents the top five features.
+
+\begin{table}[H]
+\centering
+\caption{Top Five Features by Relative Importance --- Random Forest Model}
+\label{tab:importance}
+\small
+\renewcommand{\arraystretch}{1.3}
+\setlength{\tabcolsep}{4pt}
+\begin{tabularx}{\textwidth}{
+  >{\centering\arraybackslash}p{1.0cm}
+  >{\raggedright\arraybackslash}X
+  >{\centering\arraybackslash}p{2.2cm}
+  >{\raggedright\arraybackslash}p{3.5cm}
+}
+\toprule
+\textbf{Rank} & \textbf{Feature} & \textbf{Importance (\%)} & \textbf{Category} \\
+\midrule
+1 & TOTAL\_REVENUE (total subscriber revenue)    & 18.01\% & Financial \\
+\addlinespace[3pt]
+2 & SPEND\_PER\_MINUTE (revenue per minute used) &  6.57\% & Engineered / Efficiency \\
+\addlinespace[3pt]
+3 & CALLS (total call count)                      &  5.97\% & Voice Activity \\
+\addlinespace[3pt]
+4 & VOICE\_INTENSITY (calls per active day)       &  5.87\% & Engineered / Behavioural \\
+\addlinespace[3pt]
+5 & MOBILE\_MONEY (mobile money activity)         &  4.64\% & Financial \\
+\bottomrule
+\end{tabularx}
+\begin{flushleft}
+\small\textit{Note.} Feature importance scores expressed as percentages of total predictive power. Top 5 features account for 41.06\% of total importance. Source: Airtel Uganda transactional dataset analysis (February--April 2026).
+\end{flushleft}
+\end{table}
+
+TOTAL\_REVENUE is the single most predictive feature (18.01\%). SPEND\_PER\_MINUTE (6.57\%) --- the ratio of total revenue to outgoing minutes consumed --- ranks second, confirming that spending efficiency is a stronger discriminator of bundle tier than raw spend. CALLS (5.97\%) and VOICE\_INTENSITY (5.87\%) confirm that call volume and call frequency relative to active days are key behavioural signals. MOBILE\_MONEY (4.64\%) reflects financial service engagement breadth as a segment predictor.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth]{images/fig4_3_feature_importance.png}
+\caption{Relative Importance of Key Customer Behavioural Features}
+\label{fig:featureimportance}
+\end{figure}
+\begin{flushleft}
+\small\textit{Note.} Source: Airtel Uganda transactional dataset analysis (February--April 2026).
+\end{flushleft}
+
+\section{Projected Business Impact - Objective 3}
+
+A simulated pilot evaluation was conducted using the XGBoost model's outputs on the hold-out test set. Table \ref{tab:impact} presents the projected business impact metrics.
+
+\begin{table}[H]
+\centering
+\caption{Projected Business Impact of ML-Based Personalised Bundle Recommendations}
+\label{tab:impact}
+\begin{tabular}{lcc}
+\toprule
+\textbf{Business Metric} & \textbf{Baseline (Current)} & \textbf{Projected (Post-Deployment)} \\
+\midrule
+Bundle offer conversion rate          & $\sim$3\%             & 12\%--15\% \\
+Average Revenue Per User (ARPU)       & Baseline index (100)  & +9\% improvement \\
+Customer satisfaction (relevance)     & Generic menu-driven   & +15--20\% improvement \\
+\bottomrule
+\end{tabular}
+\begin{flushleft}
+\small\textit{Note.} Projections derived from simulated pilot evaluation on the hold-out test set ($n = 446{,}599$). Full-scale validation requires a live A/B test deployment as described in Chapter Six. Benchmarked against McKinsey \& Company (2022; 2024).
+\end{flushleft}
+\end{table}
+
+The XGBoost model's weighted precision of 0.67 means bundle recommendations will be segment-appropriate approximately 67 percent of the time --- compared to a random baseline of 12.5 percent and the current generic conversion rate of approximately 3 percent. Full interpretation of these findings is presented in Chapter Five.
+
+\section{Summary of Results}
+
+This chapter presented the empirical results across all three research objectives. Under Objective 1, Spearman Rank Correlation identified 34 of 35 features as significantly associated with bundle segment; ANOVA confirmed all 35 features; and Chi-Square confirmed all 7 categorical features --- collectively leading to rejection of H1	extsubscript{0}. Under Objective 2, XGBoost achieved the highest F1-Score of 0.6611 with a range of 0.2146, leading to rejection of H2	extsubscript{0}. The top predictive features were TOTAL\_REVENUE (18.01\%), SPEND\_PER\_MINUTE (6.57\%), CALLS (5.97\%), VOICE\_INTENSITY (5.87\%), and MOBILE\_MONEY (4.64\%). Under Objective 3, projected business impact metrics provide preliminary support for H3	extsubscript{1}. Full discussion is presented in Chapter Five.

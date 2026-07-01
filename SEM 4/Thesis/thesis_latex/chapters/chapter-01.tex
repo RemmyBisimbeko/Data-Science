@@ -1,0 +1,161 @@
+
+\section{Background to the Study}
+
+The global telecommunications industry is undergoing a fundamental transformation driven by the proliferation of mobile devices, the exponential growth of customer data, and rapid advances in artificial intelligence and machine learning. In this environment, the ability to understand and anticipate individual customer needs has emerged as a primary source of competitive differentiation. Globally, telecommunications operators are increasingly moving away from generic, product-centric marketing strategies toward data-driven, customer-centric personalisation --- a shift that research consistently links to improvements in customer satisfaction, retention, and revenue (McKinsey \& Company, 2022; Sikri et al., 2024).
+
+In Uganda, this transformation is unfolding in a market characterised by intense competition, a predominantly prepaid subscriber base, and high customer sensitivity to price and product relevance. The Ugandan telecommunications sector is regulated by the Uganda Communications Commission (UCC) and currently comprises several competing Mobile Network Operators (MNOs), of which Airtel Uganda Limited is one of the two dominant players. As of late 2024, Airtel Uganda commanded approximately 47 percent of the market share, with an active subscriber base of approximately 10.5 million customers (Uganda Securities Exchange, 2025; Publicist East Africa, 2025). Despite this substantial market presence, Airtel Uganda, like its competitors, faces persistent challenges in customer retention, with monthly churn rates estimated to fluctuate between 3 and 5 percent across major Ugandan operators.
+
+A central driver of this churn and broader customer dissatisfaction is the mismatch between the products offered to customers and their actual consumption needs. Airtel Uganda's voice bundle portfolio comprises over 150 distinct products, varying in price, call minutes, validity period, and target usage occasion. Navigating this portfolio through a generic Unstructured Supplementary Service Data (USSD) menu, without personalised guidance, places a significant cognitive and financial burden on the subscriber. Customers who select inappropriate bundles --- either over-purchasing relative to their needs or depleting their allocation prematurely --- experience dissatisfaction that erodes loyalty over time. The Average Revenue Per User (ARPU) for Airtel Uganda currently averages approximately UGX 8,500 per month, a figure that the company's published financial results suggest has room for meaningful growth through more effective customer engagement (Airtel Uganda, 2024).
+
+Against this backdrop, this study proposes the application of machine learning (ML) techniques to Airtel Uganda's transactional customer data as the basis for a personalised voice bundle recommendation system. Machine learning offers the capacity to identify complex, non-linear patterns in large-scale behavioural data that are invisible to traditional rule-based segmentation approaches (Samuel, 1959; Hastie et al., 2009). By training predictive models on historical purchase behaviour, usage patterns, and temporal dynamics, it is possible to develop a system that recommends the most relevant voice bundle to each subscriber at the most opportune moment, transforming the customer's experience from one defined by generic choice to one defined by intelligent, personalised guidance.
+
+This study was conducted as a case study of Airtel Uganda Limited, utilising a dataset comprising approximately 150 million voice bundle purchase transactions from 1,458,900 subscribers from February to April 2026. This research contributes to the growing body of global literature on machine learning applications in telecommunications while addressing a specific and documented gap: the absence of published, empirically grounded ML recommendation studies in the Ugandan prepaid voice bundle market.
+
+
+\section{Problem Statement}
+
+Airtel Uganda, in common with many Mobile Network Operators in developing economies, currently relies on generalised, rule-based marketing strategies for the promotion and sale of voice bundles. These strategies segment customers into broad groups --- typically based on a single metric such as Average Revenue Per User --- and deliver standardised promotional messages to all members of each segment, without regard for the individual behavioural patterns, consumption rhythms, or immediate contextual needs of each subscriber.
+
+The commercial consequences of this approach are well documented and significant. Generic, untargeted promotional campaigns in the telecommunications sector achieve conversion rates typically below 3 percent, representing a poor return on marketing investment and a substantial volume of wasted customer communication (McKinsey \& Company, 2022). For Airtel Uganda specifically, this translates to an estimated 20 percent wastage of the marketing budget on campaigns that fail to convert, and an estimated 15 percent of the total user base that remains low-spending or inactive --- a segment that appropriate, personalised recommendations could potentially re-engage and monetise.
+
+Beyond commercial inefficiency, the one-size-fits-all approach generates a poor customer experience. Subscribers who receive irrelevant bundle recommendations --- offers that do not reflect their actual usage patterns or financial circumstances --- experience a diminished sense of being understood and valued by their service provider. This experience of irrelevance is a documented driver of customer dissatisfaction and churn in prepaid mobile markets (Al-Mashraie et al., 2020; Christopher and Nelson, 2024). The problem is further compounded by the scale and complexity of Airtel Uganda's voice bundle portfolio: with over 150 distinct products available, the probability that a randomly selected or generically recommended bundle will be the optimal choice for any individual subscriber is extremely low.
+
+Therefore, the core problem is the absence of a scalable, data-driven recommendation system capable of providing timely and personalised voice bundle recommendations that align with individual customer consumption patterns and behavioural profiles. This gap between the richness of the behavioural data available within Airtel Uganda's systems and the simplicity of the segmentation logic currently applied to it represents both a commercial opportunity and an academic research gap that this study seeks to address.
+
+
+\section{Justification of the Study}
+
+This study is justified by its potential to generate significant and demonstrable value for three distinct stakeholder groups: Airtel Uganda as the case study organisation, the customers, and the academic community. Each justification is grounded in the specific gaps identified in both the current practice and the existing literature.
+
+
+\subsection{Justification for the Telecom Industry}
+
+From an industry perspective, this research provides Airtel Uganda --- and by extension, the broader East African telecommunications sector --- with an evidence-based methodology for overcoming the economic inefficiencies inherent in generic, rule-based marketing systems. The financial case for personalisation is well-established globally: McKinsey and Company (2022) demonstrated that telecommunications operators implementing analytics-driven recommendation engines achieve revenue increases of up to 10 percent and improvements in customer satisfaction of 20 to 30 percent. This study translates this global evidence into a contextually grounded, operationally applicable framework for the Ugandan prepaid market.
+
+Specifically, this study delivers a validated machine learning model that Airtel Uganda can deploy to intelligently recommend voice bundles at the individual subscriber level, replacing the current high-volume, low-conversion broadcast campaign approach. The projected commercial impact,  including a four- to five-fold improvement in bundle offer conversion rate and a 9 percent improvement in ARPU, represents a compelling return on investment that directly addresses the operator's stated strategic priorities of revenue growth and customer retention (Airtel Uganda, 2024). Furthermore, the study's feature importance findings provide Airtel Uganda's product and marketing teams with actionable intelligence on which customer attributes most strongly drive bundle purchasing behaviour --- intelligence that can inform product design, pricing strategy, and campaign timing beyond the immediate recommendation use case.
+
+
+\subsection{Justification for the Customer}
+
+This research is equally justified by its potential to deliver tangible and direct benefits to Airtel Uganda's subscribers. The current absence of personalisation places an unreasonable burden on customers, who must independently navigate a portfolio of over 150 voice bundle products without data-driven guidance and who frequently experience the financial loss of purchasing bundles that do not match their actual usage patterns. Wang and Wang (2010) demonstrated that a high degree of service personalisation is directly and significantly linked to increased customer satisfaction and stronger brand loyalty in mobile services. This was a finding confirmed more recently by Medallia (2024), which reported that 82 percent of consumers indicated that personalised experiences drive their brand choice in at least half of their purchasing situations.
+
+The recommendation system developed in this study addresses customer needs in two concrete ways. First, by precisely matching the recommended bundles to each subscriber's demonstrated consumption patterns, the system minimises the probability of over-purchasing or under-purchasing, thereby maximising the value the customer receives from each transaction. Second, by delivering recommendations at the moment of genuine purchase intent, as identified through the bundle depletion signal, the system replaces reactive, unsolicited promotional messaging with timely, relevant, and genuinely useful guidance. The result is a customer experience defined by relevance and responsiveness, rather than irrelevance and noise.
+
+
+\subsection{Justification for Academia}
+
+From an academic standpoint, this study addresses a documented and significant gap in the existing literature. As established in Chapter Two, the global body of knowledge on machine learning applications in telecommunications is substantial and growing, with well-validated frameworks for customer segmentation, churn prediction, and recommendation system design. However, the application of these frameworks to the specific context of the Ugandan prepaid voice bundle market, characterised by high-frequency, low-denomination transactions, a dominantly prepaid subscriber base, and a distinct set of behavioural dynamics, remains largely absent from the published literature. Existing Ugandan telecom literature is predominantly survey-based and qualitative, focusing on perceptions of service quality and loyalty rather than empirical behavioural modelling (Faridah et al., 2023; Christopher \& Nelson, 2024).
+
+This study contributes to the existing knowledge by providing the first published, empirically grounded ML recommendation framework built on real transactional data from a Ugandan operator. In doing so, it serves as a replicable methodological template for future researchers studying personalisation and machine learning in other African and developing economy telecom markets. The mixed-methods design, which combines large-scale quantitative modelling with qualitative insights from industry practitioners, further contributes to the methodological literature by demonstrating how technical ML findings can be contextualised and validated through organisational knowledge (Creswell \& Creswell, 2018; Saunders et al., 2019).
+
+
+\section{Main Objective of the Research}
+
+The main objective of this study is to identify the key customer behavioural attributes that can be used to predict appropriate voice bundles for individual Airtel Uganda subscribers and to leverage these attributes to develop a machine learning-based recommendation framework that supports Airtel Uganda's business growth objectives.
+
+This study moves beyond conventional customer segmentation by establishing a data-driven relationship between specific customer behavioural attributes --- operationalised as independent variables --- and individual voice bundle purchase decisions, operationalised as the dependent variable. This study focuses specifically on identifying which engineered behavioural features, including usage patterns, temporal dynamics, and bundle depletion rates, are the most influential predictors of the bundle type a customer is most likely to purchase. This predictive capability is intended to serve two primary stakeholder groups simultaneously: Airtel Uganda, by providing a data-driven engine for intelligent bundle recommendations that reduce wasted marketing spending and increase conversion rates and revenue; and the customer, by ensuring that recommended bundles are genuinely relevant to their individual consumption profile, thereby reducing the frustration of navigating a generic product menu and the financial cost of purchasing inappropriate products.
+
+
+\section{Specific Objectives}
+
+The following three specific objectives operationalise the main research objective and structure the analytical work of the study:
+
+\begin{enumerate}
+\item To identify the key customer behavioural attributes and patterns that are most predictive of voice bundle purchase decisions among Airtel Uganda prepaid subscribers.
+\end{enumerate}
+\begin{enumerate}
+\item To test and evaluate suitable machine learning models, including appropriate data preprocessing and feature engineering techniques, for accurately predicting and classifying voice bundle purchase decisions by Airtel Uganda customers.
+\end{enumerate}
+\begin{enumerate}
+\item To formulate strategic, evidence-based machine learning recommendations for Airtel Uganda to grow its business, optimise marketing efficiency, and improve customer satisfaction.
+\end{enumerate}
+
+\section{Research Questions}
+
+The following research questions correspond directly to the three specific objectives and provide the evaluative framework against which the empirical findings of the study are assessed in Chapters Four and Five:
+
+\begin{enumerate}
+\item What are the key customer behavioural attributes and patterns that most effectively predict voice bundle purchase decisions among Airtel Uganda's prepaid subscribers? (RQ1)
+\end{enumerate}
+\begin{enumerate}
+\item Which machine learning models are most suitable and accurate for predicting and classifying customer voice bundle preferences, and which data preprocessing approaches best support this task? (RQ2)
+\end{enumerate}
+\begin{enumerate}
+\item What strategic recommendations can be derived from the machine learning model's outputs to help Airtel Uganda improve customer satisfaction, reduce churn, and grow its business? (RQ3)
+\end{enumerate}
+
+\section{Research Hypotheses}
+
+Based on the research questions, specific objectives, and theoretical framework established in Chapter Two, the following testable hypotheses guide this study. Each hypothesis is presented with its null form (H	extsubscript{0}) and alternative form (H	extsubscript{1}) and will be evaluated against the empirical findings in Chapters Four and Five:
+
+Hypothesis 1 (corresponding to RQ1) --- H1	extsubscript{0}: No customer behavioural attribute is significantly associated with the type of voice bundle purchased by Airtel Uganda subscribers. H1	extsubscript{1}: At least one engineered customer behavioural attribute --- such as bundle depletion rate, purchase frequency, temporal usage pattern, or rolling ARPU --- is a significant predictor of the type of voice bundle purchased.
+
+Hypothesis 2 (corresponding to RQ2) --- H2	extsubscript{0}: No significant difference exists in the predictive accuracy of the candidate machine learning models when applied to the Airtel Uganda voice bundle classification. H2	extsubscript{1}: At least one machine learning model significantly outperforms the others in predicting the correct voice bundle class for Airtel Uganda customers, as measured by Accuracy, F1-Score, Precision, and Recall.
+
+Hypothesis 3 (corresponding to RQ3) --- H3	extsubscript{0}: Machine learning-based personalised bundle recommendations yield no strategically significant insights for improving Airtel Uganda's customer engagement or revenue performance. H3	extsubscript{1}: Machine learning-based personalised bundle recommendations generate actionable strategic insights that can demonstrably contribute to improvements in customer satisfaction and revenue optimisation at Airtel Uganda.
+
+
+\section{Scope of the Study}
+
+
+\subsection{Geographical Scope}
+
+This study is geographically delimited to Airtel Uganda subscribers whose transactional data fall within the Central Business District of Kampala, Uganda. Kampala, as Uganda's commercial capital, represents the highest concentration of active prepaid subscribers and the greatest diversity of usage behaviour, making it an appropriate and practically accessible primary geographical focus for this study. The qualitative component, key informant interviews, was conducted with Airtel Uganda staff based at the company's Kampala headquarters.
+
+
+\subsection{Time Scope}
+
+The quantitative analysis is based on transactional data spanning a three-month period from February to April of 2026. This time window was selected for three reasons: First, it aligns with the Uganda Communications Commission's (UCC) regulatory requirement that inactive subscribers be disconnected after 90 days of inactivity, ensuring that the dataset reflects only genuinely active subscribers whose behaviour is commercially relevant. Second, a 90-day observation window is sufficient to capture meaningful short-term behavioural patterns, including purchase frequency cycles, depletion rhythms, and temporal usage routines, while remaining computationally manageable for large-scale ML model training. Third, analysing data from the most recently available period ensures that behavioural insights reflect current market conditions, product offerings, and competitive dynamics in the Ugandan telecommunications market.
+
+
+\subsection{Content Scope}
+
+This study focuses exclusively on the prepaid voice bundle purchase behaviour of Airtel Uganda subscribers. The primary analytical unit is the individual voice bundle purchase transaction, characterised by the bundle type, price, timestamp, and associated customer behavioural attributes. Data bundle and combined voice-and-data bundle purchasing patterns are outside the scope of this study, as are postpaid subscriber behaviour, which follows a structurally different purchasing process. The machine learning models developed were designed specifically for the prepaid voice bundle recommendation use case and were not generalised to other product categories or subscriber types within this study.
+
+
+\section{Significance of the Study}
+
+This research carries significance at three levels:  the telecommunications industry, end-users, and the academic community, each of which corresponds to a gap in current knowledge or practice that the study directly addresses.
+
+For the telecommunications industry, the study provides an operationally implementable, empirically validated recommendation framework that Airtel Uganda can deploy to improve marketing efficiency, increase ARPU, and reduce churn. The findings demonstrate that the data necessary to build such a system already exist within the operator's own transactional records; the missing element is the analytical framework to unlock its value. Beyond Airtel Uganda, the methodology is transferable to other Ugandan operators and, with appropriate adaptation, to other prepaid-dominant telecom markets across East and sub-Saharan Africa.
+
+For customers, the significance lies in the direct improvement in the quality and relevance of the product recommendations they receive. A recommendation system that correctly identifies the most appropriate bundle for each subscriber, at the moment of purchase intent, translates into reduced financial waste, fewer irrelevant communications, and a more intuitive and satisfying service experience. These improvements directly address the customer-side pain points identified in the problem statement: irrelevant messaging, confusing product navigation, and the financial cost of purchasing mismatched bundles.
+
+For academia, the study's significance lies in its contribution of a replicable, context-specific empirical framework for ML-based personalisation in African prepaid telecom markets, a context that is underrepresented in the global ML and telecommunications literature. The study's mixed-methods design, which combines large-scale quantitative behavioural modelling with qualitative practitioner insights, also contributes to the methodological literature on how technical ML findings can be grounded in organisational and market contexts to produce actionable, rather than merely theoretical, knowledge.
+
+
+\section{Theoretical and Conceptual Framework}
+
+The conceptual framework of this study illustrates the relationships between the key variables of the research and the mechanism through which the machine learning intervention translates customer behavioural data into personalised recommendations and measurable results. The framework is grounded in two theoretical traditions established in Chapter Two: the Push-Pull-Mooring (PPM) framework, which explains how personalised recommendations function as a retention mechanism (Al-Mashraie et al., 2020), and the hyper-personalisation paradigm, which positions individual-level behavioral modeling an evolution beyond traditional Segmentation, Targeting, and Positioning (Kotler \& Keller, 2016; McKinsey \& Company, 2024).
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth]{images/framework.png}
+\caption{Conceptual Framework of the study}
+\label{figure_1}
+\end{figure}
+
+The independent variables in this study are customer behavioural and contextual attributes that serve as inputs to the machine learning model. These include historical usage patterns such as call frequency and duration, purchase behaviour variables including bundle purchase frequency, previously purchased bundle types, and bundle depletion rate, temporal and geographic attributes including time of day, day of week, and primary location of usage, and account-level information including customer tenure and anonymised demographic data where available. These variables are hypothesised --- on the basis of the literature reviewed in Chapter Two --- to be the primary behavioural drivers of voice bundle purchase decisions.
+
+The mediating variable, and the core technical intervention of the study, is the machine learning model. The model ingests multi-dimensional independent variables and is trained to identify the complex, non-linear relationships between these attributes and the customer's bundle purchase decision. The candidate models evaluated in this study include Logistic Regression, Decision Tree, Random Forest, Gradient Boosting, and Item-Based Collaborative Filtering, selected on the basis of the global literature reviewed in Chapter Two. The model transforms raw behavioural data into ranked, personalised bundle recommendations, the mechanism through which independent variables are translated into the dependent variable prediction.
+
+The dependent variable is the voice bundle purchase decision, which is the specific bundle type that a customer selects from the available portfolio. This was operationalised as a multi-class categorical variable, with each class representing a distinct voice bundle product. The machine learning model was designed to predict this variable with sufficient accuracy to surface the customer's likely choice within a ranked shortlist of five recommendations.
+
+The outcomes component of the framework captures the expected downstream consequences of accurate, personalized recommendations: increased customer satisfaction, driven by the relevance and timeliness of the recommendations received; reduced churn, as customers who consistently receive appropriate bundle suggestions experience a more satisfying and loyalty-building relationship with their operator; and increased revenue and customer lifetime value, as higher conversion rates on recommendations translate directly into improved ARPU and reduced marketing waste. These outcomes collectively address the core problem identified in Section 1.2 and form the evaluative criteria against which the study's success is assessed in Chapters Four, Five, and Six.
+
+
+\section{Limitations of the Study}
+
+Several limitations of the design and execution of this study are acknowledged. The first concern is data privacy and proprietary sensitivity. The transactional dataset provided by Airtel Uganda is commercially sensitive and subject to strict data governance protocols. While all data were fully anonymised prior to transfer to the researcher --- with subscriber identifiers replaced by non-identifiable user IDs --- the proprietary nature of the dataset means that the exact model outputs and feature engineering pipeline cannot be fully disclosed in ways that could expose the company's competitive intelligence. This constraint limits the complete replicability of the study by external researchers who do not have access to equivalent datasets.
+
+The second limitation relates to the absence of live deployment and a real-time feedback loop. The business impact projections presented in Chapter Four are derived from a simulated pilot on the hold-out test set and have not been validated through a live, randomised A/B test deployment. Consequently, the projected conversion rate improvements and ARPU uplift remain estimates grounded in model performance metrics and external benchmarks, rather than directly observed commercial outcomes. A full-scale A/B test, recommended in Chapter Six as the logical next step, would be required to empirically confirm these projections.
+
+Third, the three-month observation window, while appropriate for capturing short-term behavioural patterns and consistent with regulatory definitions of active subscribers, may not fully capture longer-term seasonal dynamics, such as usage shifts associated with school terms, public holidays, or annual economic cycles, that could influence both customer behaviour and model performance at different points in the year. Future research using longer observation windows will provide a more complete behavioural profile.
+
+Fourth, a potential bias exists in the use of revenue and conversion metrics as primary measures of recommendation system success. Although these metrics are commercially meaningful, they do not fully capture the customer's subjective experience of receiving and responding to recommendations. These nuances underscore the importance of complementing quantitative model metrics with qualitative customer experience research, a dimension that the present study addresses partially through key informant interviews but not through direct customer surveys.
+
+
+\section{Organisation of the Thesis}
+
+This thesis is organised into six chapters. Chapter One introduces the research context, problem statement, objectives, research questions, hypotheses, scope, and conceptual framework. Chapter Two presents a systematic review of the relevant literature, progressing from global theoretical frameworks through regional African evidence to the specific Ugandan telecom context, and identifies the research gap that this study addresses. Chapter Three describes the mixed-methods research design, population, sampling strategy, data collection procedures, and analytical pipeline employed in this study. Chapter Four presents the quantitative results, including a comparative model performance evaluation, feature importance analysis, and projected business impact. Chapter Five discusses the findings in the context of the research hypotheses and the literature reviewed in Chapter Two. Chapter Six presents the study's conclusions, strategic recommendations for Airtel Uganda, acknowledged limitations, and future research directions.
