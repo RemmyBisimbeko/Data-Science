@@ -31,6 +31,21 @@ The third specific objective was to formulate strategic, evidence-based recommen
 
 Taken together, the conclusions of this study establish that a feature-rich, behaviourally grounded machine learning recommendation system is both technically feasible and commercially compelling for Airtel Uganda. The study contributes the first published, empirically validated ML recommendation framework built on real transactional data from a Ugandan telecommunications operator, covering 1,458,900 subscribers across 738 distinct voice and combo bundle products, addressing a documented gap identified in Chapter Two.
 
+In summary, the three conclusions of this study are stated directly. First,
+customer behaviour predicts voice bundle segment: smartphone ownership, recent
+bundle spend, voice call intensity, and bundle variety are the dominant signals,
+all observable in real time from Airtel's network infrastructure
+(H1\textsubscript{1} accepted). Second, XGBoost is the best model for this
+classification task, achieving a 5.4-fold improvement over a random baseline on
+an 8-class, 1.46-million-subscriber problem (H2\textsubscript{1} accepted). Third,
+the model's outputs project commercially meaningful improvements in conversion rate
+and ARPU, grounded in a weighted precision of 0.670 and consistent with global
+telecom benchmarks, pending live A/B validation
+(H3\textsubscript{1} preliminarily accepted). Together, these conclusions establish
+that the primary barrier to personalised voice bundle recommendation at Airtel
+Uganda is not data availability, not model performance, and not infrastructure
+readiness --- it is the absence of the governance framework and live validation
+experiment specified in the recommendations that follow.
 
 \section{Strategic Recommendations for Airtel Uganda}
 
@@ -115,9 +130,38 @@ are nationally generalisable. Separately, extending the observation window to
 festive spending, school-term income constraints, and agricultural income cycles
 --- that the current 90-day window cannot represent.
 
+For a researcher entering this space, the single highest-priority direction is the
+live A/B test. The projected business impacts of this framework --- a conversion
+rate improvement from 3\% to 12--15\% and a 9\% ARPU uplift (simulated pilot projection) --- are grounded in
+model precision and external benchmarks, but they remain projections until a
+randomised experiment confirms them empirically. Every subsequent research
+direction --- DRL evolution, geographic expansion, XAI implementation, seasonal
+modelling --- builds on a commercial baseline that only the A/B test can
+establish. A researcher who confirms or refutes these projections through a live
+deployment will make the most impactful single contribution to this body of work.
+
 \section{Final Remarks}
 
 This study set out to address a clearly identified gap in both academic literature and commercial practice: the absence of a published, empirically validated machine learning recommendation framework for the Ugandan prepaid voice bundle market. By analysing real transactional data from 1,458,900 Airtel Uganda subscribers across 738 voice and combo bundle products, applying a rigorous preprocessing and feature engineering pipeline, and systematically evaluating four machine learning models, the research has delivered a technically robust and commercially actionable framework that directly addresses this gap.
+
+\subsection*{Contributions of this Study}
+
+The study makes four distinct contributions. \textbf{Empirically}, it is the first
+published ML recommendation framework validated on real, proprietary transactional
+data from a Ugandan mobile network operator --- 1,458,900 subscribers across 738
+products --- closing a gap that prior studies, which rely on public or synthetic
+data, could not address. \textbf{Methodologically}, it demonstrates that a
+classification-based recommendation paradigm is viable and deployable in
+sparse-interaction prepaid telecom environments, and provides a reproducible
+35-feature engineering pipeline and capped SMOTE protocol as a template for
+similar studies. \textbf{Theoretically}, it establishes SPEND\_PER\_MINUTE ---
+spending efficiency relative to usage --- as a stronger predictor of bundle tier
+preference than absolute revenue, directly challenging the theoretical basis of
+ARPU banding as a segmentation approach. \textbf{Practically}, it delivers a
+deployment-ready roadmap --- a VOICE\_INTENSITY-triggered recommendation engine,
+enriched segmentation variables, and a Model Governance Framework --- that requires
+no new data collection infrastructure, enabling Airtel Uganda to act on these
+findings without capital investment in new systems.
 
 The study's central empirical contribution is the identification of SPEND\_PER\_MINUTE --- the ratio of total revenue to outgoing minutes consumed --- as the second most predictive feature overall (6.57\%), ahead of raw call counts and mobile money activity. This finding is not available in any prior study of Ugandan telecom data and directly challenges the adequacy of ARPU-banded segmentation: it is not how much a subscriber spends in absolute terms that most powerfully discriminates their bundle tier, but how efficiently they spend relative to their usage. Combined with VOICE\_INTENSITY (calls per active day; 5.87\%), these two engineered features provide Airtel Uganda with real-time, network-observable trigger signals for personalised recommendations that require no new data collection infrastructure.
 

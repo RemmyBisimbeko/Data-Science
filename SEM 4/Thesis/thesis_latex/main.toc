@@ -55,77 +55,87 @@
 \contentsline {section}{\numberline {3.1}Introduction}{29}{section.3.1}%
 \contentsline {section}{\numberline {3.2}Research Questions and Hypotheses}{29}{section.3.2}%
 \contentsline {section}{\numberline {3.3}Research Philosophy and Design}{31}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Study Population}{31}{section.3.4}%
-\contentsline {section}{\numberline {3.5}Variables of the Study}{32}{section.3.5}%
-\contentsline {subsection}{\numberline {3.5.1}Dependent Variable}{32}{subsection.3.5.1}%
-\contentsline {subsection}{\numberline {3.5.2}Independent Variables}{32}{subsection.3.5.2}%
-\contentsline {section}{\numberline {3.6}Sample Size and Sampling Strategy}{33}{section.3.6}%
-\contentsline {subsection}{\numberline {3.6.1}Quantitative Sample: Statistical Justification}{33}{subsection.3.6.1}%
-\contentsline {subsection}{\numberline {3.6.2}Quantitative Sample: Machine Learning Dataset}{34}{subsection.3.6.2}%
-\contentsline {subsection}{\numberline {3.6.3}Qualitative Sample: Key Informant Interviews}{35}{subsection.3.6.3}%
-\contentsline {section}{\numberline {3.7}Data Collection}{35}{section.3.7}%
-\contentsline {subsection}{\numberline {3.7.1}Secondary Data: Historical Transaction Records}{35}{subsection.3.7.1}%
-\contentsline {subsection}{\numberline {3.7.2}Data Management: Storage, Retrieval, and Version Control}{37}{subsection.3.7.2}%
-\contentsline {subsection}{\numberline {3.7.3}Primary Data: Semi-Structured Interviews}{38}{subsection.3.7.3}%
-\contentsline {section}{\numberline {3.8}Data Analysis Procedures}{38}{section.3.8}%
-\contentsline {subsection}{\numberline {3.8.1}Qualitative Analysis: Thematic Analysis}{38}{subsection.3.8.1}%
-\contentsline {subsection}{\numberline {3.8.2}Data Preprocessing and Feature Engineering}{39}{subsection.3.8.2}%
-\contentsline {subsection}{\numberline {3.8.3}Model Development and Training}{41}{subsection.3.8.3}%
-\contentsline {subsection}{\numberline {3.8.4}Model Evaluation}{42}{subsection.3.8.4}%
-\contentsline {subsection}{\numberline {3.8.5}Strategic Recommendation Formulation}{43}{subsection.3.8.5}%
-\contentsline {section}{\numberline {3.9}Validity and Reliability}{43}{section.3.9}%
-\contentsline {section}{\numberline {3.10}Ethical Considerations}{44}{section.3.10}%
-\contentsline {chapter}{\numberline {4}Results}{45}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Introduction}{45}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Key Customer Attributes and Feature--Target Relationships - Objective 1}{45}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Spearman Rank Correlation Results}{45}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}One-Way ANOVA Results}{47}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}Chi-Square Test of Independence Results}{48}{subsection.4.2.3}%
-\contentsline {subsection}{\numberline {4.2.4}Hypothesis H1 Verdict}{48}{subsection.4.2.4}%
-\contentsline {section}{\numberline {4.3}Machine Learning Model Performance - Objective 2}{49}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Hypothesis H2 Verdict}{50}{subsection.4.3.1}%
-\contentsline {section}{\numberline {4.4}Feature Importance Analysis}{50}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Projected Business Impact - Objective 3}{52}{section.4.5}%
-\contentsline {section}{\numberline {4.6}Summary of Results}{52}{section.4.6}%
-\contentsline {chapter}{\numberline {5}Discussion}{53}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Introduction}{53}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Discussion of Key Customer Behavioural Attributes: Hypothesis H1}{53}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}The Large-Sample Context}{53}{subsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.2.2}Device Type and Smartphone Ownership as the Strongest Signal}{54}{subsection.5.2.2}%
-\contentsline {subsection}{\numberline {5.2.3}Bundle Spend Recency and Purchase Frequency}{54}{subsection.5.2.3}%
-\contentsline {subsection}{\numberline {5.2.4}Voice Activity Features}{54}{subsection.5.2.4}%
-\contentsline {subsection}{\numberline {5.2.5}UPGRADE\_RATE: The One Non-Significant Feature}{55}{subsection.5.2.5}%
-\contentsline {section}{\numberline {5.3}Discussion of Model Performance: Hypothesis H2}{55}{section.5.3}%
-\contentsline {subsection}{\numberline {5.3.1}Interpreting the F1-Score in Context}{55}{subsection.5.3.1}%
-\contentsline {subsection}{\numberline {5.3.2}Performance by Segment Class}{56}{subsection.5.3.2}%
-\contentsline {subsection}{\numberline {5.3.3}The Performance Hierarchy}{56}{subsection.5.3.3}%
-\contentsline {section}{\numberline {5.4}Strategic Implications of Feature Importance Results}{56}{section.5.4}%
-\contentsline {subsection}{\numberline {5.4.1}Revenue Efficiency Over Raw Revenue}{56}{subsection.5.4.1}%
-\contentsline {subsection}{\numberline {5.4.2}Call Intensity as a Real-Time Trigger Signal}{57}{subsection.5.4.2}%
-\contentsline {subsection}{\numberline {5.4.3}Mobile Money as a Financial Engagement Signal}{57}{subsection.5.4.3}%
-\contentsline {section}{\numberline {5.5}Projected Business Impact and Evaluation of Hypothesis H3}{57}{section.5.5}%
-\contentsline {section}{\numberline {5.6}Assessment of Research Objectives}{58}{section.5.6}%
-\contentsline {section}{\numberline {5.7}Summary}{59}{section.5.7}%
-\contentsline {chapter}{\numberline {6}Conclusions and Recommendations}{60}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Introduction}{60}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Conclusions}{60}{section.6.2}%
-\contentsline {subsection}{\numberline {6.2.1}Conclusion on Specific Objective 1: Key Customer Attributes}{60}{subsection.6.2.1}%
-\contentsline {subsection}{\numberline {6.2.2}Conclusion on Specific Objective 2: Model Selection and Performance}{61}{subsection.6.2.2}%
-\contentsline {subsection}{\numberline {6.2.3}Conclusion on Specific Objective 3: Business Impact and Strategic Value}{62}{subsection.6.2.3}%
-\contentsline {section}{\numberline {6.3}Strategic Recommendations for Airtel Uganda}{62}{section.6.3}%
-\contentsline {subsection}{\numberline {6.3.1}Recommendation 1: Deploy a VOICE\_INTENSITY-Triggered Personalised Recommendation Engine}{62}{subsection.6.3.1}%
-\contentsline {subsection}{\numberline {6.3.2}Recommendation 2: Enrich Segmentation with Device Type and Channel Features}{63}{subsection.6.3.2}%
-\contentsline {subsection}{\numberline {6.3.3}Recommendation 3: Establish a Formal A/B Test and Model Governance Framework}{64}{subsection.6.3.3}%
-\contentsline {section}{\numberline {6.4}Limitations of the Study}{65}{section.6.4}%
-\contentsline {section}{\numberline {6.5}Directions for Future Research}{65}{section.6.5}%
-\contentsline {section}{\numberline {6.6}Final Remarks}{66}{section.6.6}%
-\contentsline {chapter}{References}{67}{section.6.6}%
-\contentsline {chapter}{Appendices}{73}{chapter*.29}%
-\contentsline {chapter}{\numberline {A}Data Use Agreement --- Airtel Uganda Limited}{74}{appendix.1.A}%
-\contentsline {chapter}{\numberline {B}Participant Information Sheet}{77}{appendix.1.B}%
-\contentsline {chapter}{\numberline {C}Semi-Structured Interview Guide}{80}{appendix.1.C}%
-\contentsline {chapter}{\numberline {D}Research Ethics and Data Collection Approval}{83}{appendix.1.D}%
-\contentsline {chapter}{\numberline {E}Research Objectives, Questions, and Hypotheses}{85}{appendix.1.E}%
-\contentsline {chapter}{\numberline {F}GitHub Repository and Analytical Codebase}{87}{appendix.1.F}%
-\contentsline {chapter}{\numberline {G}Declaration of AI Use}{88}{appendix.1.G}%
-\contentsline {chapter}{\numberline {H}Dataset Sample Screenshots}{89}{appendix.1.H}%
+\contentsline {section}{\numberline {3.4}Study Population}{32}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Variables of the Study}{33}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Dependent Variable}{33}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}Independent Variables}{33}{subsection.3.5.2}%
+\contentsline {section}{\numberline {3.6}Sample Size and Sampling Strategy}{34}{section.3.6}%
+\contentsline {subsection}{\numberline {3.6.1}Quantitative Sample: Statistical Justification}{34}{subsection.3.6.1}%
+\contentsline {subsection}{\numberline {3.6.2}Quantitative Sample: Machine Learning Dataset}{35}{subsection.3.6.2}%
+\contentsline {subsection}{\numberline {3.6.3}Qualitative Sample: Key Informant Interviews}{36}{subsection.3.6.3}%
+\contentsline {section}{\numberline {3.7}Data Collection}{36}{section.3.7}%
+\contentsline {subsection}{\numberline {3.7.1}Secondary Data: Historical Transaction Records}{36}{subsection.3.7.1}%
+\contentsline {subsection}{\numberline {3.7.2}Data Management: Storage, Retrieval, and Version Control}{38}{subsection.3.7.2}%
+\contentsline {subsection}{\numberline {3.7.3}Primary Data: Semi-Structured Interviews}{39}{subsection.3.7.3}%
+\contentsline {section}{\numberline {3.8}Data Analysis Procedures}{39}{section.3.8}%
+\contentsline {subsection}{\numberline {3.8.1}Qualitative Analysis: Thematic Analysis}{39}{subsection.3.8.1}%
+\contentsline {subsection}{\numberline {3.8.2}Data Preprocessing and Feature Engineering}{40}{subsection.3.8.2}%
+\contentsline {subsection}{\numberline {3.8.3}Model Development and Training}{42}{subsection.3.8.3}%
+\contentsline {subsection}{\numberline {3.8.4}Model Evaluation}{43}{subsection.3.8.4}%
+\contentsline {subsection}{\numberline {3.8.5}Strategic Recommendation Formulation}{44}{subsection.3.8.5}%
+\contentsline {section}{\numberline {3.9}Validity and Reliability}{44}{section.3.9}%
+\contentsline {section}{\numberline {3.10}Ethical Considerations}{45}{section.3.10}%
+\contentsline {chapter}{\numberline {4}Results}{46}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Introduction}{46}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Key Customer Attributes and Feature--Target Relationships - Objective 1}{46}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Spearman Rank Correlation Results}{46}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}One-Way ANOVA Results}{48}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Chi-Square Test of Independence Results}{49}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.4}Hypothesis H1 Verdict}{49}{subsection.4.2.4}%
+\contentsline {section}{\numberline {4.3}Machine Learning Model Performance - Objective 2}{50}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Hypothesis H2 Verdict}{51}{subsection.4.3.1}%
+\contentsline {section}{\numberline {4.4}Feature Importance Analysis}{51}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Projected Business Impact - Objective 3}{53}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Qualitative Findings from Key Informant Interviews}{53}{section.4.6}%
+\contentsline {subsection}{\numberline {4.6.1}Participant Profile}{53}{subsection.4.6.1}%
+\contentsline {subsection}{\numberline {4.6.2}Thematic Analysis}{54}{subsection.4.6.2}%
+\contentsline {subsubsection}{\numberline {4.6.2.1}Theme 1: Limitations of ARPU-Based Segmentation}{54}{subsubsection.4.6.2.1}%
+\contentsline {subsubsection}{\numberline {4.6.2.2}Theme 2: Data Infrastructure Readiness and Real-Time Feasibility}{55}{subsubsection.4.6.2.2}%
+\contentsline {subsubsection}{\numberline {4.6.2.3}Theme 3: Customer Experience Degradation from Irrelevant Offers}{55}{subsubsection.4.6.2.3}%
+\contentsline {subsubsection}{\numberline {4.6.2.4}Theme 4: Strategic Appetite and Governance Requirements}{55}{subsubsection.4.6.2.4}%
+\contentsline {subsection}{\numberline {4.6.3}Contribution of Qualitative Findings to the Overall Study}{56}{subsection.4.6.3}%
+\contentsline {section}{\numberline {4.7}Summary of Results}{56}{section.4.7}%
+\contentsline {chapter}{\numberline {5}Discussion}{57}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Introduction}{57}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Discussion of Key Customer Behavioural Attributes: Hypothesis H1}{57}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}The Large-Sample Context}{57}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Device Type and Smartphone Ownership as the Strongest Signal}{58}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.3}Bundle Spend Recency and Purchase Frequency}{58}{subsection.5.2.3}%
+\contentsline {subsection}{\numberline {5.2.4}Voice Activity Features}{58}{subsection.5.2.4}%
+\contentsline {subsection}{\numberline {5.2.5}UPGRADE\_RATE: The One Non-Significant Feature}{59}{subsection.5.2.5}%
+\contentsline {section}{\numberline {5.3}Discussion of Model Performance: Hypothesis H2}{59}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Interpreting the F1-Score in Context}{59}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}Performance by Segment Class}{60}{subsection.5.3.2}%
+\contentsline {subsection}{\numberline {5.3.3}The Performance Hierarchy}{60}{subsection.5.3.3}%
+\contentsline {subsection}{\numberline {5.3.4}Model Interpretability and Explainable AI}{60}{subsection.5.3.4}%
+\contentsline {section}{\numberline {5.4}Strategic Implications of Feature Importance Results}{61}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}Revenue Efficiency Over Raw Revenue}{61}{subsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.2}Call Intensity as a Real-Time Trigger Signal}{62}{subsection.5.4.2}%
+\contentsline {subsection}{\numberline {5.4.3}Mobile Money as a Financial Engagement Signal}{62}{subsection.5.4.3}%
+\contentsline {section}{\numberline {5.5}Projected Business Impact and Evaluation of Hypothesis H3}{62}{section.5.5}%
+\contentsline {section}{\numberline {5.6}Integration of Qualitative and Quantitative Findings}{63}{section.5.6}%
+\contentsline {section}{\numberline {5.7}Assessment of Research Objectives}{64}{section.5.7}%
+\contentsline {section}{\numberline {5.8}Summary}{64}{section.5.8}%
+\contentsline {chapter}{\numberline {6}Conclusions and Recommendations}{65}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Introduction}{65}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Conclusions}{65}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}Conclusion on Specific Objective 1: Key Customer Attributes}{65}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2}Conclusion on Specific Objective 2: Model Selection and Performance}{66}{subsection.6.2.2}%
+\contentsline {subsection}{\numberline {6.2.3}Conclusion on Specific Objective 3: Business Impact and Strategic Value}{67}{subsection.6.2.3}%
+\contentsline {section}{\numberline {6.3}Strategic Recommendations for Airtel Uganda}{68}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}Recommendation 1: Deploy a VOICE\_INTENSITY-Triggered Personalised Recommendation Engine}{68}{subsection.6.3.1}%
+\contentsline {subsection}{\numberline {6.3.2}Recommendation 2: Enrich Segmentation with Device Type and Channel Features}{69}{subsection.6.3.2}%
+\contentsline {subsection}{\numberline {6.3.3}Recommendation 3: Establish a Formal A/B Test and Model Governance Framework}{69}{subsection.6.3.3}%
+\contentsline {section}{\numberline {6.4}Limitations of the Study}{70}{section.6.4}%
+\contentsline {section}{\numberline {6.5}Directions for Future Research}{71}{section.6.5}%
+\contentsline {section}{\numberline {6.6}Final Remarks}{72}{section.6.6}%
+\contentsline {chapter}{References}{73}{section*.31}%
+\contentsline {chapter}{Appendices}{79}{chapter*.32}%
+\contentsline {chapter}{\numberline {A}Data Use Agreement --- Airtel Uganda Limited}{80}{appendix.1.A}%
+\contentsline {chapter}{\numberline {B}Participant Information Sheet}{83}{appendix.1.B}%
+\contentsline {chapter}{\numberline {C}Semi-Structured Interview Guide}{86}{appendix.1.C}%
+\contentsline {chapter}{\numberline {D}Research Ethics and Data Collection Approval}{89}{appendix.1.D}%
+\contentsline {chapter}{\numberline {E}Research Objectives, Questions, and Hypotheses}{91}{appendix.1.E}%
+\contentsline {chapter}{\numberline {F}GitHub Repository and Analytical Codebase}{93}{appendix.1.F}%
+\contentsline {chapter}{\numberline {G}Declaration of AI Use}{94}{appendix.1.G}%
+\contentsline {chapter}{\numberline {H}Dataset Sample Screenshots}{95}{appendix.1.H}%

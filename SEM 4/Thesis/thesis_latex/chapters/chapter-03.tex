@@ -36,6 +36,40 @@ The methodological design is a mixed-methods approach, combining quantitative an
 
 The research strategy follows a case study design, with Airtel Uganda Limited as the unit of analysis. This is appropriate because the study seeks to develop and evaluate a recommendation model within a specific, real-world organisational and market context. The temporal dimension is cross-sectional, using a 90-day window of historical customer transaction data as the basis for model training and evaluation.
 
+The research methodology follows a coherent two-phase process. Phase~1
+(Quantitative) involves the extraction, preprocessing, feature engineering,
+statistical testing, and machine learning model training and evaluation on
+1,458,900 real Airtel Uganda subscriber records (February--April 2026). Phase~2
+(Qualitative) involves semi-structured interviews with eight key informants from
+Airtel Uganda to validate deployment feasibility and gather practitioner insight
+on organisational conditions for implementation. The two phases are integrated in
+Phase~3 (Integration) following the convergent mixed-methods framework of Creswell
+and Creswell (2018) \cite{ref17}: quantitative findings identify the predictive
+attributes and best-performing model; qualitative findings confirm whether those
+attributes and model outputs are operationally deployable within Airtel Uganda's
+existing infrastructure. The integration is presented explicitly in
+Section~\ref{sec:qualfindings} (Qualitative Findings) and
+Section~\ref{sec:integration} (Integration of Qualitative and Quantitative
+Findings).
+
+A convergent mixed-methods design was adopted \cite{ref17} for two reasons.
+First, quantitative analysis of transaction records can identify which behavioural
+attributes statistically discriminate between customer segments, but cannot confirm
+whether those attributes are operationally accessible within Airtel Uganda's
+existing technical infrastructure --- a question requiring insider practitioner
+knowledge. Second, the machine learning model identifies VOICE\_INTENSITY and
+SPEND\_PER\_MINUTE as the most actionable engineered features, but whether these
+signals can be computed in real time from the OCS system and used to trigger a
+USSD push is an implementation question that only domain experts within Airtel
+Uganda can answer. The qualitative strand was designed to answer precisely these
+deployment feasibility questions.
+
+The qualitative findings informed the quantitative modelling process in the
+following specific way: informants confirmed that both VOICE\_INTENSITY and
+\\SPEND\_PER\_MINUTE are derivable from existing OCS transaction records in near
+real time (Theme~2), which elevated these engineered features from analytical
+observations to genuinely deployable trigger signals --- directly shaping
+Recommendation~1 in Chapter~6.
 
 \section{Study Population}
 
@@ -97,6 +131,26 @@ A stratified random sampling approach was applied when drawing the analytical sa
 
 For the qualitative component of the study, purposive sampling was employed to identify and recruit key informants with direct knowledge of Airtel Uganda's recommendation strategies, customer segmentation practices, and commercial objectives. Purposive sampling is appropriate here because the research requires participants with specific, expert knowledge rather than statistical representativeness (Saunders et al., 2019; Turner III, 2010). A total of eight key informants were recruited from Airtel Uganda's commercial, data analytics, and product management teams. This number was determined by the principle of data saturation --- the point at which additional interviews cease to yield substantively new insights (Guest et al., 2006). Participants were informed of the study's purpose, their right to withdraw at any time, and the confidentiality of their responses prior to participation.
 
+Purposive sampling was employed for the qualitative strand, targeting individuals
+with direct role-specific knowledge of Airtel Uganda's commercial strategy, data
+infrastructure, customer experience management, or revenue operations. The target
+population was defined as senior practitioners holding managerial or analytical
+roles within one of four functional areas --- marketing and campaigns, data
+analytics and BI, IT infrastructure and OCS systems, or commercial strategy ---
+with a minimum of two years of tenure in that role at Airtel Uganda. This criterion
+ensured that informants possessed both operational knowledge and institutional
+context necessary to address the study's deployment feasibility questions.
+
+Eight participants were recruited on the basis of informational saturation rather
+than statistical power --- the established standard for sample size determination
+in qualitative research \cite{ref23, ref_mason}. Preliminary thematic analysis of
+the first six interviews indicated that no substantively new themes were emerging
+across participants. Two additional interviews were conducted to confirm saturation,
+following the recommendation of Guest et al.\ (2006) \cite{ref23} that saturation
+typically occurs between six and twelve informants for expert-domain studies. Eight
+informants covering four distinct functional areas is consistent with established
+norms for expert informant studies in information systems and business research
+\cite{ref_myers, ref41}.
 
 \section{Data Collection}
 

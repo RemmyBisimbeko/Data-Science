@@ -53,6 +53,38 @@ The per-class classification report reveals a pattern of performance that is the
 
 The progression from Logistic Regression (F1 = 0.4465) through Decision Tree (F1 = 0.6344) and Random Forest (F1 = 0.6522) to XGBoost (F1 = 0.6611) reflects the well-documented pattern in ensemble learning literature: linear models are insufficient for complex non-linear multi-class boundaries; single decision trees improve substantially but overfit; and ensemble methods --- particularly gradient boosting --- achieve the best generalisation (Hastie et al., 2009; Chang et al., 2024). The relatively small gap between Random Forest and XGBoost (0.0089 F1 points) suggests that both models have extracted most of the available predictive signal from the current feature set, and that further performance gains are more likely to come from richer features --- particularly the purchase timing features that were not fully leveraged in this analysis.
 
+\subsection{Model Interpretability and Explainable AI}
+
+XGBoost was selected as the recommended deployment model on the basis of four
+empirically grounded criteria: highest weighted F1-Score (0.6611), highest accuracy
+(68.0\%), highest precision (67.0\%), and the smallest gap between training and
+test performance across all hyperparameter combinations --- indicating strong
+generalisation. The gradient boosting mechanism, which builds trees sequentially
+where each tree corrects the errors of the previous, is particularly effective on
+imbalanced, high-dimensional tabular data --- the exact conditions present in this
+dataset. These properties are well-documented in the telecom classification
+literature \cite{ref11, ref8}.
+
+A critical consideration for commercial deployment is model interpretability ---
+the degree to which Airtel Uganda's commercial and compliance teams can understand
+and audit the model's recommendations. The present study addressed interpretability
+at the aggregate level through the Random Forest feature importance analysis
+(Section~\ref{sec:featureimportance}), which provides magnitude-interpretable
+importance scores across the 35 features. This satisfies the business need to
+understand what the model examines at the population level.
+
+However, aggregate importance scores do not explain why the model made a specific
+recommendation for a specific subscriber. Future deployment should therefore
+incorporate Explainable AI (XAI) techniques --- specifically SHAP (SHapley
+Additive exPlanations) values \cite{ref_shap}. SHAP provides per-subscriber,
+per-feature contribution scores: for example, \textit{``Subscriber X was recommended
+Platinum because VOICE\_INTENSITY was 2.3 standard deviations above their 30-day
+average (contribution: +0.31) and SPEND\_PER\_MINUTE exceeded the Silver-segment
+median (contribution: +0.24).''} This level of explanation satisfies both internal
+accountability requirements and Uganda's Data Protection and Privacy Act (2019)
+\cite{ref47} transparency provisions. The SHAP library is fully compatible with
+the XGBoost implementation used in this study and can be integrated into the
+recommendation pipeline with minimal additional engineering.
 
 \section{Strategic Implications of Feature Importance Results}
 
@@ -82,6 +114,56 @@ The XGBoost model's weighted precision of 0.67 means that bundle recommendations
 
 It is important to note that the XGBoost F1-Score of 0.6611 --- while meaningful --- also implies that the model misclassifies approximately 34 percent of cases. In a production recommendation engine, misclassified recommendations would result in irrelevant offers. The design of the A/B test specified in Chapter Six must therefore include a measurement of actual conversion rates against this theoretical projection to validate H3	\textsubscript{1} empirically. H3	\textsubscript{1} is therefore considered preliminarily supported but not yet fully confirmed, pending live deployment validation.
 
+\section{Integration of Qualitative and Quantitative Findings}
+\label{sec:integration}
+
+The convergent mixed-methods design requires explicit integration at the discussion
+stage. The four qualitative themes presented in Section~4.6 converge with the
+quantitative results (Sections~4.2--4.5) in four specific ways, as presented in
+Table~\ref{tab:integration}.
+
+\begin{table}[H]
+\centering
+\caption{Integration of Qualitative Themes and Quantitative Findings}
+\label{tab:integration}
+\small
+\renewcommand{\arraystretch}{1.4}
+\begin{tabularx}{\textwidth}{
+  >{\raggedright\arraybackslash}p{3.5cm}
+  >{\raggedright\arraybackslash}p{4.5cm}
+  >{\raggedright\arraybackslash}X
+}
+\toprule
+\textbf{Qualitative Theme} & \textbf{Quantitative Finding} & \textbf{Combined Implication} \\
+\midrule
+Theme 1: ARPU banding limitation &
+SPEND\_PER\_MINUTE (6.57\%) outranks raw activity; identical ARPU subscribers
+have distinct behavioural profiles &
+Practitioner recognition confirmed statistically; ARPU banding insufficient for
+individual-level targeting \\
+\addlinespace[4pt]
+Theme 2: OCS data accessible in real time &
+VOICE\_INTENSITY and SPEND\_PER\_MINUTE derivable from OCS transaction data &
+Most actionable features are operationally deployable without new data
+infrastructure \\
+\addlinespace[4pt]
+Theme 3: Customer experience degradation &
+Model precision 0.670; 5.4$\times$ improvement over random targeting &
+67\% precision would substantially reduce irrelevant offers driving opt-outs
+and churn \\
+\addlinespace[4pt]
+Theme 4: Governance requirements &
+XGBoost requires quarterly retraining as bundle catalogue evolves &
+Model Governance Framework (Recommendation~3) directly responds to drift and
+fairness concerns from senior informants \\
+\bottomrule
+\end{tabularx}
+\begin{flushleft}
+\small\textit{Note.} Integration follows the convergent mixed-methods framework
+of Creswell and Creswell (2018) \cite{ref17}. Source: Primary qualitative data
+and quantitative analysis (2026).
+\end{flushleft}
+\end{table}
 
 \section{Assessment of Research Objectives}
 

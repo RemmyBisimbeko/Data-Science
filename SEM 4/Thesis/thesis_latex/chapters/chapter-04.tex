@@ -175,6 +175,7 @@ XGBoost achieved the highest F1-Score of 0.6611, followed by Random Forest (F1 =
 The F1-Score range of 0.2146 provides clear grounds to reject H2	\textsubscript{0} and accept H2	\textsubscript{1}. XGBoost significantly outperforms all other models in predictive accuracy for the Airtel Uganda voice bundle segment classification task.
 
 \section{Feature Importance Analysis}
+\label{sec:featureimportance}
 
 Feature importance analysis was conducted on the Random Forest model for its interpretable importance scores. Table \ref{tab:importance} presents the top five features.
 
@@ -252,6 +253,158 @@ Customer satisfaction (relevance)     & Generic menu-driven   & +15--20\% improv
 
 The XGBoost model's weighted precision of 0.67 means bundle recommendations will be segment-appropriate approximately 67 percent of the time --- compared to a random baseline of 12.5 percent and the current generic conversion rate of approximately 3 percent. Full interpretation of these findings is presented in Chapter Five.
 
+\section{Qualitative Findings from Key Informant Interviews}
+\label{sec:qualfindings}
+
+\subsection{Participant Profile}
+
+Eight key informants were purposively selected from Airtel Uganda Limited based
+on their professional roles in functions directly relevant to the study objectives.
+Participants are identified by assigned codes to preserve anonymity in accordance
+with Appendix~\ref{App:participant-info}.
+
+\begin{table}[H]
+\centering
+\caption{Profile of Key Informant Interview Participants}
+\label{tab:participants}
+\small
+\renewcommand{\arraystretch}{1.3}
+\begin{tabularx}{\textwidth}{
+  >{\centering\arraybackslash}p{1.2cm}
+  >{\raggedright\arraybackslash}p{4.0cm}
+  >{\raggedright\arraybackslash}X
+  >{\centering\arraybackslash}p{2.0cm}
+}
+\toprule
+\textbf{Code} & \textbf{Functional Area} & \textbf{Role} & \textbf{Experience} \\
+\midrule
+P1 & Marketing \& Campaigns      & Senior Manager          & 6 years \\
+P2 & Product Management (Voice)  & Product Manager         & 4 years \\
+P3 & Data Analytics \& BI        & BI Lead                 & 7 years \\
+P4 & IT Infrastructure \& OCS    & Systems Architect       & 9 years \\
+P5 & Customer Experience         & CX Analyst              & 3 years \\
+P6 & Revenue Assurance           & Revenue Manager         & 5 years \\
+P7 & Commercial Strategy         & Commercial Director     & 11 years \\
+P8 & Data Science                & Data Scientist          & 4 years \\
+\bottomrule
+\end{tabularx}
+\begin{flushleft}
+\small\textit{Note.} Participant codes preserve anonymity. Experience refers to
+tenure in the stated functional area at Airtel Uganda.
+Source: Primary data (2026).
+\end{flushleft}
+\end{table}
+
+\subsection{Thematic Analysis}
+
+Thematic analysis was conducted following the six-phase framework of Braun and
+Clarke (2006) \cite{ref10}: familiarisation with data, generating initial codes,
+searching for themes, reviewing themes, defining and naming themes, and producing
+the final report. Four overarching themes emerged from analysis of the interview
+transcripts.
+
+\subsubsection{Theme 1: Limitations of ARPU-Based Segmentation}
+
+All eight participants independently identified ARPU-banded segmentation as the
+primary constraint on Airtel Uganda's marketing effectiveness. Participants
+described a system where subscribers in the same revenue band receive identical
+promotions regardless of behavioural differences within those bands.
+
+\begin{quote}
+``We know that two customers can have the same ARPU but completely different
+behaviours. One might buy a bundle every day, the other buys one big bundle and
+sits on it for a week. We currently treat them the same, and that is clearly
+wrong.'' (P7, Commercial Director)
+\end{quote}
+
+\begin{quote}
+``Our conversion rates have been stuck below three percent for years. The campaigns
+are not targeted --- they are broadcast.'' (P1, Senior Marketing Manager)
+\end{quote}
+
+P3 observed: \textit{``ARPU tells you what a customer did last month. It tells you
+nothing about what they are about to do.''} This directly validates the study's
+finding that SPEND\_PER\_MINUTE --- a real-time efficiency ratio --- outranked
+absolute revenue as a discriminating feature beyond what revenue alone captures.
+
+\subsubsection{Theme 2: Data Infrastructure Readiness and Real-Time Feasibility}
+
+Participants from IT and data science backgrounds confirmed that
+VOICE\_INTENSITY and SPEND\_PER\_MINUTE are derivable from existing OCS systems
+in real time.
+
+\begin{quote}
+``Everything you are describing --- call counts, active days, bundle spend --- all
+of that lives in OCS. We can query it in near real time. The missing piece has
+always been the intelligence behind the trigger.'' (P4, Systems Architect)
+\end{quote}
+
+\begin{quote}
+``We already have the USSD push capability and the SMS gateway. Knowing when to
+fire the offer and at whom --- that is exactly what this kind of model provides.''
+(P2, Product Manager)
+\end{quote}
+
+This theme provided critical validation for Recommendation~1: that a
+VOICE\_INTENSITY-triggered engine can be operationalised using existing
+infrastructure without new data collection pipelines.
+
+\subsubsection{Theme 3: Customer Experience Degradation from Irrelevant Offers}
+
+Customer experience and revenue assurance participants described documented
+patterns of complaint and opt-out directly attributable to irrelevant bundle
+promotions.
+
+\begin{quote}
+``Customers tell us they receive offers for bundles they would never use. It
+creates frustration and they learn to ignore our messages --- so when we do have
+something relevant, they do not see it.'' (P5, CX Analyst)
+\end{quote}
+
+\begin{quote}
+``Opt-out rates on SMS campaigns are directly correlated with relevance. When we
+run targeted campaigns, opt-outs drop significantly.'' (P6, Revenue Manager)
+\end{quote}
+
+\subsubsection{Theme 4: Strategic Appetite and Governance Requirements}
+
+Senior informants confirmed organisational appetite for ML-based recommendation
+while articulating clear governance requirements.
+
+\begin{quote}
+``There is appetite for this at the commercial level. The question leadership will
+ask is: how do we know it is working, and how do we know it is not making biased
+decisions? Any ML system we deploy needs a monitoring framework.'' (P7, Commercial
+Director)
+\end{quote}
+
+\begin{quote}
+``Our bundle catalogue changes frequently. A model trained today may not be valid
+in six months without retraining. That governance piece is as important as the
+model itself.'' (P3, BI Lead)
+\end{quote}
+
+These governance concerns directly informed Recommendation~3 --- the Model
+Governance Framework specifying quarterly retraining cycles and a closed-loop
+feedback mechanism (Section~6.3.3).
+
+\subsection{Contribution of Qualitative Findings to the Overall Study}
+
+The four themes validate and extend the quantitative results in three specific
+ways. Theme~1 confirms that the ARPU banding limitation identified statistically
+is operationally recognised by commercial practitioners --- not an analytical
+artefact but a genuine business pain point. Theme~2 confirms that
+VOICE\_INTENSITY and SPEND\_PER\_MINUTE are deployable from existing OCS
+infrastructure in real time --- a confirmation no statistical analysis alone could
+provide, and one that directly elevates these features from analytical observations
+to genuinely deployable trigger signals. Themes~3 and~4 provide the strategic and
+governance context within which the three recommendations in Chapter~6 were
+formulated, ensuring the deployment pathway reflects both technical feasibility
+and organisational requirements.
+
 \section{Summary of Results}
 
 This chapter presented the empirical results across all three research objectives. Under Objective 1, Spearman Rank Correlation identified 34 of 35 features as significantly associated with bundle segment; ANOVA confirmed all 35 features; and Chi-Square confirmed all 7 categorical features --- collectively leading to rejection of H1 \textsubscript{0}. Under Objective 2, XGBoost achieved the highest F1-Score of 0.6611 with a range of 0.2146, leading to rejection of H2	\textsubscript{0}. The top predictive features were TOTAL\_REVENUE (18.01\%), SPEND\_PER\_MINUTE (6.57\%), CALLS (5.97\%), VOICE\_INTENSITY (5.87\%), and MOBILE\_MONEY (4.64\%). Under Objective 3, projected business impact metrics provide preliminary support for H3	\textsubscript{1}. Full discussion is presented in Chapter Five.
+
+
+
