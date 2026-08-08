@@ -13,21 +13,21 @@ The first specific objective was to identify the key customer behavioural attrib
 
 Applied to 1,458,900 real Airtel Uganda subscriber records over the period February to April 2026, Spearman Rank Correlation identified 34 of 35 features as significantly associated with value segment membership ($p < 0.05$), with IS\_SMARTPHONE producing the strongest correlation (r = -0.068) among non-revenue features, followed by BUNDLE\_SPEND\_30D (r = -0.067) and ACTIVE\_DAYS (r = -0.059). One-Way ANOVA confirmed that all 35 features exhibit significantly different mean values across the eight value segment groups, with VOICE\_INTENSITY (F = 27,892.34), IS\_SMARTPHONE (F = 25,891.16), BUNDLE\_SPEND\_30D (F = 23,594.82), and DISTINCT\_BUNDLES\_TRIED (F = 12,106.23) among the strongest non-revenue discriminators. Chi-Square testing confirmed that all 7 categorical features --- including HANDSET\_TYPE ($\chi^2$ = 181,566.52), MOST\_FREQ\_CHANNEL ($\chi^2$ = 59,471.19), and REGION ($\chi^2$ = 41,482.59) --- are significantly associated with segment. The one non-significant feature across all tests was UPGRADE\_RATE (Spearman r = 0.0004, p = 0.65), a novel finding indicating that upgrade frequency has no monotonic relationship with segment.
 
-The central conclusion of Objective 1 is that smartphone ownership, recent bundle spend, voice call intensity, and bundle variety are the dominant behavioural signals for predicting voice bundle segment membership in the Ugandan prepaid market. These signals are observable in real time from Airtel's network infrastructure and do not require manual customer surveys or external data sources. H1	extsubscript{1} is accepted: multiple customer behavioural attributes are significant predictors of voice bundle purchase decisions.
+The central conclusion of Objective 1 is that smartphone ownership, recent bundle spend, voice call intensity, and bundle variety are the dominant behavioural signals for predicting voice bundle segment membership in the Ugandan prepaid market. These signals are observable in real time from Airtel's network infrastructure and do not require manual customer surveys or external data sources. H1	\textsubscript{1} is accepted: multiple customer behavioural attributes are significant predictors of voice bundle purchase decisions.
 
 
 \subsection{Conclusion on Specific Objective 2: Model Selection and Performance}
 
 The second specific objective was to test and evaluate suitable machine learning models for accurately predicting voice bundle purchase decisions, including appropriate data preprocessing and feature engineering. This objective has been fully achieved.
 
-Four models were systematically evaluated on a hold-out test set of 446,599 records: Logistic Regression (F1 = 0.4465), Decision Tree (F1 = 0.6344), Random Forest (F1 = 0.6522), and XGBoost (F1 = 0.6611). XGBoost was identified as the best-performing model. The F1-Score range of 0.2146 across models confirms a statistically meaningful performance hierarchy. The XGBoost model's weighted accuracy of 68.0 percent represents a 5.4-fold improvement over a random baseline of 12.5 percent in the 8-class classification task, and its weighted precision of 0.670 means that segment-appropriate bundle recommendations are generated approximately 67 percent of the time --- compared to the current generic conversion rate of approximately 3 percent. H2	extsubscript{1} is accepted: XGBoost significantly and meaningfully outperforms all other models.
+Four models were systematically evaluated on a hold-out test set of 446,599 records: Logistic Regression (F1 = 0.4465), Decision Tree (F1 = 0.6344), Random Forest (F1 = 0.6522), and XGBoost (F1 = 0.6611). XGBoost was identified as the best-performing model. The F1-Score range of 0.2146 across models confirms a statistically meaningful performance hierarchy. The XGBoost model's weighted accuracy of 68.0 percent represents a 5.4-fold improvement over a random baseline of 12.5 percent in the 8-class classification task, and its weighted precision of 0.670 means that segment-appropriate bundle recommendations are generated approximately 67 percent of the time --- compared to the current generic conversion rate of approximately 3 percent. H2	\textsubscript{1} is accepted: XGBoost significantly and meaningfully outperforms all other models.
 
 The data preprocessing pipeline encompassing median imputation, capped SMOTE class balancing (limiting synthetic generation to a maximum of 50,000 samples per minority class), and the engineering of SPEND\_PER\_MINUTE and VOICE\_INTENSITY is concluded to be as critical a determinant of model performance as the choice of algorithm. SPEND\_PER\_MINUTE alone contributed 6.57 percent of the Random Forest model's predictive power --- more than CALLS (5.97\%) or MOBILE\_MONEY (4.64\%), despite being derived entirely from existing variables, confirming that thoughtful feature engineering from domain knowledge about prepaid behavioural patterns is a high-impact intervention (Singh et al., 2025; Yuming et al., 2024).
 
 
 \subsection{Conclusion on Specific Objective 3: Business Impact and Strategic Value}
 
-The third specific objective was to formulate strategic, evidence-based recommendations for Airtel Uganda to grow its business and improve customer satisfaction. The projected business impact analysis demonstrated a four- to five-fold improvement in bundle offer conversion rate (from approximately 3 percent to 12--15 percent) and a projected 9 percent improvement in Average Revenue Per User, grounded in the XGBoost model's weighted precision of 0.670 and consistent with documented outcomes from comparable global telecom recommendation deployments (McKinsey \& Company, 2022; 2024). H3	extsubscript{1} is preliminarily accepted, subject to confirmation through a live, randomised A/B test deployment.
+The third specific objective was to formulate strategic, evidence-based recommendations for Airtel Uganda to grow its business and improve customer satisfaction. The projected business impact analysis demonstrated a four- to five-fold improvement in bundle offer conversion rate (from approximately 3 percent to 12--15 percent) and a projected 9 percent improvement in Average Revenue Per User, grounded in the XGBoost model's weighted precision of 0.670 and consistent with documented outcomes from comparable global telecom recommendation deployments (McKinsey \& Company, 2022; 2024). H3	\textsubscript{1} is preliminarily accepted, subject to confirmation through a live, randomised A/B test deployment.
 
 Taken together, the conclusions of this study establish that a feature-rich, behaviourally grounded machine learning recommendation system is both technically feasible and commercially compelling for Airtel Uganda. The study contributes the first published, empirically validated ML recommendation framework built on real transactional data from a Ugandan telecommunications operator, covering 1,458,900 subscribers across 738 distinct voice and combo bundle products, addressing a documented gap identified in Chapter Two.
 
@@ -54,10 +54,10 @@ It is recommended that Airtel Uganda enrich its segmentation framework by incorp
 
 This enriched segmentation framework does not require new data collection infrastructure. All three variables are already captured in Airtel Uganda's existing database systems (subscriber\_dimension, device\_master, ocsmonmaininternal, and geo\_master) and were used directly in this study's analysis. The incremental cost of incorporating them into the recommendation engine is therefore minimal relative to the projected commercial impact.
 
-
 \subsection{Recommendation 3: Establish a Formal A/B Test and Model Governance Framework}
+\label{sec:abt}
 
-The projected business impact figures in this study are derived from a simulated pilot on the hold-out test set. Full confirmation of H3	extsubscript{1} requires a live, randomised A/B test deployment. It is recommended that Airtel Uganda structure this as follows: within the priority subscriber cohort, randomly assign subscribers to a treatment group --- who receive personalised XGBoost model-driven recommendations at VOICE\_INTENSITY trigger points --- and a control group who continue to receive the standard undifferentiated product experience. Primary outcome metrics should include bundle purchase conversion rate, ARPU over the 90-day test period, and bundle repurchase frequency. The test should run for a minimum of 90 days to capture sufficient transaction volume for statistically significant results.
+The projected business impact figures in this study are derived from a simulated pilot on the hold-out test set. Full confirmation of H3	\textsubscript{1} requires a live, randomised A/B test deployment. It is recommended that Airtel Uganda structure this as follows: within the priority subscriber cohort, randomly assign subscribers to a treatment group --- who receive personalised XGBoost model-driven recommendations at VOICE\_INTENSITY trigger points --- and a control group who continue to receive the standard undifferentiated product experience. Primary outcome metrics should include bundle purchase conversion rate, ARPU over the 90-day test period, and bundle repurchase frequency. The test should run for a minimum of 90 days to capture sufficient transaction volume for statistically significant results.
 
 Alongside the A/B test, it is recommended that Airtel Uganda establish a formal Model Governance Framework comprising three components. First, a real-time performance monitoring dashboard tracking the XGBoost model's weighted F1-Score on a rolling weekly basis against the baseline of 0.6611 established in this study. Second, a quarterly scheduled retraining cycle in which the model is retrained on the most recent 90-day transaction window --- important because bundle portfolios evolve frequently (738 bundles were active in the February--April 2026 window) and subscriber behavioural patterns shift seasonally. Third, a closed-loop feedback mechanism logging each recommendation event and its outcome --- whether the subscriber purchased a recommended bundle, purchased a different bundle, or made no purchase --- to enable continuous improvement of the recommendation logic. This governance framework is consistent with best practice in production machine learning systems (Deldjoo et al., 2024; McKinsey \& Company, 2024).
 
@@ -71,12 +71,49 @@ Second, the purchase timing dataset (PURCHASE\_TIMING\_FEB, MARCH, APRIL) contai
 
 \section{Directions for Future Research}
 
-The findings and limitations of this study suggest several productive directions for future research. The most immediate priority is empirical validation of the projected business impact through a live A/B test deployment as specified in Recommendation 6.3.3. Such a study would provide the definitive evidence needed to confirm H3	extsubscript{1} and establish the commercial case for broader adoption.
+The findings and limitations of this study suggest six concrete directions for
+future research.
 
-Second, future research should resolve the bundle ID join limitation by constructing a historical product catalogue covering the full February--April 2026 period, rather than using only the current catalogue snapshot. This would increase the purchase timing match rate beyond the current 267 of 738 bundles and unlock the full richness of the purchase history feature set --- particularly DISTINCT\_BUNDLES\_TRIED and BUNDLE\_SWITCH\_RATE, which showed strong ANOVA results (F = 12,106.23 and F = 4,589.58, respectively) but were computed on a subset of transactions.
+\textbf{Live A/B test validation.} The most immediate priority is the randomised
+test specified in Recommendation 3 (Section~6.3.3), to be run for a minimum of
+90 days in the Kampala, Central 1, and Central 2 regions. Primary outcome metrics
+should include bundle purchase conversion rate, Average Revenue Per User, and
+bundle repurchase frequency. This converts H3\textsubscript{1} from preliminary
+support to empirical confirmation.
 
-Third, the application of Deep Reinforcement Learning (DRL) to the recommendation problem represents a natural evolution of the framework. Unlike the static XGBoost model, a DRL-based recommendation agent would learn dynamically from customer responses in real time, continuously optimising its recommendation policy to maximise long-term customer lifetime value. This represents the current frontier of recommendation system research in telecoms (Deldjoo et al., 2024). Fourth, extending the geographic scope to include Northern, Western, and Eastern Uganda would enable assessment of whether the VOICE\_INTENSITY and SPEND\_PER\_MINUTE signals identified in this study are generalisable across the full Airtel Uganda subscriber base, or whether region-specific models are required.
+\textbf{Historical product catalogue integration.} Using a historical catalogue
+snapshot covering the full February--April 2026 observation window would resolve
+the bundle identifier mismatch --- 267 of 738 bundle identifiers matched the
+current catalogue --- and unlock the full purchase history feature set, particularly
+DISTINCT\_BUNDLES\_TRIED and BUNDLE\_SWITCH\_RATE, which could only be partially
+computed in this study.
 
+\textbf{Explainable AI (XAI) --- SHAP implementation.} SHAP (SHapley Additive
+exPlanations) values \cite{ref_shap} should be incorporated into the production
+recommendation pipeline to provide per-subscriber explanation of individual
+predictions. This satisfies both internal commercial trust requirements and the
+transparency provisions of Uganda's Data Protection and Privacy Act (2019)
+\cite{ref47}.
+
+\textbf{Cost-sensitive learning for minority classes.} The Diamond class comprised
+only 34 real training instances and achieved a recall of 0.39 despite capped SMOTE.
+Future work should explore class-weight penalties in XGBoost and Random Forest as
+an alternative to oversampling for extreme minority classes, which would penalise
+misclassification of rare but high-value subscribers more heavily during training.
+
+\textbf{Deep Reinforcement Learning (DRL).} The XGBoost classifier is a static
+model trained on historical patterns. A DRL agent would learn dynamically from
+live customer responses, continuously updating its recommendation policy in real
+time to maximise long-term customer lifetime value rather than predicting a single
+segment label \cite{ref19}.
+
+\textbf{Geographic expansion and seasonal modelling.} Extending the data scope to
+Northern, Western, and Eastern Uganda would test whether the
+VOICE\_INTENSITY and SPEND\_PER\_MINUTE trigger signals identified in this study
+are nationally generalisable. Separately, extending the observation window to
+12 months would enable the model to capture annual seasonal patterns --- December
+festive spending, school-term income constraints, and agricultural income cycles
+--- that the current 90-day window cannot represent.
 
 \section{Final Remarks}
 

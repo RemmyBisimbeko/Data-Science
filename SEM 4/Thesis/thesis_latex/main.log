@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.6.27)  1 JUL 2026 23:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.6.27)  8 AUG 2026 19:19
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -388,36 +388,36 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 284.
 )
 \Hy@SectionHShift=\skip77
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/chngcntr/chngcntr.sty
+Package: chngcntr 2018/04/09 v1.1a change counter resetting
+Package chngcntr Info: \counterwithout already defined.
+(chngcntr)             Quitting chngcntr on input line 21.
 )
-Package hyperref Info: Option `colorlinks' set `false' on input line 26.
+Package hyperref Info: Option `colorlinks' set `false' on input line 27.
  (/usr/local/texlive/2026/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count330
-) (./main.aux
-
-LaTeX Warning: Label `tab:litreview' multiply defined.
-
-)
+) (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
  (/usr/local/texlive/2026/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count331
@@ -474,15 +474,15 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring OFF on input line 51.
+Package hyperref Info: Link coloring OFF on input line 52.
 (./main.out) (./main.out)
 \@outlinefile=\write3
 \openout3 = `main.out'.
 
-<images/logos/UCU-Logo.png, id=521, 1027.84pt x 257.96375pt>
+<images/logos/UCU-Logo.png, id=529, 1027.84pt x 257.96375pt>
 File: images/logos/UCU-Logo.png Graphic file (type png)
 <use images/logos/UCU-Logo.png>
-Package pdftex.def Info: images/logos/UCU-Logo.png  used on input line 56.
+Package pdftex.def Info: images/logos/UCU-Logo.png  used on input line 62.
 (pdftex.def)             Requested size: 308.35437pt x 77.38971pt.
  [1
 
@@ -491,36 +491,50 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--6
 
  []
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 8.
-(/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+<images/signature.png, id=542, 937.5025pt x 510.90875pt>
+File: images/signature.png Graphic file (type png)
+<use images/signature.png>
+Package pdftex.def Info: images/signature.png  used on input line 15.
+(pdftex.def)             Requested size: 104.41306pt x 56.9055pt.
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 8.
- (/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-))
-pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.83 \chapter
-             *{Ethical Generative AI Usage Declaration} [1
+Underfull \hbox (badness 10000) in paragraph at lines 15--88
 
-] (./preliminary-pages/01b-AI-declaration.tex
-
-LaTeX Warning: Reference `App:AI-use-declaration' on page ii undefined on input line 11.
-
-
-Overfull \hbox (19.0335pt too wide) in paragraph at lines 24--25
-[]\T1/cmr/m/n/12 Signature: |Date: | 
  []
 
 
-LaTeX Warning: Reference `App:AI-use-declaration' on page ii undefined on input line 30.
+pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.89 \chapter
+             *{Ethical Generative AI Usage Declaration} [1
+
+ <./images/signature.png>] (./preliminary-pages/01b-AI-declaration.tex
+File: images/signature.png Graphic file (type png)
+<use images/signature.png>
+Package pdftex.def Info: images/signature.png  used on input line 25.
+(pdftex.def)             Requested size: 62.6421pt x 34.14322pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--27
+
+ []
 
 [2
 
-]) [3] (./preliminary-pages/02-approval.tex)
-Overfull \hbox (14.98112pt too wide) in paragraph at lines 4--90
+]) [3] (./preliminary-pages/02-approval.tex
+LaTeX Font Info:    Trying to load font information for U+msa on input line 5.
+ (/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 5.
+ (/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+File: images/signature.png Graphic file (type png)
+<use images/signature.png>
+Package pdftex.def Info: images/signature.png  used on input line 7.
+(pdftex.def)             Requested size: 62.6421pt x 34.14322pt.
+)
+Overfull \hbox (9.46024pt too wide) in paragraph at lines 4--96
 []  
  []
 
@@ -551,41 +565,48 @@ Overfull \hbox (1.54497pt too wide) in paragraph at lines 3--4
 \tf@lot=\write6
 \openout6 = `main.lot'.
 
-) [14
+ [14
 
-] (./preliminary-pages/06-acknowledgments.tex) [15
+])
+Overfull \hbox (13.93134pt too wide) in paragraph at lines 11--106
+[]  
+ []
+
+[15
+
+] (./preliminary-pages/06-acknowledgments.tex) [16
 
 ]
 Chapter 1.
 (./chapters/chapter-01.tex [1
 
 ]
-Overfull \hbox (2.69736pt too wide) in paragraph at lines 12--13
+Overfull \hbox (2.69736pt too wide) in paragraph at lines 14--15
 \T1/cmr/m/n/12 com-pris-ing ap-prox-i-mately 150 mil-lion voice bun-dle pur-chase trans-ac-tions from 1,458,900
  []
 
 
-Overfull \hbox (12.27432pt too wide) in paragraph at lines 17--18
+Overfull \hbox (12.27432pt too wide) in paragraph at lines 19--20
 \T1/cmr/m/n/12 Airtel Uganda, in com-mon with many Mo-bile Net-work Op-er-a-tors in de-vel-op-ing economies,
  []
 
-[2] [3] [4] [5]
-Overfull \hbox (5.89807pt too wide) in paragraph at lines 84--85
+[2] [3] [4] [5] [6]
+Overfull \hbox (5.89807pt too wide) in paragraph at lines 87--88
 []\T1/cmr/m/n/12 What strate-gic rec-om-men-da-tions can be de-rived from the ma-chine learn-ing model's
  []
 
-[6] [7]
-Overfull \hbox (7.03525pt too wide) in paragraph at lines 120--121
+[7] [8]
+Overfull \hbox (7.03525pt too wide) in paragraph at lines 123--124
 []\T1/cmr/m/n/12 For the telecom-mu-ni-ca-tions in-dus-try, the study pro-vides an op-er-a-tionally im-ple-mentable,
  []
 
-[8]
-<images/framework.png, id=979, 1537.745pt x 912.40875pt>
+[9]
+<images/framework.png, id=1022, 1537.745pt x 912.40875pt>
 File: images/framework.png Graphic file (type png)
 <use images/framework.png>
-Package pdftex.def Info: images/framework.png  used on input line 134.
+Package pdftex.def Info: images/framework.png  used on input line 137.
 (pdftex.def)             Requested size: 396.91325pt x 235.50824pt.
- [9] [10 <./images/framework.png>] [11]) [12]
+ [10 <./images/framework.png>] [11]) [12]
 Chapter 2.
 (./chapters/chapter-02.tex [13
 
@@ -595,29 +616,29 @@ Overfull \hbox (5.10309pt too wide) in paragraph at lines 19--19
  []
 
 [14]
-<images/fig2_1_arpu_distribution.png, id=1006, 1003.5894pt x 328.5876pt>
+<images/fig2_1_arpu_distribution.png, id=1044, 1003.5894pt x 328.5876pt>
 File: images/fig2_1_arpu_distribution.png Graphic file (type png)
 <use images/fig2_1_arpu_distribution.png>
 Package pdftex.def Info: images/fig2_1_arpu_distribution.png  used on input line 40.
 (pdftex.def)             Requested size: 396.91325pt x 129.95363pt.
  [15]
-<images/fig3_1_purchase_frequency.png, id=1012, 577.79865pt x 261.97874pt>
+<images/fig3_1_purchase_frequency.png, id=1049, 577.79865pt x 261.97874pt>
 File: images/fig3_1_purchase_frequency.png Graphic file (type png)
 <use images/fig3_1_purchase_frequency.png>
 Package pdftex.def Info: images/fig3_1_purchase_frequency.png  used on input line 52.
 (pdftex.def)             Requested size: 396.91325pt x 179.96603pt.
-<images/fig4_1_hourly_purchases.png, id=1013, 577.79865pt x 260.8947pt>
+<images/fig4_1_hourly_purchases.png, id=1050, 577.79865pt x 260.8947pt>
 File: images/fig4_1_hourly_purchases.png Graphic file (type png)
 <use images/fig4_1_hourly_purchases.png>
 Package pdftex.def Info: images/fig4_1_hourly_purchases.png  used on input line 64.
 (pdftex.def)             Requested size: 396.91325pt x 179.22133pt.
-<images/fig5_1_outgoing_voice_minutes.png, id=1014, 859.0494pt x 318.9516pt>
+<images/fig5_1_outgoing_voice_minutes.png, id=1051, 859.0494pt x 318.9516pt>
 File: images/fig5_1_outgoing_voice_minutes.png Graphic file (type png)
 <use images/fig5_1_outgoing_voice_minutes.png>
 Package pdftex.def Info: images/fig5_1_outgoing_voice_minutes.png  used on input line 76.
 (pdftex.def)             Requested size: 396.91325pt x 147.36679pt.
  [16 <./images/fig2_1_arpu_distribution.png> <./images/fig3_1_purchase_frequency.png> <./images/fig4_1_hourly_purchases.png>]
-<images/fig6_1_value_segments.png, id=1023, 713.064pt x 319.9152pt>
+<images/fig6_1_value_segments.png, id=1060, 713.064pt x 319.9152pt>
 File: images/fig6_1_value_segments.png Graphic file (type png)
 <use images/fig6_1_value_segments.png>
 Package pdftex.def Info: images/fig6_1_value_segments.png  used on input line 88.
@@ -637,288 +658,158 @@ Overfull \hbox (8.68817pt too wide) in paragraph at lines 139--139
 []\T1/cmr/bx/n/14.4 Data Pre-pro-cess-ing: The Foun-da-tion of Model Qual-ity 
  []
 
-[20] [21]
-Underfull \hbox (badness 10000) in paragraph at lines 167--167
+[20] [21] [22]
+Underfull \hbox (badness 10000) in paragraph at lines 183--183
 []|\T1/cmr/m/n/12 Collaborative
  []
 
 
-Underfull \hbox (badness 6428) in paragraph at lines 167--167
+Underfull \hbox (badness 6428) in paragraph at lines 183--183
 []|\T1/cmr/m/n/12 Deldjoo et al.
  []
 
 
-Underfull \hbox (badness 5217) in paragraph at lines 167--168
+Underfull \hbox (badness 5217) in paragraph at lines 183--184
 []|\T1/cmr/m/n/12 Hybrid CF mod-els out-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 167--168
+Underfull \hbox (badness 10000) in paragraph at lines 183--184
 \T1/cmr/m/n/12 per-form single-approach
  []
 
 
-Underfull \hbox (badness 7504) in paragraph at lines 167--168
+Underfull \hbox (badness 7504) in paragraph at lines 183--184
 \T1/cmr/m/n/12 sys-tems in dense us-age
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 169--169
+Underfull \hbox (badness 10000) in paragraph at lines 185--185
 []|\T1/cmr/m/n/12 K-Means Clus-
  []
 
 
-Underfull \hbox (badness 6236) in paragraph at lines 169--169
+Underfull \hbox (badness 6236) in paragraph at lines 185--185
 []|\T1/cmr/m/n/12 Yuming et al.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 169--169
+Underfull \hbox (badness 10000) in paragraph at lines 185--185
 []|\T1/cmr/m/n/12 Customer Seg-
  []
 
 
-Underfull \hbox (badness 5008) in paragraph at lines 169--170
+Underfull \hbox (badness 5008) in paragraph at lines 185--186
 \T1/cmr/m/n/12 go-rith-mic nov-elty, drives
  []
 
 
-Underfull \hbox (badness 1648) in paragraph at lines 169--170
+Underfull \hbox (badness 1648) in paragraph at lines 185--186
 \T1/cmr/m/n/12 the great-est seg-men-ta-tion
  []
 
 
-Underfull \hbox (badness 2343) in paragraph at lines 171--171
+Underfull \hbox (badness 2343) in paragraph at lines 187--187
 []|\T1/cmr/m/n/12 Customer Clas-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 171--172
+Underfull \hbox (badness 10000) in paragraph at lines 187--188
 []|\T1/cmr/m/n/12 Random For-est achieves
  []
 
 
-Underfull \hbox (badness 5817) in paragraph at lines 171--172
+Underfull \hbox (badness 5817) in paragraph at lines 187--188
 \OMS/cmsy/m/n/12 ^^X$\T1/cmr/m/n/12 91.66% ac-cu-racy; XG-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 173--173
+Underfull \hbox (badness 10000) in paragraph at lines 189--189
 []|\T1/cmr/m/n/12 Deep Learn-ing
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 173--173
+Underfull \hbox (badness 10000) in paragraph at lines 189--189
 []|\T1/cmr/m/n/12 Zhao et al.
  []
 
 
-Underfull \hbox (badness 3861) in paragraph at lines 173--174
+Underfull \hbox (badness 3861) in paragraph at lines 189--190
 \T1/cmr/m/n/12 su-per-vised ap-proach out-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 175--175
+Underfull \hbox (badness 10000) in paragraph at lines 191--191
 []|\T1/cmr/m/n/12 Temporal Fea-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 175--175
+Underfull \hbox (badness 10000) in paragraph at lines 191--191
 []|\T1/cmr/m/n/12 Chen et al.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 175--175
+Underfull \hbox (badness 10000) in paragraph at lines 191--191
 []|\T1/cmr/m/n/12 Usage Pat-tern
  []
 
 
-Underfull \hbox (badness 1661) in paragraph at lines 175--176
+Underfull \hbox (badness 1661) in paragraph at lines 191--192
 []|\T1/cmr/m/n/12 Hourly and daily tem-po-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 175--176
+Underfull \hbox (badness 10000) in paragraph at lines 191--192
 \T1/cmr/m/n/12 ral fea-tures sig-nif-i-cantly
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 175--176
+Underfull \hbox (badness 10000) in paragraph at lines 191--192
 \T1/cmr/m/n/12 out-per-form ag-gre-gated
  []
 
 
-Underfull \hbox (badness 1297) in paragraph at lines 177--177
+Underfull \hbox (badness 1297) in paragraph at lines 193--193
 []|\T1/cmr/m/n/12 Predictive An-a-
  []
 
 
-Underfull \hbox (badness 3746) in paragraph at lines 177--177
+Underfull \hbox (badness 3746) in paragraph at lines 193--193
 []|\T1/cmr/m/n/12 Wassouf et al.
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 177--177
-[]|\T1/cmr/m/n/12 Customer Re-
- []
-
-
-Overfull \hbox (5.32083pt too wide) in paragraph at lines 163--180
- [][] 
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 193--193
-[]|\T1/cmr/m/n/12 Collaborative
- []
-
-
-Underfull \hbox (badness 6428) in paragraph at lines 193--193
-[]|\T1/cmr/m/n/12 Deldjoo et al.
- []
-
-
-Underfull \hbox (badness 5217) in paragraph at lines 193--194
-[]|\T1/cmr/m/n/12 Hybrid CF mod-els out-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 193--194
-\T1/cmr/m/n/12 per-form single-approach
- []
-
-
-Underfull \hbox (badness 7504) in paragraph at lines 193--194
-\T1/cmr/m/n/12 sys-tems in dense us-age
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 195--195
-[]|\T1/cmr/m/n/12 K-Means Clus-
- []
-
-
-Underfull \hbox (badness 6236) in paragraph at lines 195--195
-[]|\T1/cmr/m/n/12 Yuming et al.
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 195--195
-[]|\T1/cmr/m/n/12 Customer Seg-
- []
-
-
-Underfull \hbox (badness 5008) in paragraph at lines 195--196
-\T1/cmr/m/n/12 go-rith-mic nov-elty, drives
- []
-
-
-Underfull \hbox (badness 1648) in paragraph at lines 195--196
-\T1/cmr/m/n/12 the great-est seg-men-ta-tion
- []
-
-
-Underfull \hbox (badness 2343) in paragraph at lines 197--197
-[]|\T1/cmr/m/n/12 Customer Clas-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 197--198
-[]|\T1/cmr/m/n/12 Random For-est achieves
- []
-
-
-Underfull \hbox (badness 5817) in paragraph at lines 197--198
-\OMS/cmsy/m/n/12 ^^X$\T1/cmr/m/n/12 91.66% ac-cu-racy; XG-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 199--199
-[]|\T1/cmr/m/n/12 Deep Learn-ing
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 199--199
-[]|\T1/cmr/m/n/12 Zhao et al.
- []
-
-
-Underfull \hbox (badness 3861) in paragraph at lines 199--200
-\T1/cmr/m/n/12 su-per-vised ap-proach out-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 201--201
-[]|\T1/cmr/m/n/12 Temporal Fea-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 201--201
-[]|\T1/cmr/m/n/12 Chen et al.
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 201--201
-[]|\T1/cmr/m/n/12 Usage Pat-tern
- []
-
-
-Underfull \hbox (badness 1661) in paragraph at lines 201--202
-[]|\T1/cmr/m/n/12 Hourly and daily tem-po-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 201--202
-\T1/cmr/m/n/12 ral fea-tures sig-nif-i-cantly
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 201--202
-\T1/cmr/m/n/12 out-per-form ag-gre-gated
- []
-
-
-Underfull \hbox (badness 1297) in paragraph at lines 203--203
-[]|\T1/cmr/m/n/12 Predictive An-a-
- []
-
-
-Underfull \hbox (badness 3746) in paragraph at lines 203--203
-[]|\T1/cmr/m/n/12 Wassouf et al.
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 203--203
 []|\T1/cmr/m/n/12 Customer Re-
  []
 
 
-Overfull \hbox (5.32083pt too wide) in paragraph at lines 189--206
+Overfull \hbox (5.32083pt too wide) in paragraph at lines 179--196
  [][] 
  []
 
-[22] [23]
-Overfull \hbox (6.2563pt too wide) in paragraph at lines 214--214
+[23]
+Overfull \hbox (6.2563pt too wide) in paragraph at lines 210--210
 []\T1/cmr/bx/n/17.28 Recommender Sys-tems in Telecom-mu-ni-ca-tions 
  []
 
 [24] [25]
-Overfull \hbox (2.70662pt too wide) in paragraph at lines 242--242
+Overfull \hbox (2.70662pt too wide) in paragraph at lines 238--238
 []\T1/cmr/bx/n/17.28 Impact of Per-son-alised Rec-om-men-da-tions on Rev-
  []
 
 
-Overfull \hbox (7.6879pt too wide) in paragraph at lines 251--252
+Overfull \hbox (7.6879pt too wide) in paragraph at lines 247--248
 []\T1/cmr/m/n/12 Research con-sis-tently iden-ti-fies up-selling through rec-om-men-da-tions as more cost-effective
  []
 
-
-Overfull \hbox (0.40338pt too wide) in paragraph at lines 254--254
+[26]
+Overfull \hbox (0.40338pt too wide) in paragraph at lines 250--250
 []\T1/cmr/bx/n/14.4 Revenue Op-ti-mi-sa-tion Through ARPU En-hance-ment 
  []
 
-[26] [27]
-Overfull \hbox (9.6804pt too wide) in paragraph at lines 270--271
+[27]
+Overfull \hbox (9.6804pt too wide) in paragraph at lines 266--267
 \T1/cmr/m/n/12 con-sis-tently out-per-form demographic-only fea-tures in pre-dict-ing cus-tomer ser-vice choices.
  []
 
@@ -927,51 +818,46 @@ Chapter 3.
 (./chapters/chapter-03.tex [29
 
 ] [30]
-Overfull \hbox (14.57506pt too wide) in paragraph at lines 34--35
+Overfull \hbox (14.57506pt too wide) in paragraph at lines 35--36
 \T1/cmr/m/n/12 y-sis of his-tor-i-cal trans-ac-tional data with qual-i-ta-tive data gath-ered through semi-structured
  []
 
-[31] [32] [33] [34]
-Overfull \hbox (77.43929pt too wide) in paragraph at lines 100--101
+[31] [32] [33] [34] [35]
+Overfull \hbox (77.43929pt too wide) in paragraph at lines 110--111
 \T1/cmr/m/n/12 1,905 bun-dle prod-ucts, fil-tered to 738 voice and combo bun-dles; (2) PUR-CHASE_TIMING_FEB.xlsx,
  []
 
-[35]
-Overfull \hbox (0.51633pt too wide) in paragraph at lines 145--145
+
+Overfull \hbox (0.51633pt too wide) in paragraph at lines 155--155
 []|\T1/cmr/m/n/10.95 br_daily_voice_usage|  
  []
 
-[36] [37]
-Overfull \hbox (14.28621pt too wide) in paragraph at lines 171--172
+[36] [37] [38]
+Overfull \hbox (14.28621pt too wide) in paragraph at lines 181--182
 \T1/cmr/m/n/12 controlled in the project GitHub repos-i-tory (https://github.com/RemmyBisimbeko/Data-
  []
 
-[38] [39]
-Overfull \hbox (104.49725pt too wide) in paragraph at lines 186--187
-[]\T1/cmr/m/n/12 Logistic Re-gres-sion was im-ple-mented us-ing Lo-gis-ti-cRe-gres-sion(max_iter=1000, multi_class='multinomial',
- []
-
-
-Overfull \hbox (6.97084pt too wide) in paragraph at lines 188--189
+[39] [40]
+Overfull \hbox (6.97084pt too wide) in paragraph at lines 202--203
 \T1/cmr/m/n/12 and Hy-poth-e-sis H1. XG-Boost was im-ple-mented us-ing XG-B-Clas-si-fier(n_estimators=200,
  []
 
 
-Overfull \hbox (4.6203pt too wide) in paragraph at lines 188--189
+Overfull \hbox (4.6203pt too wide) in paragraph at lines 202--203
 \T1/cmr/m/n/12 max_depth=6, learn-ing_rate=0.1, use_label_encoder=False, eval_metric='mlogloss',
  []
 
 
-Overfull \hbox (0.4856pt too wide) in paragraph at lines 190--191
+Overfull \hbox (0.4856pt too wide) in paragraph at lines 204--205
 []\T1/cmr/m/n/12 Hyperparameter tun-ing for both en-sem-ble mod-els was con-ducted us-ing Grid-SearchCV()
  []
 
 
-Overfull \hbox (18.75183pt too wide) in paragraph at lines 190--191
+Overfull \hbox (18.75183pt too wide) in paragraph at lines 204--205
 \T1/cmr/m/n/12 The pa-ram-e-ter grids searched in-cluded n_estimators, max_depth, and min_samples_split
  []
 
-[40] [41]) [42]
+[41] [42] [43]) [44]
 Chapter 4.
 (./chapters/chapter-04.tex
 Overfull \hbox (1.45815pt too wide) in paragraph at lines 5--5
@@ -983,60 +869,60 @@ Overfull \hbox (28.67467pt too wide) in paragraph at lines 17--35
  [][] 
  []
 
-[43
+[45
 
 ]
-<images/fig3_1_spearman_correlation.png, id=1145, 858.5676pt x 463.9734pt>
+<images/fig3_1_spearman_correlation.png, id=1221, 858.5676pt x 463.9734pt>
 File: images/fig3_1_spearman_correlation.png Graphic file (type png)
 <use images/fig3_1_spearman_correlation.png>
 Package pdftex.def Info: images/fig3_1_spearman_correlation.png  used on input line 44.
 (pdftex.def)             Requested size: 396.91325pt x 214.4923pt.
- [44] [45 <./images/fig3_1_spearman_correlation.png>]
+ [46] [47 <./images/fig3_1_spearman_correlation.png>]
 Overfull \hbox (27.96939pt too wide) in paragraph at lines 109--111
 []\T1/cmr/m/n/12 HANDSET_TYPE and IS_SMARTPHONE pro-duced the high-est $\OML/cmm/m/it/12 ^^_[]$ \T1/cmr/m/n/12 statis-tics (181,566.52),
  []
 
-[46]
-<images/fig4_1_model_comparison.png, id=1166, 1003.5894pt x 393.6306pt>
+[48] [49]
+<images/fig4_1_model_comparison.png, id=1245, 1003.5894pt x 393.6306pt>
 File: images/fig4_1_model_comparison.png Graphic file (type png)
 <use images/fig4_1_model_comparison.png>
-Package pdftex.def Info: images/fig4_1_model_comparison.png  used on input line 143.
+Package pdftex.def Info: images/fig4_1_model_comparison.png  used on input line 165.
 (pdftex.def)             Requested size: 396.91325pt x 155.67758pt.
- [47 <./images/fig4_1_model_comparison.png>]
-Overfull \hbox (0.52316pt too wide) in paragraph at lines 185--185
+
+Overfull \hbox (0.52316pt too wide) in paragraph at lines 207--207
  []|\T1/cmr/bx/n/10.95 Rank| 
  []
 
-
-Overfull \hbox (36.39577pt too wide) in paragraph at lines 191--192
+[50 <./images/fig4_1_model_comparison.png>]
+Overfull \hbox (36.39577pt too wide) in paragraph at lines 213--214
 []\T1/cmr/m/n/12 TOTAL_REVENUE is the sin-gle most pre-dic-tive fea-ture (18.01%). SPEND_PER_MINUTE
  []
 
-<images/fig4_3_feature_importance.png, id=1173, 1292.1876pt x 555.0336pt>
+<images/fig4_3_feature_importance.png, id=1253, 1292.1876pt x 555.0336pt>
 File: images/fig4_3_feature_importance.png Graphic file (type png)
 <use images/fig4_3_feature_importance.png>
-Package pdftex.def Info: images/fig4_3_feature_importance.png  used on input line 195.
+Package pdftex.def Info: images/fig4_3_feature_importance.png  used on input line 217.
 (pdftex.def)             Requested size: 396.91325pt x 170.48338pt.
-[48]
-Overfull \hbox (62.44714pt too wide) in paragraph at lines 211--220
+[51 <./images/fig4_3_feature_importance.png>]
+Overfull \hbox (62.44714pt too wide) in paragraph at lines 239--248
  [][] 
  []
 
-) [49 <./images/fig4_3_feature_importance.png>] [50]
+) [52]
 Chapter 5.
 (./chapters/chapter-05.tex
 Overfull \hbox (21.6399pt too wide) in paragraph at lines 7--7
 []\T1/cmr/bx/n/17.28 Discussion of Key Cus-tomer Be-havioural At-tributes:
  []
 
-[51
+[53
 
 ]
 Overfull \hbox (13.2329pt too wide) in paragraph at lines 29--30
 \T1/cmr/m/n/12 VOICE_INTENSITY (calls per ac-tive day; F = 27,892.34) and TO-TAL_OG_MINUTES
  []
 
-[52]
+[54]
 Overfull \hbox (7.84372pt too wide) in paragraph at lines 32--32
 []\T1/cmr/bx/n/14.4 UPGRADE_RATE: The One Non-Significant Fea-ture 
  []
@@ -1046,7 +932,7 @@ Overfull \hbox (29.13895pt too wide) in paragraph at lines 37--37
 []\T1/cmr/bx/n/17.28 Discussion of Model Per-for-mance: Hy-poth-e-sis H2 
  []
 
-[53] [54] [55]
+[55] [56] [57]
 Overfull \hbox (27.58945pt too wide) in paragraph at lines 88--89
 \T1/cmr/m/n/12 Specific Ob-jec-tive 1 is com-pre-hen-sively ad-dressed. The study iden-ti-fied IS_SMARTPHONE,
  []
@@ -1062,25 +948,20 @@ Overfull \hbox (41.26044pt too wide) in paragraph at lines 90--91
  []
 
 )
-Overfull \hbox (5.54535pt too wide) in paragraph at lines 97--126
-\T1/cmr/m/n/12 voice bun-dle seg-ment mem-ber-ship, with IS_SMARTPHONE, BUN-DLE_SPEND_30D,
+Overfull \hbox (44.27748pt too wide) in paragraph at lines 97--132
+\T1/cmr/m/n/12 ment mem-ber-ship, with IS_SMARTPHONE, BUN-DLE_SPEND_30D, VOICE_INTENSITY,
  []
 
-
-Overfull \hbox (1.90327pt too wide) in paragraph at lines 97--126
-\T1/cmr/m/n/12 VOICE_INTENSITY, and DIS-TINCT_BUNDLES_TRIED emerg-ing as the strongest
- []
-
-[56] [57]
+[58] [59]
 Chapter 6.
-(./chapters/chapter-06.tex [58
+(./chapters/chapter-06.tex [60
 
 ]
 Overfull \hbox (10.09988pt too wide) in paragraph at lines 25--26
 \T1/cmr/m/n/12 nor-ity class), and the en-gi-neer-ing of SPEND_PER_MINUTE and VOICE_INTENSITY
  []
 
-[59]
+[61]
 Overfull \hbox (3.05518pt too wide) in paragraph at lines 35--35
 []\T1/cmr/bx/n/17.28 Strategic Rec-om-men-da-tions for Air-tel Uganda 
  []
@@ -1090,12 +971,17 @@ Overfull \hbox (37.23117pt too wide) in paragraph at lines 40--40
 []\T1/cmr/bx/n/14.4 Recommendation 1: De-ploy a VOICE_INTENSITY-Triggered
  []
 
-[60] [61] [62] [63]
-Overfull \hbox (16.79117pt too wide) in paragraph at lines 85--86
+[62] [63] [64]
+Overfull \hbox (33.19826pt too wide) in paragraph at lines 84--90
+\T1/cmr/m/n/12 and un-lock the full pur-chase his-tory fea-ture set, par-tic-u-larly DIS-TINCT_BUNDLES_TRIED
+ []
+
+[65]
+Overfull \hbox (16.79117pt too wide) in paragraph at lines 122--123
 []\T1/cmr/m/n/12 The study's cen-tral em-pir-i-cal con-tri-bu-tion is the iden-ti-fi-ca-tion of SPEND_PER_MINUTE
  []
 
-) (./references/references-content.tex [64]
+[66]) (./references/references-content.tex [67]
 Underfull \hbox (badness 1371) in paragraph at lines 7--8
 []\T1/cmr/m/n/12 Airtel Uganda. (2017, Febru-ary 17). Air-tel users to get more from My-
  []
@@ -1135,9 +1021,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 31--32
 \T1/cmr/m/n/12 psy-chol-ogy. Qual-i-ta-tive Re-search in Psy-chol-ogy, 3(2), 77--101.
  []
 
-[65
+[68
 
-] [66]
+] [69]
 Underfull \hbox (badness 10000) in paragraph at lines 79--80
 []\T1/cmr/m/n/12 Koren, Y., Bell, R., & Volin-sky, C. (2009). Ma-trix fac-tori-sa-
  []
@@ -1187,7 +1073,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 97--98
 \T1/cmr/m/n/12 telecommunications/our-insights/personalizing-the-customer-experience-driving-
  []
 
-[67]
+[70]
 Underfull \hbox (badness 10000) in paragraph at lines 109--110
 \T1/cmr/m/n/12 uganda-announces-ugx-50-55-billion-contribution-to-uccs-universal-service-and-
  []
@@ -1227,7 +1113,7 @@ Underfull \hbox (badness 1210) in paragraph at lines 121--122
 \T1/cmr/m/n/12 based col-lab-o-ra-tive fil-ter-ing rec-om-men-da-tion al-go-rithms. In Pro-ceed-ings of
  []
 
-[68]
+[71]
 Underfull \hbox (badness 10000) in paragraph at lines 145--146
 []\T1/cmr/m/n/12 Uganda Se-cu-ri-ties Ex-change. (2025, Febru-ary 18). Fi-
  []
@@ -1242,25 +1128,45 @@ Overfull \hbox (359.98077pt too wide) in paragraph at lines 145--146
 \T1/cmr/m/n/12 https://www.use.or.ug/sites/default/files/FINANCIAL%20RESULTS%20FOR%20THE%20YEAR%20ENDED%2031ST%20DECEMBER%202024.pdf 
  []
 
-) (./appendicies/AAppendix-main.tex [69]
-Appendix A.
-(./appendicies/app-dua.tex [70
-
-{/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}] [71])
-Overfull \hbox (43.4085pt too wide) in paragraph at lines 70--4
-[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 70--4
-
- []
-
 [72]
-Appendix B.
-(./appendicies/app-participant-info.tex [73
+Underfull \hbox (badness 1226) in paragraph at lines 170--174
+[]\T1/cmr/m/n/12 Lundberg, S. M., & Lee, S. I. (2017). A uni-fied ap-proach to in-ter-pret-
+ []
 
-] [74]) [75]
+
+Underfull \hbox (badness 2903) in paragraph at lines 170--174
+\T1/cmr/m/n/12 ing model pre-dic-tions. In I. Guyon et al. (Eds.), \T1/cmr/m/it/12 Ad-vances in Neu-ral
+ []
+
+
+Underfull \hbox (badness 4001) in paragraph at lines 170--174
+\T1/cmr/m/it/12 In-for-ma-tion Pro-cess-ing Sys-tems 30 \T1/cmr/m/n/12 (pp. 4765--4774). Cur-ran As-so-ciates.
+ []
+
+
+Overfull \hbox (29.78236pt too wide) in paragraph at lines 170--174
+\T1/cmr/m/n/12 https://proceedings.neurips.cc/paper/2017/hash/8a20a8621978632d76c43dfd28b67767-
+ []
+
+) (./appendicies/AAppendix-main.tex [73]
+Appendix A.
+(./appendicies/app-dua.tex [74
+
+{/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}] [75]
+File: images/signature.png Graphic file (type png)
+<use images/signature.png>
+Package pdftex.def Info: images/signature.png  used on input line 74.
+(pdftex.def)             Requested size: 62.6421pt x 34.14322pt.
+)
+Overfull \hbox (10.49474pt too wide) in paragraph at lines 70--4
+[]  
+ []
+
+[76]
+Appendix B.
+(./appendicies/app-participant-info.tex [77
+
+] [78]) [79]
 Appendix C.
 (./appendicies/app-interview-guide.tex
 Overfull \hbox (0.23134pt too wide) in paragraph at lines 5--6
@@ -1272,94 +1178,97 @@ Overfull \hbox (1.21033pt too wide) in paragraph at lines 5--6
 \T1/cmr/m/n/12 ness De-ci-sions for Rev-enue Op-ti-mi-sa-tion. A Case Study of Air-tel Uganda Lim-ited. 
  []
 
-[76
+[80
 
-] [77]) [78]
+] [81]) [82]
 Appendix D.
 (./appendicies/app-ethics.tex
 Overfull \hbox (4.78429pt too wide) in paragraph at lines 31--33
 \T1/cmr/bx/n/12 most pre-dic-tive of voice bun-dle pur-chase de-ci-sions among Air-tel Uganda
  []
 
-[79
-
-])
-Overfull \hbox (14.98112pt too wide) in paragraph at lines 62--16
-[]  
- []
-
-[80]
-Appendix E.
-(./appendicies/app-objectives.tex [81
-
-]) [82]
-Appendix F.
 [83
 
 ]
+File: images/signature.png Graphic file (type png)
+<use images/signature.png>
+Package pdftex.def Info: images/signature.png  used on input line 66.
+(pdftex.def)             Requested size: 62.6421pt x 34.14322pt.
+) [84]
+Appendix E.
+(./appendicies/app-objectives.tex [85
+
+]) [86]
+Appendix F.
+[87
+
+]
 Appendix G.
-(./appendicies/app-AI-use-declaration.tex) [84
+(./appendicies/app-AI-use-declaration.tex
+File: images/signature.png Graphic file (type png)
+<use images/signature.png>
+Package pdftex.def Info: images/signature.png  used on input line 12.
+(pdftex.def)             Requested size: 104.41306pt x 56.9055pt.
+)
+Underfull \hbox (badness 10000) in paragraph at lines 12--40
+
+ []
+
+[88
 
 ]
 Appendix H.
-<images/screenshot target variable.png, id=1430, 1517.67pt x 985.6825pt>
+<images/screenshot target variable.png, id=1506, 1517.67pt x 985.6825pt>
 File: images/screenshot target variable.png Graphic file (type png)
 <use images/screenshot target variable.png>
 Package pdftex.def Info: images/screenshot target variable.png  used on input line 48.
 (pdftex.def)             Requested size: 441.01773pt x 286.42717pt.
-<images/screenshot customer profile.png, id=1431, 1517.67pt x 985.6825pt>
+<images/screenshot customer profile.png, id=1507, 1517.67pt x 985.6825pt>
 File: images/screenshot customer profile.png Graphic file (type png)
 <use images/screenshot customer profile.png>
 Package pdftex.def Info: images/screenshot customer profile.png  used on input line 55.
 (pdftex.def)             Requested size: 441.01773pt x 286.42717pt.
-[85
+[89
 
  <./images/screenshot target variable.png>]
-<images/screenshot purchase timing feb.png, id=1439, 1517.67pt x 985.6825pt>
+<images/screenshot purchase timing feb.png, id=1516, 1517.67pt x 985.6825pt>
 File: images/screenshot purchase timing feb.png Graphic file (type png)
 <use images/screenshot purchase timing feb.png>
 Package pdftex.def Info: images/screenshot purchase timing feb.png  used on input line 62.
 (pdftex.def)             Requested size: 441.01773pt x 286.42717pt.
- [86 <./images/screenshot customer profile.png>]
-<images/screenshot bundle consumption.png, id=1447, 1517.67pt x 985.6825pt>
+ [90 <./images/screenshot customer profile.png>]
+<images/screenshot bundle consumption.png, id=1524, 1517.67pt x 985.6825pt>
 File: images/screenshot bundle consumption.png Graphic file (type png)
 <use images/screenshot bundle consumption.png>
 Package pdftex.def Info: images/screenshot bundle consumption.png  used on input line 69.
 (pdftex.def)             Requested size: 441.01773pt x 286.42717pt.
- [87 <./images/screenshot purchase timing feb.png>]
-<images/screenshot location details.png, id=1456, 1517.67pt x 985.6825pt>
+ [91 <./images/screenshot purchase timing feb.png>]
+<images/screenshot location details.png, id=1532, 1517.67pt x 985.6825pt>
 File: images/screenshot location details.png Graphic file (type png)
 <use images/screenshot location details.png>
 Package pdftex.def Info: images/screenshot location details.png  used on input line 76.
 (pdftex.def)             Requested size: 441.01773pt x 286.42717pt.
-) [88 <./images/screenshot bundle consumption.png>] [89 <./images/screenshot location details.png>] (./main.aux)
+) [92 <./images/screenshot bundle consumption.png>] [93 <./images/screenshot location details.png>] (./main.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: DE3FC399D43364F20FBD530EC3AD5C62;30216.
+(rerunfilecheck)             Checksum: F082E897BAD26D89ECB21B7C2FE06718;30785.
  ) 
 Here is how much of TeX's memory you used:
- 14478 strings out of 467525
- 230484 string characters out of 5418982
- 650373 words of memory out of 5000000
- 42752 multiletter control sequences out of 15000+600000
- 645114 words of font info for 80 fonts, out of 8000000 for 9000
+ 14529 strings out of 467525
+ 231536 string characters out of 5418982
+ 649687 words of memory out of 5000000
+ 42782 multiletter control sequences out of 15000+600000
+ 645428 words of font info for 81 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 69i,11n,79p,1566b,737s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfti1728.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on main.pdf (105 pages, 5211536 bytes).
+ 69i,11n,79p,1566b,735s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfti1728.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
+Output written on main.pdf (110 pages, 5275078 bytes).
 PDF statistics:
- 1641 PDF objects out of 1728 (max. 8388607)
- 1449 compressed objects within 15 object streams
- 366 named destinations out of 1000 (max. 500000)
- 1108 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1726 PDF objects out of 1728 (max. 8388607)
+ 1524 compressed objects within 16 object streams
+ 382 named destinations out of 1000 (max. 500000)
+ 1129 words of extra memory for PDF output out of 10000 (max. 10000000)
 

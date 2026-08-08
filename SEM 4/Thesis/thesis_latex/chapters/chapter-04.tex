@@ -111,7 +111,7 @@ HANDSET\_TYPE and IS\_SMARTPHONE produced the highest $\chi^2$ statistics (181,5
 
 \subsection{Hypothesis H1 Verdict}
 
-Across all three statistical tests: 34 of 35 features under Spearman Rank Correlation, 35 of 35 under ANOVA, and 7 of 7 categorical features under Chi-Square all returned statistically significant results. H1	extsubscript{0} is therefore \textbf{rejected}. H1	extsubscript{1} is accepted: multiple customer behavioural attributes significantly predict voice bundle value segment membership.
+Across all three statistical tests: 34 of 35 features under Spearman Rank Correlation, 35 of 35 under ANOVA, and 7 of 7 categorical features under Chi-Square all returned statistically significant results. H1	\textsubscript{0} is therefore \textbf{rejected}. H1	\textsubscript{1} is accepted: multiple customer behavioural attributes significantly predict voice bundle value segment membership.
 
 \section{Machine Learning Model Performance - Objective 2}
 
@@ -136,6 +136,28 @@ Random Forest                  & 0.6731 & 0.6627 & 0.6731 & 0.6522 \\
 \end{flushleft}
 \end{table}
 
+The evaluation metrics reported in Table~\ref{tab:models} carry specific
+interpretive significance in the context of a commercial bundle recommendation
+deployment. Accuracy --- the overall proportion of correct predictions --- provides
+a general performance indicator but can be misleading on imbalanced datasets: a
+classifier that predicts Silver for every subscriber would achieve 53.3\% accuracy
+while being commercially useless. Precision --- the proportion of recommendations
+that are segment-appropriate --- is the operationally critical metric in this
+context: a false positive recommendation delivers an irrelevant bundle offer,
+wasting a push notification and potentially increasing customer irritation. Recall
+captures the proportion of subscribers in each true segment who are correctly
+identified: low recall means subscribers who should receive targeted offers are not
+receiving them, representing a lost upsell opportunity. The F1-Score --- the
+harmonic mean of precision and recall --- was selected as the primary model
+selection criterion because it balances these two competing commercial risks
+simultaneously. The F1-Score range of 0.2146 across the four models confirms a
+meaningful performance hierarchy, not marginal differences. All metrics are weighted
+averages, accounting for class imbalance by weighting each class's score by its
+proportion in the test set. In the context of deployment, the model's weighted
+precision of 0.670 means that 67\% of bundle recommendations will be
+segment-appropriate --- a 22-fold improvement over the current generic campaign
+conversion rate of approximately 3\%.
+
 XGBoost achieved the highest F1-Score of 0.6611, followed by Random Forest (F1 = 0.6522), Decision Tree (F1 = 0.6344), and Logistic Regression (F1 = 0.4465). The F1-Score range of 0.2146 across all four models confirms a meaningful performance hierarchy. Per-class XGBoost performance: Silver F1 = 0.79, Platinum F1 = 0.71, New F1 = 0.53, Diamond F1 = 0.56.
 
 \begin{figure}[H]
@@ -150,7 +172,7 @@ XGBoost achieved the highest F1-Score of 0.6611, followed by Random Forest (F1 =
 
 \subsection{Hypothesis H2 Verdict}
 
-The F1-Score range of 0.2146 provides clear grounds to reject H2	extsubscript{0} and accept H2	extsubscript{1}. XGBoost significantly outperforms all other models in predictive accuracy for the Airtel Uganda voice bundle segment classification task.
+The F1-Score range of 0.2146 provides clear grounds to reject H2	\textsubscript{0} and accept H2	\textsubscript{1}. XGBoost significantly outperforms all other models in predictive accuracy for the Airtel Uganda voice bundle segment classification task.
 
 \section{Feature Importance Analysis}
 
@@ -202,6 +224,12 @@ TOTAL\_REVENUE is the single most predictive feature (18.01\%). SPEND\_PER\_MINU
 
 \section{Projected Business Impact - Objective 3}
 
+\textbf{Note on the nature of findings in this section.}
+The business impact figures presented below are derived from a simulated pilot evaluation conducted on the hold-out test set and from external industry benchmarks \cite{ref31, ref32}. 
+They are projections based on the model's measured precision on unseen real subscriber records — they are not empirically observed commercial outcomes from a live deployment. 
+Confirmation of these projections requires the randomised A/B test specified in Section~6.3.3
+This distinction is maintained throughout the results, discussion, and conclusions of this thesis.
+
 A simulated pilot evaluation was conducted using the XGBoost model's outputs on the hold-out test set. Table \ref{tab:impact} presents the projected business impact metrics.
 
 \begin{table}[H]
@@ -226,4 +254,4 @@ The XGBoost model's weighted precision of 0.67 means bundle recommendations will
 
 \section{Summary of Results}
 
-This chapter presented the empirical results across all three research objectives. Under Objective 1, Spearman Rank Correlation identified 34 of 35 features as significantly associated with bundle segment; ANOVA confirmed all 35 features; and Chi-Square confirmed all 7 categorical features --- collectively leading to rejection of H1	extsubscript{0}. Under Objective 2, XGBoost achieved the highest F1-Score of 0.6611 with a range of 0.2146, leading to rejection of H2	extsubscript{0}. The top predictive features were TOTAL\_REVENUE (18.01\%), SPEND\_PER\_MINUTE (6.57\%), CALLS (5.97\%), VOICE\_INTENSITY (5.87\%), and MOBILE\_MONEY (4.64\%). Under Objective 3, projected business impact metrics provide preliminary support for H3	extsubscript{1}. Full discussion is presented in Chapter Five.
+This chapter presented the empirical results across all three research objectives. Under Objective 1, Spearman Rank Correlation identified 34 of 35 features as significantly associated with bundle segment; ANOVA confirmed all 35 features; and Chi-Square confirmed all 7 categorical features --- collectively leading to rejection of H1 \textsubscript{0}. Under Objective 2, XGBoost achieved the highest F1-Score of 0.6611 with a range of 0.2146, leading to rejection of H2	\textsubscript{0}. The top predictive features were TOTAL\_REVENUE (18.01\%), SPEND\_PER\_MINUTE (6.57\%), CALLS (5.97\%), VOICE\_INTENSITY (5.87\%), and MOBILE\_MONEY (4.64\%). Under Objective 3, projected business impact metrics provide preliminary support for H3	\textsubscript{1}. Full discussion is presented in Chapter Five.

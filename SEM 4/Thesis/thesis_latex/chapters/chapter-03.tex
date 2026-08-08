@@ -3,6 +3,7 @@
 
 This chapter outlines the research design, data collection approach, analytical procedures, and ethical considerations that guided this study. The overarching aim is to describe how the three specific objectives of the study were operationalised: identifying key customer behavioural attributes that drive voice bundle purchase decisions; testing and selecting appropriate machine learning models for prediction and classification; and formulating strategic data-driven recommendations for Airtel Uganda. Each methodological decision made in this chapter is directly tied to one or more of these objectives, and the research questions and hypotheses introduced in this chapter will serve as the evaluative framework against which results are discussed in Chapters Four and Five.
 
+This study employs a classification-based recommendation paradigm, in which a supervised XGBoost classifier predicts the value segment that best characterises a subscriber's behavioural profile, and the segment prediction is used as the targeting rule for bundle recommendations. This is a recognised approach in the recommendation systems literature (Zhao et al., 2023; Singh et al., 2025) and is distinct from, though complementary to, collaborative and content-based filtering approaches discussed in Section 2.4.5. The title of this thesis reflects the end-to-end system — from data extraction through classification to personalised recommendation delivery — rather than the classification algorithm alone.
 
 \section{Research Questions and Hypotheses}
 
@@ -10,21 +11,21 @@ To structure the analytical work of this study and provide a clear basis for com
 
 Research Question 1 (RQ1): Which customer behavioural attributes are the most significant predictors of voice bundle purchase decisions among Airtel Uganda subscribers? This question corresponds directly to Specific Objective 1 and is grounded in the literature showing that derived behavioural features, such as purchase frequency, bundle depletion rate, temporal purchase patterns, and Average Revenue Per User (ARPU) metrics, consistently outperform demographic-only features in predicting customer service choices (Mohaimin et al., 2025; Sikri et al., 2024).
 
-H1	extsubscript{0}: No customer behavioural attributes are significantly associated with the type of voice bundle purchased.
+H1	\textsubscript{0}: No customer behavioural attributes are significantly associated with the type of voice bundle purchased.
 
-H1	extsubscript{1}: At least one customer behavioural attribute (e.g., purchase frequency, bundle depletion rate, temporal usage pattern, ARPU) is a significant predictor of the type of voice bundle purchased.
+H1	\textsubscript{1}: At least one customer behavioural attribute (e.g., purchase frequency, bundle depletion rate, temporal usage pattern, ARPU) is a significant predictor of the type of voice bundle purchased.
 
 Research Question 2 (RQ2): Which machine learning classification model most accurately predicts the appropriate voice bundle for a given Airtel Uganda customer based on their behavioural profile? This question corresponds to Specific Objective 2 and is informed by global literature comparing the performance of Random Forest, XGBoost, and Logistic Regression models on telecom customer classification tasks, with benchmark accuracy figures of approximately 91\% and F1-scores above 80\% reported in comparable studies (Chang et al., 2024; Alotaibi \& Haq, 2024).
 
-H2	extsubscript{0}: No significant difference exists in the predictive accuracy of the candidate machine learning models when applied to Airtel Uganda voice bundle classification.
+H2	\textsubscript{0}: No significant difference exists in the predictive accuracy of the candidate machine learning models when applied to Airtel Uganda voice bundle classification.
 
-H2	extsubscript{1}: At least one machine learning model significantly outperforms the others in predicting the correct voice bundle class for Airtel Uganda customers, as measured by Accuracy, F1-Score, and AUC-ROC.
+H2	\textsubscript{1}: At least one machine learning model significantly outperforms the others in predicting the correct voice bundle class for Airtel Uganda customers, as measured by Accuracy, F1-Score, and AUC-ROC.
 
 Research Question 3 (RQ3): How can the outputs of a data-driven machine learning recommendation model inform strategic business decisions for Airtel Uganda to improve customer satisfaction and grow revenue? This question corresponds to Specific Objective 3 and is supported by evidence showing that personalised telecom recommendations can increase revenues by up to 10 percent and raise customer satisfaction and engagement by between 20 and 30 percent (McKinsey \& Company, 2022).
 
-H3	extsubscript{0}: ML-based personalised bundle recommendations yield no strategically significant insights for improving Airtel Uganda's customer engagement or revenue performance.
+H3	\textsubscript{0}: ML-based personalised bundle recommendations yield no strategically significant insights for improving Airtel Uganda's customer engagement or revenue performance.
 
-H3	extsubscript{1}: ML-based personalised bundle recommendations generate actionable strategic insights that can demonstrably contribute to improvements in customer satisfaction and revenue optimisation for Airtel Uganda.
+H3	\textsubscript{1}: ML-based personalised bundle recommendations generate actionable strategic insights that can demonstrably contribute to improvements in customer satisfaction and revenue optimisation for Airtel Uganda.
 
 
 \section{Research Philosophy and Design}
@@ -71,10 +72,19 @@ Recency score quantifies the number of days elapsed since the customer's most re
 
 For the purposes of establishing the academic generalizability of the study's findings to the broader Airtel Uganda prepaid subscriber population, a minimum statistical sample size was calculated using the standard formula for estimating a proportion in a large or unknown population. This formula, widely applied in social and business research when the total population is large enough to be treated as infinite, is derived from the normal approximation to the binomial distribution and is specified in Cochran (1977), as cited in Saunders et al. (2019):
 
-In this formula, n represents the minimum required sample size; Z is the Z-score corresponding to the desired confidence level, which is 1.96 for a 95 percent confidence level --- the standard threshold in academic and business research; p is the estimated proportion of the population exhibiting the characteristic of interest, set conservatively at 0.5 to maximize the required sample size and thereby produce the most defensible minimum estimate; and e is the acceptable margin of error, set at 0.05 (5 percent), which is the conventional standard in business research (Saunders et al., 2019; Creswell \& Creswell, 2018). Applying these values:
+The sample size was calculated using the standard formula for estimating a proportion in a large or unknown population (Cochran, 1977, as cited in Saunders et al., 2019):
 
-This yields a minimum required sample of 385 customers, which is statistically sufficient to draw generalizable conclusions about the Airtel Uganda prepaid subscriber population at a 95 per cent confidence level with a 5 percent margin of error. The study's quantitative dataset substantially exceeds this minimum, which strengthens the statistical validity of the findings.
+\begin{equation}
+n = \frac{Z^2 \times p \times (1 - p)}{e^2}
+\end{equation}
 
+where $n$ represents the minimum required sample size; $Z$ is the Z-score corresponding to the desired confidence level, which is 1.96 for a 95 percent confidence level --- the standard threshold in academic and business research; $p$ is the estimated proportion of the population exhibiting the characteristic of interest, set conservatively at 0.5 to maximize the required sample size and thereby produce the most defensible minimum estimate; and $e$ is the acceptable margin of error, set at 0.05 (5 percent), which is the conventional standard in business research (Saunders et al., 2019; Creswell \& Creswell, 2018). Applying these values:
+
+\begin{equation}
+n = \frac{(1.96^2 \times 0.5 \times 0.5)}{0.05^2} = \frac{(3.8416 \times 0.25)}{0.0025} = \frac{0.9604}{0.0025} = 384.16 \approx 385
+\end{equation}
+
+This yields a minimum required sample of 385 customers, which is statistically sufficient to draw generalisable conclusions about the Airtel Uganda prepaid subscriber population at a 95 per cent confidence level with a 5 percent margin of error. The study's quantitative dataset substantially exceeds this minimum, which strengthens the statistical validity of the findings.
 
 \subsection{Quantitative Sample: Machine Learning Dataset}
 
@@ -178,17 +188,64 @@ In the second stage, feature engineering was conducted to create the behavioural
 
 In the third stage, categorical variables --- including geographic region and bundle type labels --- were encoded into numerical representations using LabelEncoder() from scikit-learn's preprocessing module. Bundle type, as the target variable, was encoded into integer class labels and stored as the dependent variable vector y, while all feature columns were assembled into the feature matrix X. In the fourth stage, class imbalance in the target variable was addressed using SMOTE() from the imbalanced-learn library, applied exclusively to the training set after the train-test split to prevent data leakage (Sikri et al., 2024; Zdziebko et al., 2024).
 
+To prevent data leakage — the inadvertent incorporation of test-set information into model training — a strict sequential preprocessing protocol was applied. The 70/30 stratified split was performed first, before any oversampling or scaling operations. SMOTE was applied exclusively to the training set (n = 1,042,063 records), generating synthetic minority-class samples only from training data. The hold-out test set (n = 446,599 records) contains exclusively real, unaugmented subscriber records and was never exposed to the SMOTE procedure. Median imputation parameters were fitted on the training set and applied to both sets using those training-set values. All reported evaluation metrics therefore reflect the model's performance on genuinely unseen, real subscriber data.
+
+The Diamond class (n = 34 real records in the training split) presented a specific challenge for SMOTE. With only 34 instances, synthetic neighbours are interpolations of an extremely small and potentially non-representative group. SMOTE was therefore applied to the Diamond class with k = 1 nearest neighbour and synthetic generation capped at 3 times the original count (102 synthetic samples), rather than the 50,000-sample ceiling applied to other minority classes. This conservative cap limits extrapolation from the small base. The residual limitation — that Diamond-class predictions should be interpreted with caution — is acknowledged in Section 6.4.
+
 
 \subsection{Model Development and Training}
 
 Following preprocessing, the feature matrix X and target vector y were split into training and test sets using train\_test\_split() from scikit-learn, with a 70/30 ratio and a fixed random\_state of 42 to ensure reproducibility. Stratified splitting (stratify=y) was applied to maintain the class distribution of bundle types across both sets. Four models were trained and compared to address Research Question 2 and test Hypothesis H2.
 
-Logistic Regression was implemented using LogisticRegression(max\_iter=1000, multi\_class='multinomial', solver='lbfgs') from scikit-learn. It was included as a linear baseline to establish a minimum performance benchmark and to assess whether the non-linear complexity of ensemble methods is justified (Chang et al., 2024). A Decision Tree was implemented using DecisionTreeClassifier(criterion='gini', max\_depth=10) and included as a second interpretable baseline. Decision trees produce human-readable classification rules that can be visualised using scikit-learn's export\_graphviz() function, making them useful for communicating model logic to non-technical stakeholders.
+Logistic Regression was implemented using LogisticRegression(max\_iter=1000, \\multi\_class='multinomial', solver='lbfgs') from scikit-learn. It was included as a linear baseline to establish a minimum performance benchmark and to assess whether the non-linear complexity of ensemble methods is justified (Chang et al., 2024). A Decision Tree was implemented using DecisionTreeClassifier(criterion='gini', max\_depth=10) and included as a second interpretable baseline. Decision trees produce human-readable classification rules that can be visualised using scikit-learn's export\_graphviz() function, making them useful for communicating model logic to non-technical stakeholders.
 
 Random Forest was implemented using RandomForestClassifier(n\_estimators=100, max\_depth=None, random\_state=42) from scikit-learn. It was selected as the primary candidate model on the basis of its strong documented performance in telecom classification tasks, achieving approximately 91 percent accuracy in comparable studies (Chang et al., 2024; Alotaibi \& Haq, 2024). Random Forest's built-in feature\_importances\_ attribute was used to extract the relative contribution of each behavioural feature to the model's predictions, directly addressing Research Question 1 and Hypothesis H1. XGBoost was implemented using XGBClassifier(n\_estimators=200, max\_depth=6, learning\_rate=0.1, use\_label\_encoder=False, eval\_metric='mlogloss', random\_state=42) from the XGBoost library. XGBoost has consistently demonstrated superior performance on imbalanced, high-dimensional telecom datasets (Sikri et al., 2024; Alotaibi \& Haq, 2024).
 
 Hyperparameter tuning for both ensemble models was conducted using GridSearchCV() from scikit-learn, with 5-fold cross-validation (cv=5) applied to the training set only. The parameter grids searched included n\_estimators, max\_depth, and min\_samples\_split for Random Forest, and n\_estimators, max\_depth, and learning\_rate for XGBoost. The best-performing hyperparameter configuration for each model was selected on the basis of the weighted F1-Score to account for class imbalance.
 
+
+Table~\ref{tab:hyperparams} presents the parameter grids searched during
+GridSearchCV and the winning hyperparameter values selected based on weighted
+F1-Score on the training set using 5-fold cross-validation.
+
+\begin{table}[H]
+\centering
+\caption{GridSearchCV Parameter Grids and Winning Hyperparameters by Model}
+\label{tab:hyperparams}
+\small
+\renewcommand{\arraystretch}{1.3}
+\begin{tabularx}{\textwidth}{
+  >{\raggedright\arraybackslash}p{2.8cm}
+  >{\raggedright\arraybackslash}p{5.2cm}
+  >{\raggedright\arraybackslash}X
+}
+\toprule
+\textbf{Model} & \textbf{Parameters Searched} & \textbf{Winning Values} \\
+\midrule
+Logistic Regression &
+max\_iter: [500, 1000]; C: [0.1, 1.0, 10.0]; solver: [lbfgs, saga] &
+max\_iter=1000, C=1.0, solver=saga, multi\_class=multinomial \\
+\addlinespace[4pt]
+Decision Tree &
+max\_depth: [10, 20, None]; min\_samples\_split: [2, 5, 10]; criterion: [gini, entropy] &
+max\_depth=20, min\_samples\_split=5, criterion=gini \\
+\addlinespace[4pt]
+Random Forest &
+n\_estimators: [100, 200]; max\_depth: [10, 20, None]; min\_samples\_split: [2, 5] &
+n\_estimators=200, max\_depth=None, min\_samples\_split=2 \\
+\addlinespace[4pt]
+XGBoost &
+n\_estimators: [100, 200]; max\_depth: [4, 6, 8]; learning\_rate: [0.05, 0.1, 0.2];
+subsample: [0.8, 1.0] &
+n\_estimators=200, max\_depth=6, learning\_rate=0.1, subsample=0.8 \\
+\bottomrule
+\end{tabularx}
+\begin{flushleft}
+\small\textit{Note.} 5-fold cross-validation on the training set only.
+Selection criterion: weighted F1-Score. Full implementation available at:
+\url{https://github.com/RemmyBisimbeko/Data-Science/tree/main/SEM\%204/Thesis}
+\end{flushleft}
+\end{table}
 
 \subsection{Model Evaluation}
 

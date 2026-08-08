@@ -151,6 +151,22 @@ Dimensionality reduction through Principal Component Analysis (PCA) has also bee
 
 The literature consistently identifies a standard set of evaluation metrics for classification and recommendation models in telecoms. Precision measures the proportion of recommended bundles that were actually relevant to the customer. Recall measures the proportion of all genuinely relevant bundles that the model successfully identified. The F1-Score provides a harmonic mean of precision and recall, useful when there is a trade-off between the two. The Area Under the Receiver Operating Characteristic Curve (AUC-ROC) captures overall discriminative ability across classification thresholds, while the Root Mean Squared Error (RMSE) is applied in regression-based recommendation tasks. Alotaibi and Haq (2024) achieved an ensemble model AUC of 0.79 with a recall of 0.72, which they benchmarked against prior studies. Chang et al. (2024) reported a Random Forest accuracy of 91.66\% with an 82.2\% precision and 81.8\% recall --- results this study will use as a baseline for comparison.
 
+\subsection{Recommender System Paradigms and the Classification-Based Approach}
+
+Before reviewing the specific literature on machine learning in telecom bundle recommendation, it is necessary to situate this study within the broader taxonomy of recommender system approaches. Recommender systems are classified into three established paradigms: Collaborative Filtering (CF), Content-Based Filtering, and Hybrid Systems \cite{ref1, ref19}.
+
+Collaborative Filtering generates recommendations by identifying patterns in user--item interaction histories---recommending items that users with similar profiles have engaged with \cite{ref26, ref40}. However, CF requires dense interaction matrices and suffers from the cold-start problem. In the prepaid telecom context, the subscriber-to-bundle interaction space is extremely sparse---each subscriber typically purchases only a small fraction of the 738 available bundle products---making CF structurally unsuitable for this setting.
+
+Content-Based Filtering recommends items similar in attributes to those previously consumed. In a telecom context, this would recommend bundles similar in price or duration to prior purchases. While appropriate in some contexts, this approach risks over-specialisation and cannot detect behavioural signals indicating readiness for a higher-tier product.
+
+Hybrid Recommender Systems combine collaborative and content-based signals \cite{ref19}, but require both rich interaction histories and item attribute data---conditions not fully met in the prepaid subscriber context.
+
+Classification-Based Recommendation, the approach adopted in this study, represents a fourth paradigm that has gained traction where rich behavioural feature sets are available but interaction matrices are sparse \cite{ref53, ref44}. In this paradigm, a supervised classifier predicts the value segment that best characterises a subscriber's behavioural profile, and the segment prediction is used as the targeting rule for bundle recommendations: the classifier predicts that Subscriber A belongs to the Platinum segment, and the recommendation engine surfaces the Platinum tier's bundle portfolio. The justification for this approach is threefold:
+\begin{enumerate}
+    \item Rich behavioural OCS features are available but interaction matrices are too sparse for CF;
+    \item The classification output is directly consumable by Airtel Uganda's existing USSD rules engine without new system integration;
+    \item Classification-based recommendation is validated in the telecom literature \cite{ref8, ref44}.
+\end{enumerate}
 
 \section{Empirical Review of Key Methodologies}
 
@@ -182,34 +198,14 @@ Predictive Analytics & Wassouf et al.\ (2020) & Customer Retention & Accurate be
 \end{flushleft}
 \end{table}
 
-\begin{table}[H]
-\centering
-\caption{Empirical Review of Machine Learning Methodologies in Telecom Recommendation and Segmentation}
-\label{tab:litreview}
-\begin{tabular}{p{3cm}p{3cm}p{3cm}p{5cm}}
-\toprule
-\textbf{Methodology} & \textbf{Key Study} & \textbf{Application} & \textbf{Key Finding} \\
-\midrule
-Collaborative Filtering & Deldjoo et al.\ (2024) & Telecom Recommender Systems & Hybrid CF models outperform single-approach systems in dense usage datasets. \\
-\midrule
-K-Means Clustering & Yuming et al.\ (2024) & Customer Segmentation & Feature engineering, not algorithmic novelty, drives the greatest segmentation improvements. \\
-\midrule
-Gradient Boosting (XGBoost) & Alotaibi \& Haq (2024) & Customer Classification & Random Forest achieves $\sim$91.66\% accuracy; XGBoost matches or exceeds it on imbalanced datasets. \\
-\midrule
-Deep Learning Hybrid & Zhao et al.\ (2023) & Customer Value Segmentation & Two-stage unsupervised + supervised approach outperforms either method in isolation. \\
-\midrule
-Temporal Feature Modeling & Chen et al.\ (2023) & Usage Pattern Prediction & Hourly and daily temporal features significantly outperform aggregated monthly figures. \\
-\midrule
-Predictive Analytics & Wassouf et al.\ (2020) & Customer Retention & Accurate behavioral predictions directly improve the effectiveness of commercial interventions. \\
-\bottomrule
-\end{tabular}
-\begin{flushleft}
-\small\textit{Note.} Sources cited are representative of the broader literature reviewed. All identified studies rely on publicly available or synthetic datasets; none were conducted using real Ugandan operator data. Source: Author's synthesis of reviewed literature.
-\end{flushleft}
-\end{table}
-
-Table 1 reveals several important patterns across the reviewed literature. First, ensemble methods --- particularly Random Forest and XGBoost --- are the most consistently high-performing models for telecom classification tasks, with reported F1-Scores ranging from 0.78 to 0.92 across the reviewed studies (Chang et al., 2024; Alotaibi \& Haq, 2024; Sikri et al., 2024). Logistic Regression and single Decision Trees appear as baseline comparators in most studies, consistently underperforming ensemble approaches by a meaningful margin. Second, Collaborative Filtering approaches achieve strong recommendation accuracy where per-item interaction histories are available, but are primarily applied in data-rich global market contexts rather than African prepaid markets (Deldjoo et al., 2024). Third, and most significantly for the present study, none of the reviewed studies were conducted using real proprietary transaction data from a Ugandan telecommunications operator --- all rely either on publicly available benchmark datasets such as the IBM Telco Churn dataset or on synthetically generated samples. This constitutes the primary gap that the present study addresses. Furthermore, no reviewed study simultaneously addresses voice bundle recommendation, value segment classification, and business impact projection within a single analytical framework --- a combination this study contributes to the literature.
-
+Table~\ref{tab:litreview} reveals several important patterns and gaps across the reviewed literature that directly motivate the present study. First, ensemble
+methods --- particularly Random Forest and XGBoost --- are the most consistently high-performing models for telecom classification tasks, with reported F1-Scores
+ranging from 0.78 to 0.92 across the reviewed studies  (Chang et al., 2024; Alotaibi \& Haq, 2024; Sikri et al., 2024) \cite{ref11, ref8, ref43}.
+Logistic Regression and single Decision Trees consistently underperform ensemble approaches. Second, Collaborative Filtering approaches achieve strong recommendation
+accuracy in data-rich global market contexts, but are predominantly applied where dense interaction histories exist --- a condition not met in the Ugandan prepaid
+setting. Third, and most critically, none of the reviewed studies were conducted using real proprietary transaction data from a Ugandan telecommunications operator
+--- all rely either on publicly available benchmark datasets (notably the IBM Telco Churn dataset) or on synthetically generated samples. This constitutes the primary
+gap that the present study addresses. Furthermore, none of the reviewed studies simultaneously address voice bundle recommendation, value segment classification, and business impact projection within a single analytical framework --- a combination this study contributes to the literature.
 
 \section{Recommender Systems in Telecommunications}
 

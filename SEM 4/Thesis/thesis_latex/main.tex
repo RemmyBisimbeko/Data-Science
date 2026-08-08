@@ -23,6 +23,7 @@
 \usepackage[T1]{fontenc}
 \usepackage{url}
 \usepackage{hyperref}
+\usepackage{chngcntr}
 \hypersetup{colorlinks=false, linktoc=all}
 
 \setcounter{secnumdepth}{3}
@@ -30,9 +31,9 @@
 \onehalfspacing
 
 % Student details
-\newcommand\theResearchTopic{LEVERAGING MACHINE LEARNING FOR DATA-DRIVEN AND PERSONALISED VOICE BUNDLE RECOMMENDATIONS: IMPROVING CUSTOMER SATISFACTION AND INFORMING BUSINESS DECISIONS FOR REVENUE OPTIMISATION. A CASE STUDY OF AIRTEL UGANDA LIMITED}
+\newcommand\theResearchTopic{LEVERAGING MACHINE LEARNING FOR DATA-DRIVEN AND PERSONALISED VOICE BUNDLE RECOMMENDATIONS: \\IMPROVING CUSTOMER SATISFACTION AND INFORMING BUSINESS DECISIONS FOR REVENUE OPTIMISATION. \\A CASE STUDY OF AIRTEL UGANDA LIMITED}
 \newcommand\theStudentName{Remmy Bisimbeko}
-\newcommand\theStudentRegNo{J24MD19/007}
+\newcommand\theStudentRegNo{J24M19/011}
 \newcommand\theStudentNo{B26099}
 \newcommand\theStudentEmail{rbisimbeko@ucu.ac.ug}
 \newcommand\theSpecializationTrack{Data Science and Analytics}
@@ -43,12 +44,17 @@
 \newcommand\theFaculty{Faculty of Engineering Design \& Technology}
 \newcommand\theStudentPrevQualification{Master of Science in Data Science and Analytics Candidate}
 \newcommand\theDepartment{Department of Computing \& Technology}
-\newcommand\theVersionDate{October 2025}
+\newcommand\theVersionDate{August 2026}
 \newcommand\makLogo{\includegraphics[scale=.3]{images/logos/UCU-Logo.png}}
 
 \pagenumbering{roman}
 
 \begin{document}
+
+% Force sequential figure and table numbering (not per-chapter)
+\counterwithout{figure}{chapter}
+\counterwithout{table}{chapter}
+
 
 % Title page
 \begin{titlepage}
